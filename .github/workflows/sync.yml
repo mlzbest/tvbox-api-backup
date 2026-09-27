@@ -1,0 +1,54 @@
+name: 自动同步源仓库
+
+on:
+  schedule:
+    # 北京时间每日 03:00 执行（UTC 19:00）
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: "详细调试日志"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出当前仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 添加源仓库远程
+        run: |
+          git remote add source https://github.com/lubin776/tvbox-api-backup.git
+
+      - name: 拉取源仓库最新代码
+        run: |
+          git fetch source main
+          echo "源仓库最新提交: $(git log source/main -1 --format='%h %s')"
+
+      - name: 合并源仓库更新
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase source main || git merge source/main --no-edit
+          echo "合并完成"
+
+      - name: 提交变更
+        run: |
+          git add -A
+          git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +%Y-%m-%d\ %H:%M))]" || echo "无变更"
+          git push
+
+      - name: 推送通知
+        if: success()
+        run: |
+          echo "✅ 同步完成" >> $GITHUB_STEP_SUMMARY
+          echo "- 源仓库: lubin776/tvbox-api-backup" >> $GITHUB_STEP_SUMMARY
+          echo "- 目标仓库: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
