@@ -1,9 +1,9 @@
-更新专用接口.json|20260926|4.2K|https://0.12yue.de5.net/tvbox/更新专用接口.json
-菠菜pro.json|20260926|95.2K|https://0.12yue.de5.net/5/x4pro.json
-幸福年年.json|20260926|36.8K|http://150.158.52.248/tgyg/bbm.json
-饭太硬.json|20260926|16.2K|http://www.饭太硬.net/tv
-嗷呜.json|20260926|21.4K|http://www.英格里希嗷呜.top/tv
-潇洒.json|20260926|707B|https://9877.kstore.space/single.json
+更新专用接口.json|20260928|4.2K|https://0.12yue.de5.net/tvbox/更新专用接口.json
+菠菜pro.json|20260928|95.2K|https://0.12yue.de5.net/5/x4pro.json
+幸福年年.json|20260928|36.8K|http://150.158.52.248/tgyg/bbm.json
+饭太硬.json|20260928|16.2K|http://www.饭太硬.net/tv
+嗷呜.json|20260928|21.4K|http://www.英格里希嗷呜.top/tv
+潇洒.json|20260928|707B|https://9877.kstore.space/single.json
 南风.json|20260916|73.3K|https://ghproxy.monkeyray.net/raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json
 菠菜园.json|20260915|70.2K|https://0.12yue.de5.net/5/x4.json
 少儿频道.json|20260915|32.2K|https://0.12yue.de5.net/5/tv少儿.json
