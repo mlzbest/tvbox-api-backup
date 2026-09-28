@@ -5,12 +5,6 @@ on:
     # 北京时间每日 03:00 执行（UTC 19:00）
     - cron: "0 19 * * *"
   workflow_dispatch:
-    inputs:
-      debug:
-        description: "详细调试日志"
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -33,22 +27,17 @@ jobs:
           git fetch source main
           echo "源仓库最新提交: $(git log source/main -1 --format='%h %s')"
 
-      - name: 合并源仓库更新
+      - name: 同步文件（保留本仓库的 .github/workflows/sync.yml）
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase source main || git merge source/main --no-edit
-          echo "合并完成"
-
-      - name: 提交变更
-        run: |
+          # 排除 sync.yml 和 _src，只同步其他文件
+          git read-tree --prefix=sync-tmp/ -u source/main
+          git checkout --track -B source-main source/main
+          # 恢复本仓库的 sync.yml
+          git checkout HEAD -- .github/workflows/sync.yml 2>/dev/null || true
+          # 删除 _src submodule 目录
+          rm -rf _src
+          git rm -rf _src --ignore-unmatch 2>/dev/null || true
+          # 提交所有变更
           git add -A
-          git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +%Y-%m-%d\ %H:%M))]" || echo "无变更"
+          git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M'))]" || echo "无变更"
           git push
-
-      - name: 推送通知
-        if: success()
-        run: |
-          echo "✅ 同步完成" >> $GITHUB_STEP_SUMMARY
-          echo "- 源仓库: lubin776/tvbox-api-backup" >> $GITHUB_STEP_SUMMARY
-          echo "- 目标仓库: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
