@@ -2,9 +2,13 @@ name: 自动同步源仓库
 
 on:
   schedule:
-    # 北京时间每日 03:00 执行（UTC 19:00）
-    - cron: "0 19 * * *"
+    # 北京时间每日 03:30 执行（UTC 19:30），避开其他工作流同时推送
+    - cron: "30 19 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: tvbox-repo-write
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -16,28 +20,24 @@ jobs:
       - name: 检出当前仓库
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: 添加源仓库远程
-        run: |
-          git remote add source https://github.com/lubin776/tvbox-api-backup.git
+          fetch-depth: 1
 
       - name: 拉取源仓库最新代码
         run: |
-          git fetch source main
+          git remote add source https://github.com/lubin776/tvbox-api-backup.git
+          git fetch --depth=1 source main
           echo "源仓库最新提交: $(git log source/main -1 --format='%h %s')"
 
-      - name: 同步文件（保留本仓库的 .github/workflows/sync.yml）
+      - name: 用源仓库内容覆盖（保留本仓库独有文件如 sync.yml）
         run: |
-          # 排除 sync.yml 和 _src，只同步其他文件
-          git read-tree --prefix=sync-tmp/ -u source/main
-          git checkout --track -B source-main source/main
-          # 恢复本仓库的 sync.yml
-          git checkout HEAD -- .github/workflows/sync.yml 2>/dev/null || true
-          # 删除 _src submodule 目录
-          rm -rf _src
-          git rm -rf _src --ignore-unmatch 2>/dev/null || true
-          # 提交所有变更
+          git checkout source/main -- .
           git add -A
-          git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M'))]" || echo "无变更"
-          git push
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --cached --quiet; then
+            echo "✅ 源仓库无新变更，跳过提交" >> $GITHUB_STEP_SUMMARY
+          else
+            git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M')]"
+            git push
+            echo "✅ 已同步源仓库至 $(git log source/main -1 --format='%h')" >> $GITHUB_STEP_SUMMARY
+          fi
