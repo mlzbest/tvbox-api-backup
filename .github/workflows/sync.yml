@@ -2,8 +2,8 @@ name: 自动同步源仓库
 
 on:
   schedule:
-    # 北京时间每日 03:30 执行（UTC 19:30），避开其他工作流同时推送
-    - cron: "30 19 * * *"
+    # 北京时间每日 04:00 执行（UTC 20:00），错开其他工作流
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -38,6 +38,8 @@ jobs:
             echo "✅ 源仓库无新变更，跳过提交" >> $GITHUB_STEP_SUMMARY
           else
             git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M')]"
+            # 先 pull --rebase 避免冲突
+            git pull --rebase origin main || true
             git push
             echo "✅ 已同步源仓库至 $(git log source/main -1 --format='%h')" >> $GITHUB_STEP_SUMMARY
           fi
