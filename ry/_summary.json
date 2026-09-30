@@ -1,8 +1,8 @@
 {
-  "time": "2026-09-29 21:17:48",
+  "time": "2026-09-30 21:17:30",
   "output_dir": "/home/runner/work/tvbox-api-backup/tvbox-api-backup/ry",
   "total": 8,
-  "success": 7,
+  "success": 8,
   "items": [
     {
       "name": "潇洒下载",
@@ -31,9 +31,8 @@
     {
       "name": "柒豪下载",
       "url": "https://raw.gitcode.com/qihao/qihaoyyds/raw/main/版本.json",
-      "file": null,
-      "ok": false,
-      "error": "all failed: HTTP 418"
+      "file": "./ry/柒豪下载.json",
+      "ok": true
     },
     {
       "name": "天神下载",
