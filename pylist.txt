@@ -8,6 +8,11 @@ fy|♨️枫叶｜免扫|type: 3|api: https://gh-proxy.com/https://raw.githubuse
 爱听音乐|📻爱听┃音乐|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/爱听音乐.py
 网络直播|📺网络┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/网络直播.py
 哔哩直播|📺哔哩┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/哔哩直播.py
+咕噜1080p.py|咕噜1080|type: 3|api: http://150.158.52.248/tgyg/py/咕噜1080p.py
+九合一版|九合一版.py|type: 3|api: http://150.158.52.248/tgyg/py/九合一版.py
+各种豆采集.py|各种豆采集|type: 3|api: http://150.158.52.248/tgyg/py/各种豆采集.py
+初见影视.py|初见影视.py|type: 3|api: http://150.158.52.248/tgyg/py/初见影视.py
+4k-av|💓‍4k-av|type: 3|api: https://pan.szfx.top/down.php/21da377c5e328d67e943a2acc1947ff3.py
 影视聚合五合一V2.py|影视聚合五合一|type: 3|api: http://150.158.52.248/tgyg/lib/影视聚合五合一V2.py
 py_央视频.py|央视频|type: 3|api: http://150.158.52.248/tgyg/lib/py_央视频.py
 红果短剧最终版 (1).py|红果短剧最终版|type: 3|api: http://150.158.52.248/tgyg/lib/红果短剧最终版 (1).py
