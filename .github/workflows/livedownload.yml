@@ -42,8 +42,12 @@ jobs:
       - name: 运行 live下载器
         run: |
           ARGS=""
-          ${{ github.event.inputs.debug == 'true' && 'ARGS="$ARGS --debug"' || '' }}
-          ${{ github.event.inputs.force == 'true' && 'ARGS="$ARGS --force"' || '' }}
+          if [ "${{ github.event.inputs.debug }}" = "true" ]; then
+            ARGS="$ARGS --debug"
+          fi
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
           python python/live下载器.py $ARGS
 
       - name: 提交产物
