@@ -4,7 +4,7 @@ TVBox API fetch report  20260915_150432
 [更新专用接口] 
   status: OK
   file: tvbox/更新专用接口.json
-  url: https://0.120733.xyz/tvbox/更新专用接口.json
+  url: https://0.12yue.de5.net/tvbox/更新专用接口.json
 
 [菠菜pro] 
   status: OK
