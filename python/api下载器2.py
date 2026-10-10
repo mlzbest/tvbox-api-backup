@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-TVBox 接口一键抓取工具
+"""TVBox 接口抓取工具。
+
+配置放在仓库根目录的 apilinks.txt（每行：名称,URL1,URL2,...），
+运行时由本脚本读取；可用 --config 指定其它配置文件路径。
+输出：tvbox/ 目录下的接口 JSON，以及仓库根目录的 list.txt 与 SUMMARY.txt。
+
+list.txt 位置约定：仓库根目录（LIST_TXT = "list.txt"）。
 """
 
 import re
@@ -9,6 +14,7 @@ import json
 import base64
 import os
 import sys
+import argparse
 import binascii
 import gzip
 import time
@@ -16,48 +22,90 @@ import functools
 from datetime import datetime, timezone, timedelta
 from threading import Thread
 from queue import Queue
+from collections import OrderedDict
 
 
+# ---------- 时间工具 ----------
 def beijing_now():
-    """返回当前北京时间（脚本统一使用，避免依赖运行机本地时区 UTC）"""
     return datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=8)))
 
 
 def today_str():
-    """当前北京时间，格式 YYYYMMDD，用于 list.txt 日期列"""
     return beijing_now().strftime("%Y%m%d")
 
-# ================== 配置加载（JSON / PY 双版本） ==================
+# ---------- 配置加载（新 apilinks.txt 优先，老 api_list.json 兜底） ----------
+DEFAULT_CONFIG_FILE = "apilinks.txt"      # 新格式：每行 名称,URL1,URL2,...
+LEGACY_CONFIG_FILE = "api_list.json"      # 老格式：JSON（API_LIST / API_MIRRORS）
+
+
+def _load_txt_config(txt_path):
+    """新格式：每行 '名称,URL1,URL2,...'，# 开头为注释。返回 (api_list, {})。"""
+    api_list = []
+    with open(txt_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < 2:
+                continue
+            name = parts[0]
+            urls = [u for u in parts[1:] if u]
+            if not name or not urls:
+                continue
+            for u in urls:
+                api_list.append((name, u))
+    return api_list, {}
+
+
+def _load_json_config(json_path):
+    """老格式：JSON 文件，含 API_LIST / API_MIRRORS。返回 (api_list, api_mirrors)。"""
+    with open(json_path, "r", encoding="utf-8") as f:
+        cfg = json.load(f)
+    api_list = [tuple(x) for x in cfg.get("API_LIST", [])]
+    api_mirrors = cfg.get("API_MIRRORS", {})
+    return api_list, api_mirrors
+
+
 def _load_api_config():
-    """
-    优先级：
-    1. api_list.json（如果存在）
-    2. api_list.py（默认）
-    """
-    json_path = "api_list.json"
-    py_module = "api_list"
+    config_path = None
+    for i, arg in enumerate(sys.argv):
+        if arg == "--config" and i + 1 < len(sys.argv):
+            config_path = sys.argv[i + 1]
+            break
+        elif arg.startswith("--config="):
+            config_path = arg.split("=", 1)[1]
+            break
 
-    # ---- JSON 版 ----
-    if os.path.exists(json_path):
-        print(f"  📄 使用配置文件: {json_path}")
-        with open(json_path, "r", encoding="utf-8") as f:
-            cfg = json.load(f)
-        api_list = [tuple(x) for x in cfg.get("API_LIST", [])]
-        api_mirrors = cfg.get("API_MIRRORS", {})
-        return api_list, api_mirrors
+    # 1) 显式 --config：按扩展名判断格式
+    if config_path and os.path.exists(config_path):
+        print(f"  using config: {config_path}")
+        if config_path.lower().endswith(".json"):
+            return _load_json_config(config_path)
+        return _load_txt_config(config_path)
 
-    # ---- PY 版 ----
+    # 2) 新格式优先：apilinks.txt
+    if os.path.exists(DEFAULT_CONFIG_FILE):
+        print(f"  using config: {DEFAULT_CONFIG_FILE} (txt list)")
+        return _load_txt_config(DEFAULT_CONFIG_FILE)
+
+    # 3) 老格式兜底：api_list.json
+    if os.path.exists(LEGACY_CONFIG_FILE):
+        print(f"  using config: {LEGACY_CONFIG_FILE} (legacy json)")
+        return _load_json_config(LEGACY_CONFIG_FILE)
+
+    # 4) 最老式兜底：api_list.py 模块
     try:
-        print(f"  📄 使用配置文件: {py_module}.py")
         import importlib
-        mod = importlib.import_module(py_module)
+        mod = importlib.import_module("api_list")
+        print("  using config: api_list.py (legacy module)")
         return mod.API_LIST, mod.API_MIRRORS
     except Exception as e:
-        print(f"  ⚠ 未找到 {py_module}.py，使用空配置（自测模式）: {e}")
+        print(f"  no config found ({DEFAULT_CONFIG_FILE} / {LEGACY_CONFIG_FILE} / api_list.py), using empty: {e}")
         return [], {}
 
 
-# ================== 网络库兼容 ==================
+# ---------- 网络库兼容 ----------
 try:
     import requests
     HAVE_REQUESTS = True
@@ -66,7 +114,6 @@ except Exception:
 
 try:
     from urllib.request import Request, urlopen
-    from urllib.error import URLError
     HAVE_URLLIB = True
 except Exception:
     HAVE_URLLIB = False
@@ -78,8 +125,15 @@ if HAVE_REQUESTS:
     except Exception:
         pass
 
-# ====================== 调试开关 ======================
-DEBUG = "--debug" in sys.argv
+
+# ---------- 调试开关 ----------
+parser = argparse.ArgumentParser(description="TVBox 接口抓取与备份")
+parser.add_argument("--debug", action="store_true", help="输出详细调试日志")
+parser.add_argument("--force", action="store_true", help="强制执行（工作流手动触发时使用）")
+parser.add_argument("--check-config", action="store_true", help="仅检查配置，不抓取")
+parser.add_argument("--selftest", action="store_true", help="自测模式")
+ARGS, _ = parser.parse_known_args()
+DEBUG = ARGS.debug
 
 
 def dbg(msg):
@@ -87,15 +141,12 @@ def dbg(msg):
         print(f"[DBG] {msg}")
 
 
-# ======================================================================
-# 超时装饰器（通用解决方案）
-# ======================================================================
+# ---------- 超时装饰器 ----------
 class TimeoutError(Exception):
     pass
 
 
 def timeout(seconds):
-    """函数超时装饰器，支持 Windows 和 Unix"""
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -103,10 +154,9 @@ def timeout(seconds):
 
             def target():
                 try:
-                    result = func(*args, **kwargs)
-                    result_queue.put(('success', result))
+                    result_queue.put(("success", func(*args, **kwargs)))
                 except Exception as e:
-                    result_queue.put(('error', e))
+                    result_queue.put(("error", e))
 
             thread = Thread(target=target)
             thread.daemon = True
@@ -114,19 +164,17 @@ def timeout(seconds):
             thread.join(seconds)
 
             if thread.is_alive():
-                raise TimeoutError(f"Function {func.__name__} timed out after {seconds} seconds")
+                raise TimeoutError(f"{func.__name__} timed out after {seconds}s")
 
             status, value = result_queue.get()
-            if status == 'error':
+            if status == "error":
                 raise value
             return value
         return wrapper
     return decorator
 
 
-# ======================================================================
-# AES-128-CBC + PKCS7（纯标准库实现）
-# ======================================================================
+# ---------- AES-128-CBC（纯标准库，含加解密） ----------
 class AES128:
     RCON = [0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36]
     SBOX = [
@@ -235,18 +283,16 @@ class AES128:
 
     @staticmethod
     def decrypt_cbc(ciphertext, key, iv):
-        """AES-128-CBC 解密 + 严格 PKCS7 去填充"""
         assert len(key) == 16 and len(iv) == 16
         assert len(ciphertext) % 16 == 0
         rk = AES128._expand_key(key)
         plaintext = bytearray()
         prev = iv
         for i in range(0, len(ciphertext), 16):
-            block = ciphertext[i:i+16]
-            decrypted = AES128._decrypt_block(block, rk)
+            decrypted = AES128._decrypt_block(ciphertext[i:i+16], rk)
             plain_block = bytes(a ^ b for a, b in zip(decrypted, prev))
             plaintext += plain_block
-            prev = block
+            prev = ciphertext[i:i+16]
         if len(plaintext) > 0:
             pad = plaintext[-1]
             if 1 <= pad <= 16 and len(plaintext) >= pad:
@@ -265,8 +311,7 @@ class AES128:
             state = bytes(a ^ b for a, b in zip(state, rk[16*r:16*(r+1)]))
         state = AES128._sub_bytes(state)
         state = AES128._shift_rows(state)
-        state = bytes(a ^ b for a, b in zip(state, rk[16*Nr:16*(Nr+1)]))
-        return state
+        return bytes(a ^ b for a, b in zip(state, rk[16*Nr:16*(Nr+1)]))
 
     @staticmethod
     def _sub_bytes(state):
@@ -303,7 +348,7 @@ class AES128:
         return bytes(s)
 
     @staticmethod
-    def _encrypt_cbc(plaintext, key, iv):
+    def encrypt_cbc(plaintext, key, iv):
         assert len(key) == 16 and len(iv) == 16
         rk = AES128._expand_key(key)
         prev = iv
@@ -317,12 +362,9 @@ class AES128:
         return bytes(out)
 
 
-# ======================================================================
-# ★ 配置区 —— 从外部文件加载
-# ======================================================================
+# ---------- 运行配置 ----------
 RAW_API_LIST, API_MIRRORS = _load_api_config()
 
-# 请求指纹池
 TVBOX_UAS = [
     ("okhttp/3.15",                               "com.iptvbox"),
     ("okhttp/4.9.3",                               "com.iptvbox"),
@@ -337,57 +379,37 @@ HEADERS_BASE = {
     "Connection": "keep-alive",
 }
 
-# ★ 修改1：JSON 直接输出到 tvbox 目录
 OUTPUT_DIR = "tvbox"
 LIST_TXT = "list.txt"
 MAX_DEPTH = 5
 REQUEST_TIMEOUT = 20
-TOTAL_TIMEOUT = 45
+PER_URL_TIMEOUT = 30   # 每个 URL 独立超时（秒）
 
 
-# ======================================================================
-# ★ URL 规范化 + 按接口名分组
-# ======================================================================
+# ---------- URL 规范化 + 接口分组 ----------
 def normalize_url(url):
-    """
-    URL 规范化：
-    - 去掉代理前缀中的双 https：http://proxy.com/https://raw.xxx  → 取最右侧协议起点
-      即保留最后一个 http(s):// 开始的真实地址
-    - 去掉末尾单斜杠（路径部分一致时去重）
-    """
     if not url:
         return url
     u = url.strip()
-    # 取【最后一个】http(s):// 作为真实 URL 起点（去掉前面的代理域名）
     matches = list(re.finditer(r"https?://", u))
     if len(matches) >= 2:
         u = u[matches[-1].start():]
-    # 去掉末尾斜杠（保留 http://x.com 这类根域名）
     if u.endswith("/") and u.count("/") > 2:
         u = u.rstrip("/")
     return u
 
 
 def build_api_list(raw_api_list, api_mirrors):
-    """
-    把原始 API_LIST（[(name, url), ...]）按接口名分组：
-    - 同名条目 + API_MIRRORS 中的镜像 → 合并成一个 URL 列表（去重、规范化）
-    - 返回 [(name, [url1, url2, ...]), ...]
-    """
-    from collections import OrderedDict
     grouped = OrderedDict()
-    # 1. 先收原始列表
     for item in raw_api_list:
         if not isinstance(item, (list, tuple)) or len(item) < 2:
             continue
         name, url = item[0], item[1]
         if not url:
             continue
-        norm = normalize_url(url)
         grouped.setdefault(name, OrderedDict())
-        grouped[name][norm] = None  # 用 dict 保序去重
+        grouped[name][normalize_url(url)] = None
 
-    # 2. 合并 API_MIRRORS（镜像列表也规范化并入）
     for name, mirrors in api_mirrors.items():
         if not isinstance(mirrors, list):
             mirrors = [mirrors]
@@ -395,28 +417,17 @@ def build_api_list(raw_api_list, api_mirrors):
         for u in mirrors:
             if not u:
                 continue
-            norm = normalize_url(u)
-            grouped[name][norm] = None
+            grouped[name][normalize_url(u)] = None
 
-    # 3. 转成 [(name, [urls])]
-    result = []
-    for name, url_dict in grouped.items():
-        urls = list(url_dict.keys())
-        result.append((name, urls))
-    return result
+    return [(name, list(url_dict.keys())) for name, url_dict in grouped.items()]
 
 
-# 构建最终分组后的 API_LIST（供主流程使用）
 API_LIST = build_api_list(RAW_API_LIST, API_MIRRORS)
 
 
-# ======================================================================
-# 通用工具
-# ======================================================================
+# ---------- 通用工具 ----------
 def right_padding(s, ch, length):
-    if len(s) >= length:
-        return s[:length]
-    return s + (ch * (length - len(s)))
+    return s[:length] if len(s) >= length else s + (ch * (length - len(s)))
 
 
 def is_json(text):
@@ -443,21 +454,16 @@ def filter_json(text):
         return json.dumps(obj, ensure_ascii=False, indent=2)
     keep = {"video", "sites", "lives", "parses", "rules",
             "spider", "wallpaper", "livePlayHeaders", "md5", "name", "homeSite",
-            "homeLogo", "homeBg", "homeSearch", "homeRec", "searchable",
-            "logo"}
+            "homeLogo", "homeBg", "homeSearch", "homeRec", "searchable", "logo"}
     filtered = {k: v for k, v in obj.items() if k in keep}
-    if not filtered:
-        filtered = obj
-    return json.dumps(filtered, ensure_ascii=False, indent=2)
+    return json.dumps(filtered if filtered else obj, ensure_ascii=False, indent=2)
 
 
 def get_base_url(source_url):
     if not source_url:
         return ""
     idx = source_url.rfind("/")
-    if idx <= 0:
-        return ""
-    return source_url[:idx + 1]
+    return source_url[:idx + 1] if idx > 0 else ""
 
 
 def is_absolute_url(value):
@@ -466,9 +472,7 @@ def is_absolute_url(value):
     v = value.strip()
     if not v:
         return True
-    if v.startswith(("http://", "https://", "data:", "file://", "//")):
-        return True
-    return False
+    return v.startswith(("http://", "https://", "data:", "file://", "//"))
 
 
 def resolve_url(rel_path, base_url):
@@ -480,11 +484,8 @@ def resolve_url(rel_path, base_url):
     return urljoin(base_url, rel_path)
 
 
-# ======================================================================
-# ★ 重写后的 absolutize_json —— 仅处理 spider/logo/sites，极简路径判断
-# ======================================================================
+# ---------- URL 绝对化（相对地址补全） ----------
 def absolutize_json(text, source_url):
-    """将 JSON 中 spider/logo/sites 的相对 URL 转换为绝对 URL"""
     if not source_url:
         return text
     try:
@@ -496,10 +497,13 @@ def absolutize_json(text, source_url):
     if not base:
         return text
 
-    from urllib.parse import urljoin
+    top_url_fields = {
+        "spider", "wallpaper", "homeLogo", "homeBg",
+        "homeSite", "livePlayHeaders", "logo", "homeSearch",
+        "homeRec", "md5"
+    }
+    spider_prefixes = ("csp_", "json_", "nodejs_", "py_", "js_", "http_")
 
-    # ★ 极简判断：非绝对地址 且 包含路径分隔符（如 ./ 或 /）才视为相对路径
-    # 效果："./config.json" 会转换；"Demo"、"ijk" 等不含 / 的标识符绝不转换
     def should_resolve(val):
         if not val or not isinstance(val, str):
             return False
@@ -508,13 +512,13 @@ def absolutize_json(text, source_url):
             return False
         if val.startswith(("http://", "https://", "data:", "file://", "//")):
             return False
-        # 核心：必须有路径分隔符才算相对路径
-        return "/" in val
+        if any(val.startswith(p) for p in spider_prefixes):
+            return False
+        return not val.isdigit()
 
     def resolve_if_needed(val):
-        return urljoin(base, val) if should_resolve(val) else val
+        return resolve_url(val, base) if should_resolve(val) else val
 
-    # ★ 递归处理 ext 对象（字符串 / 数组 / 嵌套字典）
     def resolve_ext_object(ext):
         if isinstance(ext, str):
             return resolve_if_needed(ext)
@@ -531,29 +535,49 @@ def absolutize_json(text, source_url):
         return ext
 
     if isinstance(obj, dict):
-        # ★ 1. 仅处理顶层 spider 和 logo（支持字符串或数组形式）
-        for key in ("spider", "logo"):
-            if key in obj:
-                val = obj[key]
-                if isinstance(val, str):
-                    obj[key] = resolve_if_needed(val)
-                elif isinstance(val, list):
-                    obj[key] = [resolve_if_needed(v) if isinstance(v, str) else v for v in val]
+        for field in top_url_fields:
+            if field in obj and should_resolve(obj[field]):
+                obj[field] = resolve_url(obj[field], base)
 
-        # ★ 2. 仅处理 sites 列表
         if "sites" in obj and isinstance(obj["sites"], list):
             for site in obj["sites"]:
                 if not isinstance(site, dict):
                     continue
-                # 递归处理 ext
                 if "ext" in site:
                     site["ext"] = resolve_ext_object(site["ext"])
-                # 处理站点常见 URL 字段
-                for field in ("jar", "playUrl", "logo", "url", "epg", "api"):
+                for field in ("jar", "playUrl", "logo", "url", "epg"):
                     if field in site and should_resolve(site[field]):
-                        site[field] = urljoin(base, site[field])
+                        site[field] = resolve_url(site[field], base)
+                if "api" in site and isinstance(site["api"], str):
+                    api_val = site["api"].strip()
+                    if _looks_like_url(api_val) and should_resolve(api_val):
+                        site["api"] = resolve_url(api_val, base)
+
+        if "lives" in obj and isinstance(obj["lives"], list):
+            for live in obj["lives"]:
+                if not isinstance(live, dict):
+                    continue
+                for field in ("url", "logo", "epg", "playUrl"):
+                    if field in live and should_resolve(live[field]):
+                        live[field] = resolve_url(live[field], base)
+
+        if "parses" in obj and isinstance(obj["parses"], list):
+            for parse in obj["parses"]:
+                if not isinstance(parse, dict):
+                    continue
+                for field in ("url", "logo"):
+                    if field in parse and should_resolve(parse[field]):
+                        parse[field] = resolve_url(parse[field], base)
+
+        if "rules" in obj and isinstance(obj["rules"], list):
+            for rule in obj["rules"]:
+                if not isinstance(rule, dict):
+                    continue
+                if "url" in rule and should_resolve(rule["url"]):
+                    rule["url"] = resolve_url(rule["url"], base)
 
     return json.dumps(obj, ensure_ascii=False, indent=2)
+
 
 def _looks_like_url(value):
     if not value:
@@ -564,16 +588,12 @@ def _looks_like_url(value):
         return True
     if "." in value and not value.startswith("."):
         parts = value.split(".")
-        if len(parts) >= 2 and all(p for p in parts):
-            return True
+        return len(parts) >= 2 and all(p for p in parts)
     return False
 
 
-# ======================================================================
-# list.txt —— 新旧合并（新替代旧同条目 / 新条目增加 / 旧条目保留）
-# ======================================================================
+# ---------- list.txt 读写（位置：仓库根目录） ----------
 def fmt_size(num_bytes):
-    """字节 → 人类可读：<1024 显示 B，否则显示 K（保留 1 位小数）。无效返回 '-'"""
     if num_bytes is None:
         return "-"
     try:
@@ -588,28 +608,20 @@ def fmt_size(num_bytes):
 
 
 def _file_key(name):
-    """把接口名转成安全的文件名（中文保留，非法字符转下划线），与 process() 保持一致"""
     return re.sub(r"[^\w\u4e00-\u9fff]", "_", name)
+
 
 _SUFFIX_RE = re.compile(r"(?:线路|一线|二线|三线|vip线|专线|备用|主线路?|测试|勿传|vip|line)\s*$", re.I)
 
+
 def _note_of(name):
-    """
-    ★ 备注 = 接口名去掉非中文/非单词字符后的主体，再去掉末尾通用后缀。
-    """
     if not name:
         return ""
-    base = _file_key(name)
-    cleaned = _SUFFIX_RE.sub("", base)
-    return cleaned if cleaned else base
+    cleaned = _SUFFIX_RE.sub("", _file_key(name))
+    return cleaned or _file_key(name)
 
 
 def load_list_txt(path=LIST_TXT):
-    """
-    ★ 读取【旧的 list.txt】。
-    返回 {file_name: (date_str, size_str, url_str)} 字典。
-    file_name 即「条目 key」—— 它就是新旧合并的判断依据。
-    """
     old = {}
     if not os.path.exists(path):
         return old
@@ -632,7 +644,6 @@ def load_list_txt(path=LIST_TXT):
 
 
 def save_list_txt(latest, path=LIST_TXT):
-    """将合并后的字典覆盖写入 list.txt（每个接口一行，按日期倒序）"""
     os.makedirs(os.path.dirname(path) if os.path.dirname(path) else ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         for file_name, rec in sorted(latest.items(), key=lambda kv: kv[1][0], reverse=True):
@@ -641,77 +652,42 @@ def save_list_txt(latest, path=LIST_TXT):
 
 
 def update_list_txt(results, path=LIST_TXT):
-    """
-    ★★★ 新旧 list 合并（脚本运行时的核心逻辑）★★★
-
-    ★ 只收集【成功爬取 JSON 或 TEXT】的条目；爬取失败（TIMEOUT / FAILED）的
-       一律不写入 list.txt，也不影响旧条目。
-
-    流程：
-    1. 先读取【旧的 list.txt】→ old 字典（key = file_name 条目名）
-       （旧 list 里的条目都曾是成功过的，天然符合"只收成功"原则）
-    2. 遍历本次 results，【仅 ok=True（=status JSON 或 TEXT）】的条目参与合并：
-       - 新条目成功(ok) + 旧有同名 → 新替代旧（日期=今天、尺寸、成功URL）
-       - 新条目成功(ok) + 旧无同名 → 新增一条
-       - 新条目失败(!ok)           → 直接跳过，不写 list，不动旧条目
-    3. 合并结果写回 list.txt（覆盖写）
-
-    合并语义（按条目 key = file_name，list 中永远只含成功条目）：
-    - 旧有新也有（同名，且新成功）→ 新替代旧   ← 替换
-    - 旧没有 + 新成功            → 新增一条   ← 增加
-    - 旧有 + 新没爬到/新失败      → 保留旧条目 ← 保留（不动）
-    """
     today = today_str()
-
-    # ① 读旧 list（若首次运行不存在则为空字典）
     old = load_list_txt(path)
 
-    # new_by_key：本次「新 list」中【成功】的条目，按 key 索引
     new_by_key = {}
     for info in results:
         name = info.get("name")
-        if not name:
+        if not name or not info.get("ok"):
             continue
-        if not info.get("ok"):                      # ★ 失败条目：直接忽略，不进 list
-            continue
-        file_name = _file_key(name) + ".json"
-        new_by_key[file_name] = info
+        new_by_key[_file_key(name) + ".json"] = info
 
-    # ② 以旧 list 为底座，【仅成功的】新条目逐个覆盖同名 → 新替代旧 + 新增加
-    merged = dict(old)                              # 先完整保留旧条目
+    merged = dict(old)
     for file_name, info in new_by_key.items():
-        if info.get("ok"):                          # 成功 → 替代 / 新增
-            date_str = info.get("date") or today
-            size_k = fmt_size(info.get("bytes"))
-            success_url = info.get("success_url", "")
-            merged[file_name] = (date_str, size_k, success_url)
-        # ★ 失败条目不会走到这里（已在上方 continue 过滤）
+        if info.get("ok"):
+            merged[file_name] = (
+                info.get("date") or today,
+                fmt_size(info.get("bytes")),
+                info.get("success_url", ""),
+            )
 
-    # ③ 覆盖写回 list.txt
     save_list_txt(merged, path)
 
-    # ④ 打印每条的来源（新增 / 更新 / 保留），一目了然
     print("\n" + "=" * 62)
-    print(f"  list.txt 合并记录（仅成功条目，按 key 合并）  ({path})")
+    print(f"  list.txt updated ({path})")
     print("=" * 62)
     if not merged:
-        print("  （暂无记录）")
-    def tag_of(file_name):
-        in_old = file_name in old
-        in_new = file_name in new_by_key
-        if in_old and in_new:   return "更新"   # 旧有新也有（且新成功）→ 新替代旧
-        if not in_old and in_new: return "新增"  # 新条目成功 → 增加
-        return "保留"                              # 旧有新没有 / 新失败 → 保留旧条目
+        print("  (empty)")
     for file_name, rec in sorted(merged.items(), key=lambda kv: kv[1][0], reverse=True):
         date_str, size_str, url_str = rec if len(rec) == 3 else (rec[0], rec[1], "")
-        print(f"  {file_name}|{date_str}|{size_str}|{url_str}  [{tag_of(file_name)}]")
+        tag = "更新" if (file_name in old and file_name in new_by_key) else (
+            "新增" if file_name in new_by_key else "保留")
+        print(f"  {file_name}|{date_str}|{size_str}|{url_str}  [{tag}]")
     print("=" * 62)
     return merged
 
 
-# ======================================================================
-# 解密相关
-# ======================================================================
+# ---------- 解密 / 解混淆 ----------
 def _try_decrypt_2423_hex(stripped):
     idx2423 = stripped.index("2423")
     idx2324 = stripped.index("2324")
@@ -724,17 +700,15 @@ def _try_decrypt_2423_hex(stripped):
     data_start = idx2324 + 4
     data_end = len(stripped) - 26
     if data_end <= data_start:
-        raise ValueError("hex形态: data区间非法")
+        raise ValueError("hex: invalid data range")
     data_hex = stripped[data_start: data_end]
-    content_rstrip = stripped.rstrip()
-    ts_hex = content_rstrip[len(content_rstrip) - 26:]
+    ts_hex = stripped.rstrip()[-26:]
     try:
         ts_bytes = bytes.fromhex(ts_hex)
     except Exception:
         ts_bytes = ts_hex.encode("utf-8")
-    iv_str = right_padding(ts_bytes.decode("latin-1"), "0", 16)
     key_bytes = key_str.encode("utf-8")[:16]
-    iv_bytes = iv_str.encode("utf-8")[:16]
+    iv_bytes = right_padding(ts_bytes.decode("latin-1"), "0", 16).encode("utf-8")[:16]
     cipher_bytes = binascii.unhexlify(data_hex)
     return AES128.decrypt_cbc(cipher_bytes, key_bytes, iv_bytes)
 
@@ -743,19 +717,16 @@ def _try_decrypt_2423_plain(S):
     idx2324 = S.index("2324")
     p_doll = S.index("$#")
     p_sharp = S.index("#$")
-    data_hex = S[idx2324 + 4: p_doll]
-    data_hex = re.sub(r"[^0-9a-fA-F]", "", data_hex)
+    data_hex = re.sub(r"[^0-9a-fA-F]", "", S[idx2324 + 4: p_doll])
     if len(data_hex) % 2 != 0:
         data_hex = data_hex[:-1]
     key = right_padding(S[p_doll + 2: p_sharp], "0", 16)
-    iv = right_padding(S[len(S) - 13:], "0", 16)
-    key_bytes = key.encode("latin-1")[:16]
-    iv_bytes = iv.encode("latin-1")[:16]
-    cipher_bytes = bytes.fromhex(data_hex)
-    return AES128.decrypt_cbc(cipher_bytes, key_bytes, iv_bytes)
+    iv = right_padding(S[-13:], "0", 16)
+    return AES128.decrypt_cbc(bytes.fromhex(data_hex), key.encode("latin-1")[:16], iv.encode("latin-1")[:16])
 
 
 def find_result(raw_text, _raw_bytes=None, _depth=0):
+    """递归解密：base64、**壳、2423-AES、gzip，直到得到 JSON。"""
     if _raw_bytes is None and raw_text is not None:
         _raw_bytes = raw_text.encode("utf-8", errors="ignore")
     content = raw_text if raw_text is not None else ""
@@ -763,6 +734,7 @@ def find_result(raw_text, _raw_bytes=None, _depth=0):
         content = _raw_bytes.decode("utf-8", errors="ignore")
     if is_json(content):
         return content
+
     star_idx = None
     if _raw_bytes is not None:
         pos = _raw_bytes.find(b"**")
@@ -772,38 +744,36 @@ def find_result(raw_text, _raw_bytes=None, _depth=0):
         m = re.search(r"[A-Za-z0-9]{8}\*\*", content)
         if m:
             star_idx = content.index(m.group()) + 10
+
     if star_idx is not None:
         if _raw_bytes is not None:
-            b64_bytes = _raw_bytes[star_idx + 2:]
-            b64_bytes = bytes(b for b in b64_bytes if b not in (0x09, 0x0a, 0x0d, 0x20))
+            b64_bytes = bytes(b for b in _raw_bytes[star_idx + 2:] if b not in (0x09, 0x0a, 0x0d, 0x20))
             try:
-                decoded = base64.b64decode(b64_bytes + b"==").decode("utf-8", errors="ignore")
-                return find_result(decoded, _depth=_depth + 1)
+                return find_result(b64_bytes.decode("latin-1", errors="ignore"), _depth=_depth + 1)
             except Exception as e:
-                dbg(f"字节壳base64解码失败: {e}")
+                dbg(f"shell base64 decode failed: {e}")
                 content = b64_bytes.decode("latin-1", errors="ignore")
         else:
             b64 = re.sub(r"[^A-Za-z0-9+/=]", "", content[star_idx:])
             try:
-                decoded = base64.b64decode(b64 + "==").decode("utf-8", errors="ignore")
-                return find_result(decoded, _depth=_depth + 1)
+                return find_result(base64.b64decode(b64 + "==").decode("utf-8", errors="ignore"), _depth=_depth + 1)
             except Exception:
                 content = b64
+
     stripped = collapse_whitespace(content).strip()
     has_delim = "$#" in stripped and "#$" in stripped
     has_2423_structure = stripped.startswith("2423") and "2324" in stripped
     if stripped.startswith("2423") and (has_delim or has_2423_structure):
         last_err = None
         try:
-            result = _try_decrypt_2423_hex(stripped)
-            return find_result(result, _depth=_depth + 1)
+            return find_result(_try_decrypt_2423_hex(stripped), _depth=_depth + 1)
         except Exception as e:
             last_err = e
         try:
-            result = _try_decrypt_2423_plain(stripped)
-            return find_result(result, _depth=_depth + 1)
+            return find_result(_try_decrypt_2423_plain(stripped), _depth=_depth + 1)
         except Exception as e2:
-            raise RuntimeError(f"2423 双形态均解密失败: hex={last_err} / plain={e2}")
+            raise RuntimeError(f"2423 decrypt failed (hex={last_err} / plain={e2})")
+
     clean = re.sub(r"\s", "", content)
     if re.match(r"^[A-Za-z0-9+/=]+$", clean) and len(clean) > 50:
         try:
@@ -812,6 +782,7 @@ def find_result(raw_text, _raw_bytes=None, _depth=0):
                 return decoded
         except Exception:
             pass
+
     if _raw_bytes is not None:
         try:
             decompressed = gzip.decompress(_raw_bytes).decode("utf-8", errors="ignore")
@@ -822,9 +793,7 @@ def find_result(raw_text, _raw_bytes=None, _depth=0):
     return content
 
 
-# ======================================================================
-# 网络
-# ======================================================================
+# ---------- 网络 ----------
 def fetch_url(url, ua, xrw=""):
     headers = dict(HEADERS_BASE)
     headers["User-Agent"] = ua
@@ -836,12 +805,13 @@ def fetch_url(url, ua, xrw=""):
         if parsed.netloc and any(ord(c) > 127 for c in parsed.netloc):
             try:
                 import idna
-                netloc = idna.encode(parsed.netloc).decode('ascii')
+                netloc = idna.encode(parsed.netloc).decode("ascii")
                 url = url.replace(parsed.netloc, netloc)
             except Exception:
                 pass
     except Exception:
         pass
+
     if HAVE_REQUESTS:
         r = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT, allow_redirects=True, verify=False)
         if r.status_code == 200 and len(r.content) > 20:
@@ -855,7 +825,7 @@ def fetch_url(url, ua, xrw=""):
                 return data
             raise RuntimeError("empty body")
     else:
-        raise RuntimeError("无可用网络库")
+        raise RuntimeError("no available http library")
 
 
 def try_fetch(url):
@@ -874,139 +844,116 @@ def try_fetch(url):
     raise RuntimeError(str(last_err))
 
 
-@timeout(TOTAL_TIMEOUT)
+@timeout(PER_URL_TIMEOUT)
+def try_fetch_one(url):
+    return try_fetch(url)
+
+
 def try_fetch_all(urls):
+    """遍历 URL 列表：实时打印当前 URL，每个独立超时，成功即返回。"""
     errs = []
-    for u in urls:
+    for idx, u in enumerate(urls, 1):
+        print(f"    [{idx}/{len(urls)}] trying: {u}")
         try:
-            raw, ua = try_fetch(u)
+            raw, ua = try_fetch_one(u)
+            print(f"    ok [{idx}/{len(urls)}] {u} (UA={ua})")
             return raw, ua, u
+        except TimeoutError:
+            print(f"    timeout [{idx}/{len(urls)}] {u}")
+            errs.append(f"{u} -> timeout")
         except Exception as e:
+            print(f"    fail [{idx}/{len(urls)}] {u} ({e})")
             errs.append(f"{u} -> {e}")
     raise RuntimeError(" | ".join(errs))
 
 
-# ======================================================================
-# 主流程
-# ======================================================================
+# ---------- JSON 处理 ----------
 def clean_json_comments(text):
     if not text:
         return text
-    if text.startswith('\ufeff'):
+    if text.startswith("\ufeff"):
         text = text[1:]
-    lines = text.split('\n')
-    cleaned_lines = []
-    in_block_comment = False
+    lines = text.split("\n")
+    out, in_block = [], False
     for line in lines:
-        if in_block_comment:
-            if '*/' in line:
-                in_block_comment = False
-                line = line[line.index('*/') + 2:]
+        if in_block:
+            if "*/" in line:
+                in_block = False
+                line = line[line.index("*/") + 2:]
             else:
                 continue
-        if '/*' in line:
-            before, after = line.split('/*', 1)
-            if '*/' in after:
-                line = before + after[after.index('*/') + 2:]
-            else:
-                line = before
-                in_block_comment = True
-        if '//' in line:
-            in_string = False
-            string_char = None
-            for i, char in enumerate(line):
-                if char in ('"', "'") and (i == 0 or line[i-1] != '\\'):
-                    if not in_string:
-                        in_string = True
-                        string_char = char
-                    elif char == string_char:
-                        in_string = False
-                elif char == '/' and i + 1 < len(line) and line[i+1] == '/' and not in_string:
+        if "/*" in line:
+            before, after = line.split("/*", 1)
+            line = before + (after[after.index("*/") + 2:] if "*/" in after else "")
+            if "*/" not in after:
+                in_block = True
+        if "//" in line:
+            in_str, sc = False, None
+            for i, ch in enumerate(line):
+                if ch in ('"', "'") and (i == 0 or line[i-1] != "\\"):
+                    if not in_str:
+                        in_str, sc = True, ch
+                    elif ch == sc:
+                        in_str = False
+                elif ch == "/" and i + 1 < len(line) and line[i+1] == "/" and not in_str:
                     line = line[:i]
                     break
         if line.strip():
-            cleaned_lines.append(line)
-    return '\n'.join(cleaned_lines)
+            out.append(line)
+    return "\n".join(out)
 
 
 def extract_json(text):
     if not text:
         return text
     text = clean_json_comments(text)
-    start = -1
-    end = -1
-    for i, char in enumerate(text):
-        if char in '{[':
-            start = i
-            break
+    start = next((i for i, ch in enumerate(text) if ch in "{["), -1)
     if start == -1:
         return text
-    for i in range(len(text) - 1, -1, -1):
-        if text[i] in '}]':
-            end = i + 1
-            break
-    if end == -1 or end <= start:
+    end = next((i for i in range(len(text) - 1, -1, -1) if text[i] in "}]"), -1)
+    if end <= start:
         return text
-    json_text = text[start:end]
+    jt = text[start:end + 1]
     try:
-        json.loads(json_text)
-        return json_text
+        json.loads(jt)
+        return jt
     except Exception:
         return text
 
 
-@timeout(TOTAL_TIMEOUT + 10)
 def process(name, urls) -> dict:
-    if isinstance(urls, str):
-        urls = [urls]
-    print(f"\n▶ [{name}] 尝试 {len(urls)} 个源")
-    success_url = ""
-    t0 = time.time()
+    print(f"\n[{name}] {len(urls)} source(s)")
     try:
-        raw, ua, used_url = try_fetch_all(urls)
-        success_url = used_url
-    except TimeoutError:
-        raise RuntimeError(f"抓取超时（{TOTAL_TIMEOUT}秒）")
-    print(f"  ✓ 下载成功 ({len(raw)} 字节, UA={ua})")
-    print(f"  源地址: {success_url}")
-    decrypted = find_result("", _raw_bytes=raw)
-    decrypted = extract_json(decrypted)
-    try:
-        obj = json.loads(decrypted)
-        formatted = filter_json(decrypted)
-        status = "JSON"
+        raw, ua, used = try_fetch_all(urls)
     except Exception as e:
-        dbg(f"JSON解析失败: {e}")
-        try:
-            obj = json.loads(decrypted)
-            formatted = json.dumps(obj, ensure_ascii=False, indent=2)
-        except Exception:
-            formatted = decrypted
-        status = "TEXT"
-    if status == "JSON":
-        formatted = absolutize_json(formatted, success_url)
-    safe = re.sub(r"[^\w\u4e00-\u9fff]", "_", name)
-    path = os.path.join(OUTPUT_DIR, f"{safe}.json")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(formatted)
-    elapsed_ms = int((time.time() - t0) * 1000)
-    print(f"  ✓ {status} | {len(formatted)} 字符 -> {path}")
+        print(f"  all failed: {e}")
+        return {"name": name, "status": "FAILED", "file": None, "ok": False, "success_url": "", "bytes": 0}
+
+    text = find_result("", _raw_bytes=raw)
+    text = extract_json(text)
+    text = absolutize_json(text, used)
+
     try:
-        obj = json.loads(formatted)
-        if isinstance(obj, dict):
-            keys = [k for k in obj.keys() if k in {"sites", "lives", "parses", "rules", "spider", "wallpaper"}]
-            print(f"  字段: {keys}")
-            if "sites" in obj and isinstance(obj["sites"], list):
-                print(f"  sites 数量: {len(obj['sites'])}")
-    except Exception as e:
-        dbg(f"预览解析失败: {e}")
-    preview = "\n".join(formatted.split("\n")[:5])
-    print(f"  预览:\n  {'~'*50}\n  " + preview.replace("\n", "\n  "))
-    print(f"  {'~'*50}")
+        json.loads(text)
+        parsed = True
+    except Exception:
+        parsed = False
+
+    safe = re.sub(r'[\\/:*?"<>|\x00-\x1f]', "_", name).strip().strip(".")[:120] or "unnamed"
+    file_name = safe + ".json"
+    out_path = os.path.join(OUTPUT_DIR, file_name)
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+    print(f"  -> {out_path} ({len(raw)} bytes, parsed={'yes' if parsed else 'no'})")
     return {
-        "name": name, "status": status, "file": path, "ua": ua,
-        "ok": status in ("JSON", "TEXT"), "note": _note_of(name),  # ★ 修改：TEXT 也视为成功
-        "bytes": len(formatted), "time_ms": elapsed_ms, "success_url": success_url,
+        "name": name,
+        "status": "OK" if parsed else "RAW",
+        "file": out_path,
+        "ok": True,
+        "success_url": used,
+        "bytes": len(raw),
     }
 
 
@@ -1016,93 +963,70 @@ def main():
     summary = []
 
     print("=" * 62)
-    print(f"  TVBox 接口一键抓取  {ts}")
+    print(f"  TVBox API fetcher  {ts}")
     print("=" * 62)
 
-    # 显示合并前的旧 list，便于对照
     old = load_list_txt(LIST_TXT)
     if old:
-        print(f"  📌 读取到旧 list.txt：{len(old)} 条，将与新结果合并")
+        print(f"  loaded existing list.txt: {len(old)} entries, will merge")
 
-    # ★ API_LIST 已是 [(name, [urls])] 分组结构
     for name, urls in API_LIST:
         try:
-            info = process(name, urls)
-            summary.append(info)
+            summary.append(process(name, urls))
         except TimeoutError as e:
-            print(f"  ✗ 超时: {e}")
+            print(f"  timeout: {e}")
             summary.append({"name": name, "status": "TIMEOUT", "file": None, "ok": False, "success_url": ""})
         except Exception as e:
-            print(f"  ✗ 全部失败: {e}")
+            print(f"  failed: {e}")
             summary.append({"name": name, "status": "FAILED", "file": None, "ok": False, "success_url": ""})
 
-    # ★ 更新 list.txt（新替代旧同条目 / 新增加 / 旧保留）
     update_list_txt(summary, LIST_TXT)
 
-    # ★ 修改2：报告 SUMMARY.txt 直接输出到仓库根目录
     report = "SUMMARY.txt"
     with open(report, "w", encoding="utf-8") as f:
-        f.write(f"TVBox 接口抓取报告  {ts}\n")
+        f.write(f"TVBox API fetch report  {ts}\n")
         f.write("=" * 62 + "\n\n")
         for it in summary:
             f.write(f"[{it['name']}] {it.get('ua','')}\n")
-            f.write(f"  状态: {it['status']}\n")
-            f.write(f"  文件: {it.get('file')}\n")
-            f.write(f"  成功URL: {it.get('success_url','')}\n\n")
+            f.write(f"  status: {it['status']}\n")
+            f.write(f"  file: {it.get('file')}\n")
+            f.write(f"  url: {it.get('success_url','')}\n\n")
 
     print("\n" + "=" * 62)
-    print("  汇总")
+    print("  summary")
     print("=" * 62)
     for it in summary:
-        icon = "✓" if it.get("ok") else "✗"
+        icon = "ok" if it.get("ok") else "--"
         print(f"  {icon} {it['name']:8s} | {it['status']:10s} | {it.get('file','')}")
-    print(f"\n  报告: {report}")
-    print(f"  更新日志: {LIST_TXT}")
+    print(f"\n  report: {report}")
+    print(f"  changelog: {LIST_TXT}")
     print("=" * 62)
 
 
-# ======================================================================
-# 自测
-# ======================================================================
 def selftest():
-    # （自测函数保持原样，略作兼容）
     global RAW_API_LIST, API_MIRRORS, API_LIST
     RAW_API_LIST = [
-        ["饭太硬", "http://www.饭太硬.net/tv"],
-        ["饭太硬", "http://www.饭太硬.art/tv"],
-        ["饭太硬", "http://fty.xxooo.cf/tv"],
+        ["饭太硬", "http://www.example.net/tv"],
         ["南风", "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"],
-        ["天神", "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/天神IY.png"],
     ]
-    API_MIRRORS = {
-        "饭太硬": ["http://www.饭太硬.net/tv", "http://fty.888484.xyz/tv"],
-        "嗷呜": ["http://a.com/tv"],
-    }
+    API_MIRRORS = {"饭太硬": ["http://www.example.net/tv"]}
     API_LIST = build_api_list(RAW_API_LIST, API_MIRRORS)
-    print("  [准备] 已加载内置测试配置")
-    # （省略具体自测逻辑，与原脚本一致）
-    print("\n" + "=" * 62)
-    print("  全部自测通过 ✓")
-    print("=" * 62)
+    print("  selftest config loaded")
+
 
 if __name__ == "__main__":
-    if "--selftest" in sys.argv:
+    if ARGS.selftest:
         selftest()
-    elif "--check-config" in sys.argv:
+    elif ARGS.check_config:
         print("=" * 62)
-        print("  配置检查（URL 规范化 + 同名分组 + 去重，不抓包）")
+        print("  config check (normalize + group + dedupe, no fetch)")
         print("=" * 62)
         for name, urls in API_LIST:
-            print(f"\n  [{name}] {len(urls)} 个源（去重后）")
+            print(f"\n  [{name}] {len(urls)} source(s)")
             for i, u in enumerate(urls, 1):
                 print(f"    {i}. {u}")
         print("\n" + "=" * 62)
-        print(f"  共 {len(API_LIST)} 个接口")
+        print(f"  total {len(API_LIST)} interfaces")
         print("=" * 62)
     else:
         main()
-        print("\n完成! 按回车退出...")
-        try:
-            input()
-        except EOFError:
-            pass

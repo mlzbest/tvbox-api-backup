@@ -1,5 +1,10 @@
 name: 接口扫描处理工具
 
+# 新增：并发控制，确保与其他工作流（ry下载、api下载）排队串行执行
+concurrency:
+  group: tvbox-repo-write
+  cancel-in-progress: false
+
 on:
   schedule:
     # 每天北京时间 03:00 运行（UTC 19:00）
@@ -15,15 +20,12 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    permissions:
-      contents: write   # 允许 push 回仓库
 
     steps:
       - name: 检出仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -67,6 +69,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
+          # 仅在有变更时提交
           if git diff --cached --quiet; then
             echo "无变更，跳过提交"
           else

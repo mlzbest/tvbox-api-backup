@@ -31,9 +31,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SCAN_DIR = REPO_ROOT / "tvbox"
 OUTPUT_LIVE_DIR = SCAN_DIR / "live"
 
-AGGREGATE_JSON = SCAN_DIR / "海量直播聚合接口.json"
+AGGREGATE_JSON = SCAN_DIR / "海量直播聚合接口.json"          # ← 已改名
 LIVELIST_PATH = REPO_ROOT / "livelist.txt"
 
+# 新增路径
 CJ_LIST_PATH = REPO_ROOT / "cjlist.txt"
 PY_LIST_PATH = REPO_ROOT / "pylist.txt"
 PY_AGG_JSON = SCAN_DIR / "海量py聚合接口.json"
@@ -136,43 +137,7 @@ TEMPLATE_CONFIG = {
 }
 
 
-# ==================== 兼容工具 ====================
-
-def extract_list_field(data, field_name):
-    """
-    兼容多种 JSON 根结构，提取指定字段的列表：
-      1) dict 且含 field_name 列表  -> 直接返回
-      2) dict 且字段散落在其它位置 -> 深度查找
-      3) list                      -> 遍历其中 dict，合并它们的 field_name
-    返回: list
-    """
-    result = []
-
-    def _collect(obj, depth=0):
-        if depth > 6:
-            return
-        if isinstance(obj, dict):
-            val = obj.get(field_name)
-            if isinstance(val, list):
-                result.extend(val)
-        elif isinstance(obj, list):
-            for sub in obj:
-                _collect(sub, depth + 1)
-
-    if isinstance(data, dict):
-        if isinstance(data.get(field_name), list):
-            return data[field_name]
-        _collect(data)
-        return result
-
-    if isinstance(data, list):
-        _collect(data)
-        return result
-
-    return result
-
-
-# ==================== 原有工具函数 ====================
+# ==================== 原有工具函数（完整保留） ====================
 
 def normalize_url(url):
     try:
@@ -222,7 +187,7 @@ def ensure_suffix(name):
     return name + ".txt"
 
 
-# ---------- 下载相关 ----------
+# ---------- 下载相关（完整保留） ----------
 def build_headers(ua):
     headers = dict(TVBOX_HEADERS)
     headers["User-Agent"] = (
@@ -275,7 +240,7 @@ def derive_filename(base_name, url):
     return ensure_suffix(base_name)
 
 
-# ---------- 核心：下载单个直播源 ----------
+# ---------- 核心：下载单个直播源（完整保留） ----------
 def download_one(live, _chain=None):
     name = live["name"]
     orig_url = live["url"]
@@ -318,7 +283,7 @@ def download_one(live, _chain=None):
     return True, size, disk_filename, final_url
 
 
-# ---------- 扫描与聚合 ----------
+# ---------- 扫描与聚合（完整保留） ----------
 def scan_interfaces():
     print("\n[1/6] 扫描接口文件，提取 lives ...")
     all_lives = []
@@ -328,56 +293,45 @@ def scan_interfaces():
         print(f"  目录不存在: {SCAN_DIR}")
         return all_lives
 
-    skip_names = {AGGREGATE_JSON.name, CJ_AGG_JSON.name, PY_AGG_JSON.name}
-
     for json_file in SCAN_DIR.glob("*.json"):
-        if json_file.name in skip_names:
+        if json_file.name == AGGREGATE_JSON.name:
             continue
-
         source = json_file.stem
-        print(f"  正在处理: {json_file.name}")
-
         try:
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
+        except (json.JSONDecodeError, Exception) as e:
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
-        try:
-            lives = extract_list_field(data, "lives")
-            if not lives:
-                print(f"  {json_file.name}: 无 lives 字段，跳过")
+        lives = data.get("lives", [])
+        if not isinstance(lives, list):
+            continue
+
+        valid = 0
+        for item in lives:
+            if not isinstance(item, dict):
+                continue
+            item_name = item.get("name", "").strip()
+            item_url = item.get("url", "").strip()
+            if not item_name or not item_url:
+                continue
+            if not item_url.startswith(("http://", "https://")):
                 continue
 
-            valid = 0
-            for item in lives:
-                if not isinstance(item, dict):
-                    continue
-                item_name = str(item.get("name", "")).strip()
-                item_url = str(item.get("url", "")).strip()
-                if not item_name or not item_url:
-                    continue
-                if not item_url.startswith(("http://", "https://")):
-                    continue
+            norm = normalize_url(item_url)
+            if norm in used_urls:
+                continue
+            used_urls.add(norm)
 
-                norm = normalize_url(item_url)
-                if norm in used_urls:
-                    continue
-                used_urls.add(norm)
-
-                all_lives.append({
-                    "name": item_name,
-                    "url": item_url,
-                    "ua": item.get("ua", ""),
-                    "source": source,
-                })
-                valid += 1
-
-            print(f"  {json_file.name}: {valid} 条")
-        except Exception as e:
-            print(f"  {json_file.name} 解析异常，跳过: {e}")
-            continue
+            all_lives.append({
+                "name": item_name,
+                "url": item_url,
+                "ua": item.get("ua", ""),
+                "source": source,
+            })
+            valid += 1
+        print(f"  {json_file.name}: {valid} 条")
 
     print(f"  合计（去重后）: {len(all_lives)}")
     return all_lives
@@ -471,7 +425,7 @@ def generate_livelist(lives, results):
     print(f"  更新: {len(new_records)}, 保留旧记录: {preserved}")
 
 
-# ==================== sites 相关 ====================
+# ==================== 新增功能 ====================
 
 def scan_sites_all():
     """扫描所有接口JSON的sites数组，提取 type 0/1 和 .py 结尾的站"""
@@ -481,66 +435,60 @@ def scan_sites_all():
     cj_urls = set()
     py_urls = set()
 
-    skip_names = {AGGREGATE_JSON.name, CJ_AGG_JSON.name, PY_AGG_JSON.name}
-
     for json_file in SCAN_DIR.glob("*.json"):
-        if json_file.name in skip_names:
+        # 跳过聚合输出自身，避免循环
+        if json_file.name in {AGGREGATE_JSON.name, CJ_AGG_JSON.name, PY_AGG_JSON.name}:
             continue
-
         try:
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
+        except (json.JSONDecodeError, Exception) as e:
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
-        try:
-            sites = extract_list_field(data, "sites")
-            if not sites:
+        sites = data.get("sites", [])
+        if not isinstance(sites, list):
+            continue
+
+        for s in sites:
+            if not isinstance(s, dict):
+                continue
+            key = str(s.get("key", "")).strip()
+            name = str(s.get("name", "")).strip()
+            stype = s.get("type")
+            api = str(s.get("api", "")).strip()
+
+            if not key or not name or not api:
                 continue
 
-            for s in sites:
-                if not isinstance(s, dict):
+            norm_api = normalize_url(api)
+
+            # type 0/1 -> 采集站
+            if stype in (0, 1):
+                if norm_api in cj_urls:
                     continue
-                key = str(s.get("key", "")).strip()
-                name = str(s.get("name", "")).strip()
-                stype = s.get("type")
-                api = str(s.get("api", "")).strip()
+                cj_urls.add(norm_api)
+                cj_items.append({
+                    "key": key,
+                    "name": name,
+                    "type": int(stype),
+                    "api": api,
+                })
 
-                if not key or not name or not api:
+            # api 以 .py 结尾
+            if api.lower().endswith(".py"):
+                if norm_api in py_urls:
                     continue
-
-                norm_api = normalize_url(api)
-
-                # type 0/1 -> 采集站
-                if stype in (0, 1):
-                    if norm_api in cj_urls:
-                        continue
-                    cj_urls.add(norm_api)
-                    cj_items.append({
-                        "key": key,
-                        "name": name,
-                        "type": int(stype),
-                        "api": api,
-                    })
-
-                # api 以 .py 结尾
-                if api.lower().endswith(".py"):
-                    if norm_api in py_urls:
-                        continue
-                    py_urls.add(norm_api)
-                    py_items.append({
-                        "key": key,
-                        "name": name,
-                        "type": int(stype) if isinstance(stype, int) else 3,
-                        "api": api,
-                        "searchable": 1,
-                        "quickSearch": 1,
-                        "filterable": 1,
-                    })
-        except Exception as e:
-            print(f"  {json_file.name} sites 解析异常，跳过: {e}")
-            continue
+                py_urls.add(norm_api)
+                py_items.append({
+                    "key": key,
+                    "name": name,
+                    "type": int(stype) if isinstance(stype, int) else 3,
+                    "api": api,
+                    "searchable": 1,
+                    "quickSearch": 1,
+                    "filterable": 1,
+                })
 
     print(f"  采集站(type 0/1): {len(cj_items)} 条")
     print(f"  py站(.py): {len(py_items)} 条")
@@ -562,6 +510,7 @@ def write_text_list(path, items):
         line = f"{it['key']}|{it['name']}|type: {it['type']}|api: {it['api']}"
         new_records[it['key']] = line
 
+    # 合并：新的覆盖旧的，旧的未覆盖的保留
     final_lines = list(new_records.values())
     for k, line in old_records.items():
         if k not in new_records:
@@ -570,12 +519,12 @@ def write_text_list(path, items):
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(final_lines) + "\n")
 
-    preserved = max(0, len(old_records) - len(new_records))
-    print(f"  -> {path.name} (新增 {len(new_records)}, 保留旧 {preserved})")
+    print(f"  -> {path.name} (新增 {len(new_records)}, 保留旧 {len(old_records)-len(new_records)})")
 
 
 def build_agg_json(path, new_sites):
     """将站点列表插入模板，输出聚合JSON，旧文件中的非模板站点保留"""
+    # 读旧文件或初始化模板
     if path.exists():
         try:
             cfg = json.loads(path.read_text(encoding="utf-8"))
@@ -584,17 +533,21 @@ def build_agg_json(path, new_sites):
     else:
         cfg = json.loads(json.dumps(TEMPLATE_CONFIG, ensure_ascii=False))
 
+    # 确保 sites 字段存在
     if "sites" not in cfg or not isinstance(cfg["sites"], list):
         cfg["sites"] = []
 
+    # 用 key 做去重映射
     site_map = {}
     for s in cfg["sites"]:
         if isinstance(s, dict) and s.get("key"):
             site_map[s["key"]] = s
 
+    # 新站点覆盖同名
     for s in new_sites:
         site_map[s["key"]] = s
 
+    # 保持原顺序 + 新站追加
     ordered = []
     seen = set()
     for s in cfg["sites"]:
@@ -651,6 +604,7 @@ def main():
     write_text_list(PY_LIST_PATH, py_items)
     build_agg_json(PY_AGG_JSON, py_items)
 
+    # 采集站转成标准格式后插入模板
     cj_sites_for_json = []
     for it in cj_items:
         cj_sites_for_json.append({

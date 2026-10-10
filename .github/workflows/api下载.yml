@@ -1,12 +1,12 @@
-name: 每日聚合TVBox直播源
+name: 每日更新接口
 
 on:
   schedule:
-    - cron: "0 18 * * *"   # UTC 18:00 = 北京时间次日 02:00
+    - cron: "5 16 * * *"   # UTC 16:05 = 北京时间次日 00:05
   workflow_dispatch:
     inputs:
       force:
-        description: "强制执行（忽略日期/频率限制，立即运行）"
+        description: "强制执行（传递给脚本，立即运行）"
         required: false
         type: boolean
         default: false
@@ -39,22 +39,18 @@ jobs:
       - name: 安装依赖
         run: pip install requests urllib3
 
-      - name: 运行 live下载器
+      - name: 运行 tvbox_get_api
         run: |
           ARGS=""
-          if [ "${{ github.event.inputs.debug }}" = "true" ]; then
-            ARGS="$ARGS --debug"
-          fi
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            ARGS="$ARGS --force"
-          fi
-          python python/live下载器.py $ARGS
+          ${{ github.event.inputs.debug == 'true' && 'ARGS="$ARGS --debug"' || '' }}
+          ${{ github.event.inputs.force == 'true' && 'ARGS="$ARGS --force"' || '' }}
+          python python/tvbox_get_api.py $ARGS
 
       - name: 提交产物
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash
-          git add tvbox/ livelist.txt
-          git commit -m "chore(live): 每日更新直播源 $(TZ='CST-8' date +%Y-%m-%d)" || echo "no changes"
+          git add tvbox/ list.txt
+          git commit -m "chore(api): 每日更新接口 $(TZ='CST-8' date +%Y-%m-%d)" || echo "no changes"
           git push
