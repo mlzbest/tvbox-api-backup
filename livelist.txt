@@ -1,11 +1,11 @@
-Guovin.m3u|20261025|387.1K|https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u|菠菜pro|null|
-综合直播.php|20261025|41.9K|http://193.123.86.190:14888/TV/iptv.php|嗷呜|bingcha/1.1 (mianfeifenxiang)|
-虎牙一起看.m3u|20261025|201.0K|https://sub.ottiptv.cc/huyayqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-斗鱼一起看.m3u|20261025|171.0K|https://sub.ottiptv.cc/douyuyqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-B站直播.m3u|20261025|61.6K|https://sub.ottiptv.cc/bililive.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-YY轮播.m3u|20261025|110.8K|https://sub.ottiptv.cc/yylunbo.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-Yoursmile.txt|20261025|114.3K|https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt|南风|okhttp/3.15|
-Kimentanm1线.m3u|20261025|21.4K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|饭太硬|null|
+Guovin.m3u|20261026|387.1K|https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u|菠菜pro|null|
+综合直播.php|20261026|41.9K|http://193.123.86.190:14888/TV/iptv.php|嗷呜|bingcha/1.1 (mianfeifenxiang)|
+虎牙一起看.m3u|20261026|196.4K|https://sub.ottiptv.cc/huyayqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+斗鱼一起看.m3u|20261026|171.2K|https://sub.ottiptv.cc/douyuyqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+B站直播.m3u|20261026|31.4K|https://sub.ottiptv.cc/bililive.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+YY轮播.m3u|20261026|110.6K|https://sub.ottiptv.cc/yylunbo.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+Yoursmile.txt|20261026|114.3K|https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt|南风|okhttp/3.15|
+Kimentanm1线.m3u|20261026|21.4K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|饭太硬|null|
 Kimentanm.m3u|20261024|21.4K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|饭太硬|null|
 范明明需开启V6网络.m3u|20260915|12.5K|https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u|饭太硬5线|null|
 驸马影视电信专线.m3u|20260915|17.0K|http://fmys.top/lib/live.m3u|驸马|null|
