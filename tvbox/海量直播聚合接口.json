@@ -1,44 +1,50 @@
 {
   "lives": [
     {
-      "name": "Guovin",
-      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "name": "综合直播",
+      "url": "http://193.123.86.190:14888/TV/iptv.php",
+      "ua": "bingcha/1.1 (mianfeifenxiang)",
+      "source": "饭太硬"
+    },
+    {
+      "name": "牛播一",
+      "url": "http://127.0.0.1:9978/proxy?do=cctva",
       "ua": "",
-      "source": "菠菜pro"
+      "source": "饭太硬"
     },
     {
       "name": "Kimentanm",
-      "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "ua": "",
-      "source": "嗷呜"
-    },
-    {
-      "name": "综合直播",
-      "url": "http://193.123.86.190:14888/TV/iptv.php",
-      "ua": "bingcha/1.1 (mianfeifenxiang) ",
-      "source": "嗷呜"
+      "source": "饭太硬"
     },
     {
       "name": "虎牙一起看",
       "url": "https://sub.ottiptv.cc/huyayqk.m3u",
       "ua": "okHttp/Mod-1.5.0.0",
-      "source": "嗷呜"
+      "source": "饭太硬"
     },
     {
       "name": "斗鱼一起看",
       "url": "https://sub.ottiptv.cc/douyuyqk.m3u",
       "ua": "okHttp/Mod-1.5.0.0",
+      "source": "饭太硬"
+    },
+    {
+      "name": "YY轮播",
+      "url": "https://sub.ottiptv.cc/yylunbo.m3u",
+      "ua": "okHttp/Mod-1.5.0.0",
+      "source": "饭太硬"
+    },
+    {
+      "name": "Kimentanm1线",
+      "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "ua": "",
       "source": "嗷呜"
     },
     {
       "name": "B站直播",
       "url": "https://sub.ottiptv.cc/bililive.m3u",
-      "ua": "okHttp/Mod-1.5.0.0",
-      "source": "嗷呜"
-    },
-    {
-      "name": "YY轮播",
-      "url": "https://sub.ottiptv.cc/yylunbo.m3u",
       "ua": "okHttp/Mod-1.5.0.0",
       "source": "嗷呜"
     },
@@ -49,16 +55,10 @@
       "source": "南风"
     },
     {
-      "name": "牛播一",
-      "url": "http://127.0.0.1:9978/proxy?do=cctva",
+      "name": "Guovin",
+      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
       "ua": "",
-      "source": "饭太硬"
-    },
-    {
-      "name": "Kimentanm1线",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "ua": "",
-      "source": "饭太硬"
+      "source": "菠菜pro"
     }
   ]
 }
