@@ -16,7 +16,7 @@
       "key": "短剧┃搜索1",
       "name": "🏠短剧┃搜1",
       "type": 3,
-      "api": "https://mpimg.cn/down.php/7e246e896fa4cf52866921b818d7e8cb.py",
+      "api": "https://mpimg.cn/down.php/7e246e896fa4cf52866921b8d7e8cb.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -25,7 +25,7 @@
       "key": "短剧搜索",
       "name": "🏠短剧┃搜2",
       "type": 3,
-      "api": "https://mpimg.cn/down.php/18b8bebbf7b64d39a1e3a90c83a86642.py",
+      "api": "https://mpimg.cn/down.php/18b8bebbf7b64d39a1e3a90c83a866.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -34,7 +34,7 @@
       "key": "fy",
       "name": "♨️枫叶｜免扫",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/fy.py",
+      "api": "https://0.12yue.de5.net/5/lib/fy.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -43,7 +43,7 @@
       "key": "华数",
       "name": "🌀华数┃1920",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/华数.py",
+      "api": "https://0.12yue.de5.net/5/lib/华数.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -52,7 +52,7 @@
       "key": "七猫短剧",
       "name": "🎬七猫┃短剧",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qmdj.py",
+      "api": "https://0.12yue.de5.net/5/lib/qmdj.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -61,7 +61,7 @@
       "key": "七星短剧",
       "name": "🎬七星丨短剧",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qxdj.py",
+      "api": "https://0.12yue.de5.net/5/lib/qxdj.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -70,7 +70,7 @@
       "key": "星芽短剧",
       "name": "🎬星芽┃短剧",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/星芽短剧.py",
+      "api": "https://0.12yue.de5.net/5/lib/星芽短剧.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -79,25 +79,25 @@
       "key": "爱听音乐",
       "name": "📻爱听┃音乐",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/爱听音乐.py",
+      "api": "https://0.12yue.de5.net/5/lib/爱听音乐.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
       "key": "网络直播",
-      "name": "📺网络┃点播",
+      "name": "📺网络┃直播",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/网络直播.py",
+      "api": "https://0.12yue.de5.net/5/lib/网络直播.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
       "key": "哔哩直播",
-      "name": "📺哔哩┃点播",
+      "name": "📺哔哩┃直播",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/哔哩直播.py",
+      "api": "https://0.12yue.de5.net/5/lib/哔哩直播.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
