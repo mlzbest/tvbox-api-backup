@@ -1,9 +1,9 @@
-Yoursmile.txt|20261105|113.6K|https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt|南风|okhttp/3.15|
+Yoursmile.txt|20261105|112.9K|https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt|南风|okhttp/3.15|
 综合直播.php|20261105|41.9K|http://193.123.86.190:14888/TV/iptv.php|嗷呜|bingcha/1.1 (mianfeifenxiang)|
-虎牙一起看.m3u|20261105|199.8K|https://sub.ottiptv.cc/huyayqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-斗鱼一起看.m3u|20261105|169.6K|https://sub.ottiptv.cc/douyuyqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-B站直播.m3u|20261105|36.4K|https://sub.ottiptv.cc/bililive.m3u|嗷呜|okHttp/Mod-1.5.0.0|
-YY轮播.m3u|20261105|110.8K|https://sub.ottiptv.cc/yylunbo.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+虎牙一起看.m3u|20261105|197.4K|https://sub.ottiptv.cc/huyayqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+斗鱼一起看.m3u|20261105|167.0K|https://sub.ottiptv.cc/douyuyqk.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+B站直播.m3u|20261105|27.4K|https://sub.ottiptv.cc/bililive.m3u|嗷呜|okHttp/Mod-1.5.0.0|
+YY轮播.m3u|20261105|109.0K|https://sub.ottiptv.cc/yylunbo.m3u|嗷呜|okHttp/Mod-1.5.0.0|
 Kimentanm1线.m3u|20261105|21.4K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|饭太硬|null|
 Guovin.m3u|20261105|387.1K|https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u|菠菜pro|null|
 Kimentanm.m3u|20261103|21.4K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|饭太硬|null|
