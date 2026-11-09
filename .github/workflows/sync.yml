@@ -28,9 +28,21 @@ jobs:
           git fetch --depth=1 source main
           echo "源仓库最新提交: $(git log source/main -1 --format='%h %s')"
 
-      - name: 用源仓库内容覆盖（保留本仓库独有文件如 sync.yml）
+      - name: 用源仓库内容覆盖（保留本仓库聚合产出与自有 workflow）
         run: |
-          git checkout source/main -- . ':(exclude).github/workflows'
+          # 排除项说明：
+          #   .github/workflows  -> 保留本仓库自己的工作流定义
+          #   tvbox/ list.txt    -> apidownload / livedownload 的产出
+          #   livelist.txt       -> livedownload 的产出
+          #   ry/                -> rydownload 的产出
+          # 除上述聚合产出外，其余静态文件（api_list.json、apilinks.txt、
+          # config.json、index.html、python/ 等）均按源站镜像覆盖。
+          git checkout source/main -- . \
+            ':(exclude).github/workflows' \
+            ':(exclude)tvbox' \
+            ':(exclude)list.txt' \
+            ':(exclude)livelist.txt' \
+            ':(exclude)ry'
           git add -A
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,7 +50,7 @@ jobs:
             echo "✅ 源仓库无新变更，跳过提交" >> $GITHUB_STEP_SUMMARY
           else
             git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M')]"
-            # 先 pull --rebase 避免冲突
+            # 不再使用 || true 吞掉 rebase 错误；若仍冲突会如实失败便于排查
             git pull --rebase --autostash origin main
             git push
             echo "✅ 已同步源仓库至 $(git log source/main -1 --format='%h')" >> $GITHUB_STEP_SUMMARY
