@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="color-scheme" content="light">
+  <title>系统提示</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; overflow: hidden; background: #eef2f7; color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .app-modal-mask { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 9999; background: rgba(238, 242, 247, 0.85); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .app-modal-box { background: #fff; width: 100%; max-width: 340px; max-height: 90vh; border-radius: 20px; box-shadow: 0 10px 40px rgba(10, 26, 43, 0.15); overflow: hidden; display: flex; flex-direction: column; transform: scale(0.9); opacity: 0; animation: modalIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+    @keyframes modalIn { to { transform: scale(1); opacity: 1; } }
+    .app-modal-header { padding: 24px 20px 10px; text-align: center; flex: 0 0 auto; }
+    .app-modal-icon { font-size: 48px; line-height: 1; margin-bottom: 12px; display: block; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    .app-modal-title { font-size: 1.15rem; font-weight: 700; color: #0a1a2b; margin-bottom: 8px; }
+    .app-modal-content { padding: 0 24px 20px; text-align: center; color: #5a6f88; font-size: 0.88rem; line-height: 1.6; flex: 1 1 auto; min-height: 0; }
+    .app-modal-content strong { color: #0a1a2b; font-weight: 600; }
+    .app-modal-content .highlight { color: #e08a00; font-weight: 600; }
+    .app-modal-footer { padding: 0 20px 24px; display: flex; flex-direction: column; gap: 12px; flex: 0 0 auto; }
+    .btn-primary { display: flex; align-items: center; justify-content: center; width: 100%; height: 46px; background: #4a9eff; color: #fff; border: none; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3); }
+    .btn-primary:active { transform: scale(0.96); background: #2a7ed9; box-shadow: 0 2px 6px rgba(74, 158, 255, 0.2); }
+    .step { display: none; animation: fadeIn 0.3s forwards; }
+    .step.active { display: flex; flex-direction: column; min-height: 0; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* 风险声明页 */
+    .app-modal-content.scrollable { overflow-y: auto; -webkit-overflow-scrolling: touch; text-align: left; padding-left: 20px; padding-right: 20px; }
+    .app-modal-content.scrollable::-webkit-scrollbar { width: 4px; }
+    .app-modal-content.scrollable::-webkit-scrollbar-thumb { background: #d4dbe5; border-radius: 4px; }
+    .warn-badge { display: inline-block; background: #fff4e5; color: #d97706; font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .warn-item { display: flex; gap: 8px; margin-bottom: 12px; font-size: 0.82rem; line-height: 1.65; }
+    .warn-item .dot { flex: 0 0 18px; height: 18px; line-height: 18px; text-align: center; font-size: 0.7rem; margin-top: 1px; }
+    .warn-item.red .dot { color: #e5484d; }
+    .warn-item.blue .dot { color: #4a9eff; }
+    .warn-item.amber .dot { color: #e08a00; }
+    .warn-item b { color: #0a1a2b; }
+    .warn-note { background: #f7f9fc; border-left: 3px solid #ffb020; border-radius: 6px; padding: 8px 10px; font-size: 0.76rem; color: #7a8fa3; line-height: 1.6; }
+
+    /* 白嫖宣言页 */
+    .baipiao-quote { font-size: 0.95rem; font-weight: 700; color: #4a9eff; line-height: 1.6; margin: 4px 0 2px; }
+    .baipiao-em { color: #0a1a2b; font-weight: 700; }
+
+    /* 完成页 · 提示次数 */
+    .quota-card { background: linear-gradient(180deg, #f8fbff 0%, #eff6fe 100%); border: 1px solid #e0ecfa; border-radius: 14px; padding: 18px 14px; text-align: center; }
+    .quota-main { font-size: 0.92rem; font-weight: 700; color: #0a1a2b; line-height: 1.55; }
+    .quota-main b { color: #e08a00; }
+    .quota-main.done b { color: #16a34a; }
+    .quota-sub { margin-top: 7px; font-size: 0.74rem; color: #8b9eb0; }
+    .quota-sub b { color: #5a6f88; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <div class="app-modal-mask">
+    <div class="app-modal-box">
+      <div class="step active" id="step1">
+        <div class="app-modal-header" style="padding-bottom: 6px;">
+          <span class="app-modal-icon">⚠️</span>
+          <div class="app-modal-title">风险告警 · 爬虫程序</div>
+        </div>
+        <div class="app-modal-content scrollable">
+          <div style="text-align:center;"><span class="warn-badge">第 1 / 2 页 · 请务必阅读并理解</span></div>
+          <div class="warn-item red"><span class="dot">●</span><span><b>接口由爬虫程序采集。</b>本站所有接口均来自网络整理，由爬虫程序自动抓取备份，<b>非人工审核</b>，内容来源第三方，<b>不保证可用性、准确性、时效性与安全性</b>，接口失效、变更、报错均属正常现象。</span></div>
+          <div class="warn-item amber"><span class="dot">●</span><span><b>爬虫接口存在风险。</b>爬虫接口可能携带失效链接、跳转广告、恶意脚本或不良内容，由此导致的设备异常、隐私泄露、财产损失等后果，<b>需由使用者自行承担</b>。</span></div>
+          <div class="warn-item blue"><span class="dot">●</span><span><b>发布渠道与性质。</b>本网站发布于全球最大的代码交流社区 <b>GitHub</b>，属于<b>开发者与发烧友的测试、交流、学习用途</b>，<b>不构成任何商业服务</b>，请勿用于任何非法用途。</span></div>
+          <div class="warn-note">看不懂以上风险提示的，请直接关闭页面退出。本站完全免费、无任何收费项目，也请勿向任何人付费购买本站资源。</div>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" id="riskBtn" onclick="goStep(2)">我已了解，继续</button>
+        </div>
+      </div>
+
+      <div class="step" id="step2">
+        <div class="app-modal-header" style="padding-bottom: 6px;">
+          <span class="app-modal-icon">⚖️</span>
+          <div class="app-modal-title">风险告警 · 法律法规</div>
+        </div>
+        <div class="app-modal-content scrollable">
+          <div style="text-align:center;"><span class="warn-badge">第 2 / 2 页 · 请务必阅读并理解</span></div>
+          <div class="warn-item red"><span class="dot">●</span><span><b>未成年人提示。</b>本站内容不适合未成年人浏览，<b>建议未成年人立即退出</b>；确需使用的，应<b>先取得监护人明确同意</b>，并在监护人陪同下使用。</span></div>
+          <div class="warn-item blue"><span class="dot">●</span><span><b>二次创作与分发须知。</b>对本站资源进行<b>二创、转载或分发</b>时，<b>必须遵守你所在国家或地区的法律法规</b>及相关政策规定；因违反当地法律产生的<b>一切法律责任由行为人自行承担</b>，本站不提供也不背书任何超出法律法规允许范围的内容。</span></div>
+          <div class="warn-item amber"><span class="dot">●</span><span><b>合规使用声明。</b>请勿将本站接口用于<b>传播违法信息、侵犯他人知识产权、绕过合法订阅付费</b>等违规违法行为；由此引发的一切法律后果，与本网站及开发者无关。</span></div>
+          <div class="warn-item amber"><span class="dot">●</span><span><b>风险自负。</b>点击“我已了解”即视为你已充分理解并接受上述全部风险，<b>继续使用所产生的一切后果由你自行承担</b>，本站及开发者不承担任何责任。</span></div>
+          <div class="warn-note">如果你不同意上述任何一条，请立即关闭页面退出。</div>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" id="riskBtn2" onclick="goStep(3)">我已了解，继续</button>
+        </div>
+      </div>
+
+      <div class="step" id="step3">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">🕊️</span>
+          <div class="app-modal-title">白嫖宣言</div>
+        </div>
+        <div class="app-modal-content">
+          <p><strong>站长是个资深白嫖客</strong>，<br>100% 鼓励并赞成白嫖资源！</p>
+          <br>
+          <p>站长的口号是：</p>
+          <p class="baipiao-quote">“如果白嫖有门槛，就是对白嫖的不尊重！”</p>
+          <br>
+          <p>在这里，除了你自己的电费和网费，<br>我不允许你多花 1 分钱！</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="goStep(4)">继续</button>
+        </div>
+      </div>
+
+      <div class="step" id="step4">
+        <div class="app-modal-header" style="padding-bottom: 6px;">
+          <span class="app-modal-icon">👍</span>
+          <div class="app-modal-title">致敬白嫖精神</div>
+        </div>
+        <div class="app-modal-content">
+          <div class="quota-card">
+            <p class="quota-main" id="quotaMain">风险告警提示 3 次，<b>还有 2 次</b></p>
+            <p class="quota-sub" id="quotaSub">第 <b>1</b> 次 / 共 <b>3</b> 次</p>
+          </div>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="closeGuide()">确认并进入站点</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* 清理地址栏：弹窗过程中始终只显示纯域名，不出现 /guide.html 与 ?t= 参数 */
+    function cleanUrl() {
+      try {
+        const dir = window.location.pathname.replace(/[^\/]*$/, '');
+        const clean = dir + window.location.hash;
+        if (window.location.pathname !== dir || window.location.search) {
+          window.history.replaceState(null, '', clean);
+        }
+      } catch (e) {}
+    }
+    cleanUrl();
+    window.addEventListener('pageshow', cleanUrl);
+    window.addEventListener('popstate', cleanUrl);
+
+    const STATE_KEY = 'guide_prompt_state';
+    const MAX_TIMES = 3;
+    const DAY_MS = 24 * 60 * 60 * 1000;
+
+    /* 三个周期：每日 / 每周 / 每月，各自 3 次 */
+    const PHASES = {
+      daily:   { days: 1 },
+      weekly:  { days: 7 },
+      monthly: { days: 30 }
+    };
+
+    function getState() {
+      let s = null;
+      try { s = JSON.parse(localStorage.getItem(STATE_KEY) || 'null'); } catch (e) { s = null; }
+      if (!s || typeof s !== 'object') s = { phase: 'daily', count: 0, lastShow: 0 };
+      if (!PHASES[s.phase]) s.phase = 'daily';
+      if (typeof s.count !== 'number' || !isFinite(s.count) || s.count < 0) s.count = 0;
+      if (!s.lastShow) s.lastShow = 0;
+      return s;
+    }
+
+    function saveState(s) {
+      try { localStorage.setItem(STATE_KEY, JSON.stringify(s)); } catch (e) {}
+    }
+
+    /* 周期到期后额度自动重置，保证“还剩 N 次”始终准确 */
+    function resetIfNewPeriod(s) {
+      const days = PHASES[s.phase].days;
+      if (s.lastShow && (Date.now() - s.lastShow) / DAY_MS >= days && s.count > 0) {
+        s.count = 0;
+        saveState(s);
+      }
+      return s;
+    }
+
+    /* 渲染最后一步的次数提示 */
+    function renderQuota() {
+      const state = resetIfNewPeriod(getState());
+      const nth = Math.min(state.count + 1, MAX_TIMES);
+      const left = Math.max(0, MAX_TIMES - nth);
+
+      const main = document.getElementById('quotaMain');
+      if (left > 0) {
+        main.className = 'quota-main';
+        main.innerHTML = '风险告警提示 ' + MAX_TIMES + ' 次，<b>还有 ' + left + ' 次</b>';
+      } else {
+        main.className = 'quota-main done';
+        main.innerHTML = '风险告警提示 ' + MAX_TIMES + ' 次，<b>本次已完成</b>';
+      }
+
+      document.getElementById('quotaSub').innerHTML =
+        '第 <b>' + nth + '</b> 次 / 共 <b>' + MAX_TIMES + '</b> 次';
+    }
+
+    function goStep(step) {
+      document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById('step' + step);
+      if (target) target.classList.add('active');
+      if (step === 4) renderQuota();
+      cleanUrl();
+    }
+
+    function closeGuide() {
+      const state = resetIfNewPeriod(getState());
+      state.count = Math.min(state.count + 1, MAX_TIMES);
+      state.lastShow = Date.now();
+      saveState(state);
+
+      sessionStorage.removeItem('guide_pending_time');
+      window.location.replace('index.html?t=' + Date.now());
+    }
+
+    /* 启动：仅在 index.html 正常引导跳转过来时展示，直接访问或已完成则回首页 */
+    (function init() {
+      const pendingTime = sessionStorage.getItem('guide_pending_time');
+      const now = Date.now();
+
+      if (!pendingTime || (now - Number(pendingTime) > 10 * 60 * 1000)) {
+        window.location.replace('index.html?t=' + now);
+        return;
+      }
+
+      const state = resetIfNewPeriod(getState());
+      if (state.count >= MAX_TIMES) {
+        sessionStorage.removeItem('guide_pending_time');
+        window.location.replace('index.html?t=' + now);
+        return;
+      }
+
+      goStep(1);
+    })();
+
+    document.querySelector('.app-modal-mask').addEventListener('click', function (e) {
+      if (e.target === this) return;
+    });
+  </script>
+</body>
+</html>

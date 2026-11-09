@@ -2,8 +2,7 @@
 
 API_LIST = [
     ["更新专用接口", "https://0.12yue.de5.net/tvbox/更新专用接口.json"],
-    ["菠菜pro", "https://0.12yue.de5.net/5/x4pro.json"],
-    ["幸福年年", "http://150.158.52.248/tgyg/bbm.json"],
+    ["菠菜pro", "https://0.12yue.de5.net/5/x4pro.json"]
 ]
 
 API_MIRRORS = {

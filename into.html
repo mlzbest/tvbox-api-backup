@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>海量接口搬运备份</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:#eef2f7;color:#1a2b3d;padding:20px 14px 10px;min-height:100vh;
+  display:flex;flex-direction:column;-webkit-tap-highlight-color:transparent;
+}
+.container{max-width:820px;margin:auto;width:100%;flex:1;display:flex;flex-direction:column}
+
+.header-block{text-align:center;margin-bottom:18px}
+h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
+.version-tag{
+  display:inline-block;font-size:.66rem;font-weight:600;color:#4a9eff;
+  background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
+  padding:1px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.3px;
+}
+.header-divider{height:1px;background:#e4ebf3;margin:12px 0}
+.subtitle{font-size:.78rem;color:#7a8fa3;line-height:1.6}
+.qq-link{color:#4a9eff;text-decoration:none;font-weight:600}
+.qq-link:active{opacity:.7}
+
+.status-card{
+  background:#fff;border-radius:8px;padding:16px 18px;
+  border:1px solid #d4dbe5;margin-bottom:16px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:150px;
+}
+.status-text{
+  font-size:.88rem;color:#2563eb;line-height:24px;
+  width:100%;height:48px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.countdown{color:#10b981;font-weight:700;font-size:1.05rem;line-height:24px}
+
+.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap;height:36px;align-items:center}
+.btn-stay,.btn-goto{
+  border:none;border-radius:40px;padding:8px 18px;font-size:.8rem;font-weight:500;
+  cursor:pointer;transition:background .15s,transform .1s;touch-action:manipulation;
+  -webkit-user-select:none;user-select:none;flex:0 1 auto;min-width:100px;
+}
+.btn-stay{background:#eef2f7;color:#3a5a7a;border:1px solid #cbd5e1}
+.btn-stay:active{background:#d9e2ec;transform:scale(.96)}
+.btn-goto{background:#4a9eff;color:#fff;box-shadow:0 2px 6px rgba(74,158,255,.3)}
+.btn-goto:active{background:#2a7ed9;transform:scale(.96)}
+
+.domains-card{background:#fff;border-radius:8px;padding:18px 18px 14px;border:1px solid #d4dbe5}
+.domains-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
+.domains-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
+
+.merged-card{
+  background:#fff;border-radius:8px;padding:16px 18px 14px;
+  border:1px solid #d4dbe5;margin-bottom:16px;
+}
+
+.batch-jump-bar{display:flex;justify-content:center;margin-bottom:14px}
+.btn-enter-site{
+  height:44px;padding:0 36px;border:none;border-radius:44px;font-size:.92rem;font-weight:600;
+  cursor:pointer;color:#fff;background:linear-gradient(135deg,#8b5cf6,#6366f1);
+  box-shadow:0 4px 14px rgba(99,102,241,.4);
+  transition:background .15s,transform .1s,box-shadow .15s;
+  touch-action:manipulation;-webkit-user-select:none;user-select:none;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-enter-site:active{transform:scale(.96);box-shadow:0 2px 8px rgba(99,102,241,.3)}
+.btn-enter-site:disabled{background:#cbd5e1;box-shadow:none;cursor:not-allowed;transform:none}
+
+.btn{
+  height:32px;padding:0 16px;border:none;border-radius:6px;font-size:.8rem;font-weight:500;
+  cursor:pointer;color:#fff;background:#4a9eff;white-space:nowrap;touch-action:manipulation;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.btn:active{transform:scale(.96)}
+.btn.primary{background:#2563eb}
+.btn.success{background:#10b981}
+.btn.ghost{background:#fff;color:#5a6f88;border:1px solid #d4dbe5}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+.ctrl-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin-bottom:14px}
+
+.status-bar{
+  display:flex;justify-content:space-between;align-items:center;
+  background:#f7fafd;border:1px solid #e0e8f0;border-radius:8px;
+  padding:10px 14px;margin:0 0 14px 0;font-size:.82rem;
+  flex-wrap:wrap;gap:8px;
+}
+.status-bar .stat{display:flex;gap:14px;flex-wrap:wrap}
+.status-bar .stat span{font-size:.78rem;color:#5a6f88}
+.status-bar .stat b{font-weight:700}
+.b-ok{color:#10b981}.b-fail{color:#ef4444}.b-wait{color:#f59e0b}.b-total{color:#2563eb}
+
+.copy-btn{
+  flex-shrink:0;background:#4a9eff;color:#fff;border:none;border-radius:30px;padding:0 12px;
+  font-size:.68rem;font-weight:500;cursor:pointer;height:26px;
+  display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
+  touch-action:manipulation;-webkit-user-select:none;user-select:none;z-index:1;
+}
+.copy-btn:active{background:#2a7ed9;transform:scale(.96)}
+.copy-btn.copied{background:#3b9b6c}
+
+/* ===== 分组站点样式 ===== */
+#about-domains-list { margin-top: 0; text-align: left; }
+.domain-group-card {
+  background: #f8fafc;
+  border: 1px solid #e4ebf3;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  min-width: 0;
+}
+.domain-group-card:last-child { margin-bottom: 0; }
+.domain-group-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  min-width: 0;
+}
+.domain-group-info { flex: 1; min-width: 0; }
+.domain-group-name {
+  font-size: .85rem;
+  font-weight: 700;
+  color: #0a1a2b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.domain-group-desc {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: .62rem;
+  font-weight: 500;
+  color: #4a9eff;
+  background: #e8f2ff;
+  padding: 2px 10px;
+  border-radius: 50px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.domain-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 50px;
+  margin-top: 6px;
+  min-width: 0;
+}
+.domain-line .url-text {
+  font-size: .75rem;
+  color: #2563eb;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 状态点 & 延迟 */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  flex-shrink: 0;
+  transition: background .2s, box-shadow .2s;
+}
+.domain-line.ok .status-dot { background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.15); }
+.domain-line.fail .status-dot { background:#ef4444; box-shadow:0 0 0 3px rgba(239,68,68,.15); }
+.domain-line.checking .status-dot { background:#f59e0b; box-shadow:0 0 0 3px rgba(245,158,11,.15); }
+.domain-line.fail .url-text { color:#94a3b8; text-decoration:line-through; text-decoration-color:#cbd5e1; }
+.domain-line .lat {
+  flex-shrink:0; font-size:.7rem; color:#7a8fa3;
+  font-variant-numeric:tabular-nums; min-width:52px; text-align:right;
+}
+
+.contact-section{
+  text-align:center;padding:14px 4px 4px;max-width:820px;margin:0 auto;width:100%;
+}
+.contact-section p{margin-top:8px;font-size:.76rem;color:#5a6f88;line-height:1.6}
+.contact-section a{color:#4a9eff;text-decoration:none;font-weight:600;word-break:break-all}
+.contact-section a:active{opacity:.7}
+
+/* ===== 快捷图标行（QQ群 / 微信赞赏 / TG / GitHub） ===== */
+.quick-links {
+  display:flex; justify-content:center; align-items:flex-start;
+  gap:26px; flex-wrap:wrap;
+}
+.quick-item {
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  padding:0; border:none; background:transparent; text-decoration:none;
+  cursor:pointer; -webkit-user-select:none; user-select:none;
+  -webkit-tap-highlight-color:transparent; touch-action:manipulation;
+}
+.quick-icon {
+  width:44px; height:44px; display:block;
+  filter:drop-shadow(0 3px 8px rgba(10,26,43,.16));
+  transition:transform .16s ease, filter .16s ease;
+}
+.quick-item:hover .quick-icon {
+  transform:translateY(-3px);
+  filter:drop-shadow(0 8px 16px rgba(10,26,43,.26));
+}
+.quick-item:active .quick-icon { transform:scale(.93); }
+.quick-label {
+  font-size:.7rem; color:#7a8fa3; line-height:1.2; white-space:nowrap;
+}
+
+.page-footer{
+  text-align:left;padding:8px 4px 10px;font-size:.7rem;color:#8fa3b8;line-height:1.8;
+  margin-top:auto;max-width:820px;margin-left:auto;margin-right:auto;width:100%;
+}
+.page-footer p{word-break:break-word;overflow-wrap:break-word}
+
+.mode-jump{display:block}
+.mode-batch{display:none}
+body.batch-mode .mode-jump{display:none}
+body.batch-mode .mode-batch{display:block}
+
+/* ===== 微信赞赏弹窗 ===== */
+.zsm-modal {
+  position:fixed; inset:0; z-index:999;
+  display:flex; align-items:center; justify-content:center;
+  padding:26px 22px; visibility:hidden; opacity:0;
+  transition:opacity .2s ease, visibility .2s ease;
+}
+.zsm-modal.open { visibility:visible; opacity:1; }
+.zsm-modal-mask {
+  position:absolute; inset:0; background:rgba(10,26,43,.62);
+  -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);
+}
+.zsm-modal-panel {
+  position:relative; width:100%; max-width:330px; background:#fff;
+  border-radius:14px; padding:18px 18px 14px; text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,.32);
+  transform:scale(.9); opacity:0;
+  transition:transform .22s cubic-bezier(.2,.9,.3,1.2), opacity .2s ease;
+}
+.zsm-modal.open .zsm-modal-panel { transform:scale(1); opacity:1; }
+.zsm-modal-panel img {
+  display:block; width:auto; max-width:100%; max-height:56vh; margin:0 auto;
+  border-radius:8px; border:1px solid #e4ebf3; background:#fff;
+}
+.zsm-modal-title {
+  font-size:.82rem; font-weight:700; color:#0a1a2b;
+  margin-bottom:12px; display:flex; align-items:center; justify-content:center; gap:6px;
+}
+.zsm-modal-title svg { width:18px; height:18px; display:block; }
+.zsm-modal-tip { font-size:.72rem; color:#7a8fa3; line-height:1.7; margin-top:12px; }
+.zsm-modal-close {
+  position:absolute; top:-11px; right:-11px; width:32px; height:32px;
+  border:none; border-radius:50%; background:#4a9eff; color:#fff;
+  font-size:19px; line-height:1; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; box-shadow:0 2px 8px rgba(74,158,255,.45);
+  transition:background .15s, transform .08s; touch-action:manipulation;
+}
+.zsm-modal-close:hover { background:#2a7ed9; }
+.zsm-modal-close:active { transform:scale(.9); }
+
+@media (max-width:600px){
+  body{padding:14px 10px 6px}
+  .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
+  .status-bar{flex-direction:column;gap:8px;align-items:flex-start}
+  .btn-stay,.btn-goto{padding:7px 14px;font-size:.75rem;min-width:80px}
+  .btn-enter-site{height:40px;padding:0 28px;font-size:.86rem}
+  .contact-section{padding:10px 4px 2px}
+  .page-footer{padding:6px 4px 8px}
+  .domain-group-card { padding: 12px 12px; }
+  .domain-group-name { font-size: .8rem; }
+  .domain-line { padding: 6px 10px; gap: 6px; }
+  .domain-line .url-text { font-size: .7rem; }
+  .domain-line .lat { min-width: 44px; }
+  .quick-links { gap:18px; }
+  .quick-icon { width:40px; height:40px; }
+  .zsm-modal-panel { max-width:300px; }
+  .zsm-modal-panel img { max-height:52vh; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header-block">
+    <h1>海量接口搬运备份</h1>
+    <div class="header-divider"></div>
+    <p class="subtitle" id="header-subtitle"> 备用数据源，防屏不迷路 
+ <br>
+ <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+  <span style="color:#00C853;">点击</span>
+ </a>
+ </p>
+  </div>
+
+  <!-- 跳转模式（初始显示） -->
+  <div class="mode-jump" id="modeJump">
+    <div class="status-card">
+      <div class="status-text" id="status">正在跳转进入...</div>
+      <div class="action-buttons" id="actionButtons">
+        <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
+        <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
+      </div>
+    </div>
+
+    <div class="domains-card">
+      <div class="domains-title">🌐 备份线路域名</div>
+      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
+      <div id="about-domains-list"></div>
+    </div>
+  </div>
+
+  <!-- 批量模式（分组 + 检测结果） -->
+  <div class="mode-batch" id="modeBatch">
+    <div class="merged-card">
+
+      <div class="batch-jump-bar">
+        <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
+      </div>
+
+      <div class="ctrl-row">
+        <button class="btn primary" id="btnStart">重新检测</button>
+        <button class="btn success" id="btnCopyOK">复制可用</button>
+      </div>
+
+      <div class="status-bar">
+        <div class="stat">
+          <span>总数 <b class="b-total" id="stTotal">0</b></span>
+          <span>可用 <b class="b-ok" id="stOk">0</b></span>
+          <span>失败 <b class="b-fail" id="stFail">0</b></span>
+          <span>等待 <b class="b-wait" id="stWait">0</b></span>
+        </div>
+        <div class="stat">
+          <span id="stMsg">就绪</span>
+        </div>
+      </div>
+
+      <div class="domains-title">🌐 备份线路域名</div>
+      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用（检测结果实时刷新）：</div>
+      <div id="about-domains-list-batch"></div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- 底部快捷图标 -->
+<div class="contact-section">
+  <div class="quick-links">
+    <a class="quick-item" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer" aria-label="QQ 社群">
+      <svg class="quick-icon" fill="#12B7F5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673z"/>
+      </svg>
+      <span class="quick-label">加入Q群</span>
+    </a>
+    <button class="quick-item" type="button" id="zsmBtn" aria-label="微信赞赏">
+      <svg class="quick-icon" fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+      </svg>
+      <span class="quick-label">微信赞赏</span>
+    </button>
+    <a class="quick-item" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer" aria-label="Telegram 群组">
+      <svg class="quick-icon" fill="#26A5E4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.318-.437.87-.663 3.498-1.524 5.83-2.529 6.998-3.015 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+      </svg>
+      <span class="quick-label">TG群组</span>
+    </a>
+    <a class="quick-item" href="https://github.com/lubin776/tvbox-api-backup" target="_blank" rel="noopener noreferrer" aria-label="GitHub 项目">
+      <svg class="quick-icon" fill="#181717" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      <span class="quick-label">GitHub</span>
+    </a>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>
+    本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。
+    仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。
+    如涉及侵权，请联系删除。
+  </p>
+</footer>
+
+<!-- 微信赞赏弹窗 -->
+<div class="zsm-modal" id="zsmModal" aria-hidden="true">
+  <div class="zsm-modal-mask" data-close></div>
+  <div class="zsm-modal-panel" role="dialog" aria-modal="true" aria-label="微信赞赏码">
+    <button class="zsm-modal-close" type="button" data-close aria-label="关闭">×</button>
+    <div class="zsm-modal-title">
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="48" height="48" rx="12" fill="#07C160"/>
+        <path d="M10 26.2 L5.4 32.2 L14.4 29.2 Z" fill="#ffffff"/>
+        <ellipse cx="18.5" cy="19" rx="11.2" ry="9.6" fill="#ffffff" stroke="#07C160" stroke-width="1.8"/>
+        <path d="M37.4 35.8 L42.4 41 L33.6 38.6 Z" fill="#ffffff"/>
+        <ellipse cx="32" cy="30.5" rx="8.8" ry="7.4" fill="#ffffff" stroke="#07C160" stroke-width="1.8"/>
+        <circle cx="14.5" cy="18.3" r="1.75" fill="#07C160"/>
+        <circle cx="22.5" cy="18.3" r="1.75" fill="#07C160"/>
+        <circle cx="28.6" cy="29.9" r="1.45" fill="#07C160"/>
+        <circle cx="35.4" cy="29.9" r="1.45" fill="#07C160"/>
+      </svg>
+      微信赞赏码
+    </div>
+    <img src="./vip/zsm.png" alt="微信赞赏码"
+         onerror="this.outerHTML='&lt;p class=&quot;zsm-modal-tip&quot;&gt;赞赏码图片未找到，请检查 ./vip/zsm.png 是否存在。&lt;/p&gt;';">
+    <p class="zsm-modal-tip">长按图片识别，或保存到相册后扫码</p>
+  </div>
+</div>
+
+<script>
+// ========== 自动跳转目标（当前域名相对路径 /app） ==========
+const CONFIG = {
+  countdownUrls: [
+    window.location.origin + "/app"
+  ]
+};
+
+// 等待多久再跳转（毫秒），不显示倒计时数字
+const JUMP_DELAY_MS = 2000;
+
+// ========== 分组站点数据 ==========
+const DOMAIN_GROUPS = [
+  {
+    name: "误道者站点",
+    desc: "主站线路",
+    domains: [
+      "https://0.wudaozhe.net",
+      "https://0.12yue.de5.net",
+      "https://0.cdz.qzz.io",
+      "https://0.wdzb.eu.cc"
+    ]
+  },
+  {
+    name: "雪衣玉龙站点",
+    desc: "备选线路",
+    domains: [
+      "https://ym.120733.xyz",
+      "https://4.wudaozhe.net"
+    ]
+  },
+  {
+    name: "韧忍仁人站点",
+    desc: "备选线路",
+    domains: [
+      "https://liujin86.ccwu.cc",
+      "https://8.wudaozhe.net"
+    ]
+  },
+  {
+    name: "第五站点",
+    desc: "备选线路",
+    domains: [
+      "https://tvthaox.cc.cd",
+      "https://5.wudaozhe.net"
+    ]
+  },
+  {
+    name: "祥子站点",
+    desc: "备选线路",
+    domains: [
+      "https://nxz.de5.net",
+      "https://6.wudaozhe.net"
+    ]
+  },
+  {
+    name: "第七站点",
+    desc: "备选线路",
+    domains: [
+      "https://tvbox-api.luca.dpdns.org"
+    ]
+  }
+];
+
+const CONCURRENCY = 6;
+const TIMEOUT_SEC = 12;
+
+function noCacheUrl(url) {
+  const sep = url.includes("?") ? "&" : "?";
+  return url + sep + "_t=" + Date.now();
+}
+
+(function clearAllCaches() {
+  if (window.caches && caches.keys) {
+    caches.keys().then(function(keys) {
+      keys.forEach(function(k) { caches.delete(k); });
+    }).catch(function(){});
+  }
+  if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      regs.forEach(function(r) { r.unregister(); });
+    }).catch(function(){});
+  }
+})();
+
+let mode = 'jump';
+let jumpTargetUrl = null;
+let autoJumpTimer = null;
+
+// 每个域名的状态
+let domainStates = {};
+DOMAIN_GROUPS.forEach(function(g) {
+  g.domains.forEach(function(u) {
+    domainStates[u] = { url: u, state: 'wait', lat: null };
+  });
+});
+
+const bodyEl = document.body;
+const statusEl = document.getElementById('status');
+const actionButtons = document.getElementById('actionButtons');
+const stayBtn = document.getElementById('stayBtn');
+const gotoBtn = document.getElementById('gotoBtn');
+const aboutDomainsListEl = document.getElementById('about-domains-list');
+const aboutDomainsListBatchEl = document.getElementById('about-domains-list-batch');
+
+const stTotal = document.getElementById("stTotal");
+const stOk = document.getElementById("stOk");
+const stFail = document.getElementById("stFail");
+const stWait = document.getElementById("stWait");
+const stMsg = document.getElementById("stMsg");
+const btnStart = document.getElementById("btnStart");
+const btnEnterSite = document.getElementById("btnEnterSite");
+
+// ========== 渲染分组（含检测状态） ==========
+function renderGroupsInto(container, withStatus) {
+  if (!container) return;
+  container.innerHTML = '';
+  DOMAIN_GROUPS.forEach(function(group) {
+    const card = document.createElement('div');
+    card.className = 'domain-group-card';
+    card.dataset.name = group.name;
+
+    const head = document.createElement('div');
+    head.className = 'domain-group-head';
+    head.innerHTML =
+      '<div class="domain-group-info">' +
+        '<div class="domain-group-name" title="' + group.name + '">' + group.name + '</div>' +
+        (group.desc ? '<div class="domain-group-desc">' + group.desc + '</div>' : '') +
+      '</div>';
+    card.appendChild(head);
+
+    const bodyDiv = document.createElement('div');
+    group.domains.forEach(function(domain) {
+      const line = document.createElement('div');
+      line.className = 'domain-line';
+      line.dataset.url = domain;
+
+      if (withStatus) {
+        const st = domainStates[domain] || { state: 'wait', lat: null };
+        const latTxt = st.state === 'ok' ? (st.lat + ' ms')
+                     : st.state === 'fail' ? '失败'
+                     : st.state === 'checking' ? '检测中…' : '—';
+        line.innerHTML =
+          '<span class="status-dot"></span>' +
+          '<span class="url-text">' + domain + '</span>' +
+          '<span class="lat">' + latTxt + '</span>' +
+          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
+      } else {
+        line.innerHTML =
+          '<span class="url-text">' + domain + '</span>' +
+          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
+      }
+      bodyDiv.appendChild(line);
+    });
+    card.appendChild(bodyDiv);
+
+    container.appendChild(card);
+  });
+}
+
+function renderAboutDomains() {
+  renderGroupsInto(aboutDomainsListEl, false);
+  renderGroupsInto(aboutDomainsListBatchEl, true);
+}
+
+// 只更新批量模式下的分组显示
+function updateBatchGroupDisplay() {
+  const lines = aboutDomainsListBatchEl.querySelectorAll('.domain-line');
+  lines.forEach(function(line) {
+    const url = line.dataset.url;
+    const st = domainStates[url];
+    if (!st) return;
+
+    line.classList.remove('ok', 'fail', 'checking');
+    if (st.state === 'ok') line.classList.add('ok');
+    else if (st.state === 'fail') line.classList.add('fail');
+    else if (st.state === 'checking') line.classList.add('checking');
+
+    const latEl = line.querySelector('.lat');
+    if (latEl) {
+      latEl.textContent = st.state === 'ok' ? (st.lat + ' ms')
+                       : st.state === 'fail' ? '失败'
+                       : st.state === 'checking' ? '检测中…' : '—';
+    }
+  });
+}
+
+// ========== 统计 ==========
+function updateBatchStats() {
+  let ok = 0, fail = 0, wait = 0, checking = 0;
+  Object.keys(domainStates).forEach(function(k) {
+    const s = domainStates[k].state;
+    if (s === 'ok') ok++;
+    else if (s === 'fail') fail++;
+    else if (s === 'checking') checking++;
+    else wait++;
+  });
+  stTotal.textContent = Object.keys(domainStates).length;
+  stOk.textContent = ok;
+  stFail.textContent = fail;
+  stWait.textContent = wait + checking;
+}
+
+// ========== 切换模式 ==========
+function switchToBatchMode() {
+  mode = 'batch';
+  bodyEl.classList.add('batch-mode');
+
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
+
+  updateBatchGroupDisplay();
+  updateBatchStats();
+  updateEnterButton();
+
+  startBatchCheck();
+}
+
+function switchToJumpMode() {
+  mode = 'jump';
+  bodyEl.classList.remove('batch-mode');
+
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
+
+  jumpTargetUrl = null;
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  actionButtons.style.display = 'flex';
+
+  checkFirstAvailable();
+}
+
+function updateEnterButton() {
+  const okCount = Object.keys(domainStates).filter(function(k) {
+    return domainStates[k].state === 'ok';
+  }).length;
+  if (okCount > 0) {
+    btnEnterSite.disabled = false;
+    btnEnterSite.textContent = '🌐 进入网站 (' + okCount + ' 条可用)';
+  } else {
+    btnEnterSite.disabled = false;
+    btnEnterSite.textContent = '🌐 进入网站';
+  }
+}
+
+// ========== 等待 2 秒后跳转，不显示倒计时数字 ==========
+function checkFirstAvailable() {
+  const url = CONFIG.countdownUrls[0];
+  jumpTargetUrl = url;
+  statusEl.textContent = '正在跳转进入...';
+  autoJumpTimer = setTimeout(function() {
+    window.location.href = url;
+  }, JUMP_DELAY_MS);
+}
+
+// ========== 批量检测 ==========
+let aborting = false;
+
+async function startBatchCheck() {
+  aborting = false;
+  btnStart.disabled = true;
+  stMsg.textContent = '检测中…';
+
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
+  updateBatchGroupDisplay();
+  updateBatchStats();
+
+  const urls = Object.keys(domainStates);
+
+  let idx = 0;
+  const workers = Array.from({ length: CONCURRENCY }, async function() {
+    while (!aborting) {
+      const i = idx++;
+      if (i >= urls.length) break;
+      const url = urls[i];
+
+      domainStates[url].state = 'checking';
+      updateBatchGroupDisplay();
+      updateBatchStats();
+
+      const r = await probeWithLatency(url);
+      if (aborting) break;
+
+      domainStates[url].state = r.ok ? 'ok' : 'fail';
+      domainStates[url].lat = r.lat || null;
+      updateBatchGroupDisplay();
+      updateBatchStats();
+
+      const done = Object.keys(domainStates).filter(function(k) {
+        return domainStates[k].state === 'ok' || domainStates[k].state === 'fail';
+      }).length;
+      stMsg.textContent = '进度 ' + done + '/' + urls.length;
+    }
+  });
+
+  await Promise.all(workers);
+  btnStart.disabled = false;
+
+  if (aborting) {
+    stMsg.textContent = "已停止";
+  } else {
+    const okCount = Object.keys(domainStates).filter(function(k) {
+      return domainStates[k].state === 'ok';
+    }).length;
+    stMsg.textContent = okCount ? '完成，可用 ' + okCount + ' 条' : "全部不可用";
+  }
+  updateEnterButton();
+}
+
+function probeWithLatency(url) {
+  const controller = new AbortController();
+  const t0 = performance.now();
+  const to = setTimeout(function() { controller.abort(); }, TIMEOUT_SEC * 1000);
+  return new Promise(function(resolve) {
+    fetch(noCacheUrl(url), {
+      method: "GET",
+      mode: "no-cors",
+      cache: "no-store",
+      signal: controller.signal,
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+      }
+    })
+      .then(function() {
+        clearTimeout(to);
+        resolve({ ok: true, lat: Math.round(performance.now() - t0) });
+      })
+      .catch(function() {
+        clearTimeout(to);
+        resolve({ ok: false });
+      });
+  });
+}
+
+// ========== 按钮事件 ==========
+document.getElementById("btnStart").addEventListener("click", startBatchCheck);
+
+document.getElementById("btnCopyOK").addEventListener("click", function() {
+  const ok = Object.keys(domainStates)
+    .filter(function(k) { return domainStates[k].state === 'ok'; })
+    .sort(function(a, b) {
+      return (domainStates[a].lat || 9999) - (domainStates[b].lat || 9999);
+    });
+  if (!ok.length) {
+    stMsg.textContent = "暂无可用线路";
+    return;
+  }
+  copyText(ok.join("\n"), function() {
+    stMsg.textContent = '已复制 ' + ok.length + ' 条可用线路';
+  });
+});
+
+btnEnterSite.addEventListener("click", function() {
+  switchToJumpMode();
+});
+
+// “留在本页”按钮：取消自动跳转，进入批量模式
+stayBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  switchToBatchMode();
+};
+
+// “立即跳转”按钮：立即跳转到目标 URL
+gotoBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpTargetUrl) {
+    window.location.href = jumpTargetUrl;
+  }
+};
+
+// ========== 复制功能 ==========
+document.addEventListener("click", function(e) {
+  const copy = e.target.closest(".copy-btn");
+  if (copy) {
+    e.preventDefault();
+    e.stopPropagation();
+    const url = copy.dataset.url;
+    copyText(url, function() {
+      const o = copy.textContent;
+      copy.textContent = "✅ 已复制";
+      copy.classList.add("copied");
+      setTimeout(function() {
+        copy.textContent = o;
+        copy.classList.remove("copied");
+      }, 1500);
+    });
+    return;
+  }
+  if (mode === 'batch') {
+    const line = e.target.closest(".domain-line");
+    if (line && line.dataset.url) {
+      window.open(line.dataset.url, "_blank");
+    }
+  }
+});
+
+function copyText(text, done) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function() { fallback(); });
+  } else {
+    fallback();
+  }
+  function fallback() {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand("copy"); } catch (_) {}
+    document.body.removeChild(ta);
+    done();
+  }
+}
+
+// ========== 微信赞赏弹窗 ==========
+(function () {
+  var btn   = document.getElementById('zsmBtn');
+  var modal = document.getElementById('zsmModal');
+  var lastFocus = null;
+  function openModal() {
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('.zsm-modal-close');
+    if (closeBtn) closeBtn.focus();
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  btn.addEventListener('click', openModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target.hasAttribute('data-close')) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Escape' || e.keyCode === 27) && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+})();
+
+// ========== 初始化 ==========
+renderAboutDomains();
+checkFirstAvailable();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "X4采集站",
+    "date": "",
+    "size": "",
+    "origUrl": "",
+    "urls": [
+      { "label": "基础线路", "url": "https://3.wudaozhe.net/5/x4.json" },
+      { "label": "增强线路", "url": "https://3.wudaozhe.net/5/x4pro.json"  },
+      { "label": "少儿频道", "url": "https://3.wudaozhe.net/5/tv少儿.json" },
+      { "label": "更新专用", "url": "https://3.wudaozhe.net/0/666" }
+    ]
+  }
+]
