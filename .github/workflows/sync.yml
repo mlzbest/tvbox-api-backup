@@ -30,7 +30,7 @@ jobs:
 
       - name: 用源仓库内容覆盖（保留本仓库独有文件如 sync.yml）
         run: |
-          git checkout source/main -- .
+          git checkout source/main -- . ':(exclude).github/workflows'
           git add -A
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,7 +39,7 @@ jobs:
           else
             git commit -m "chore: 自动同步源仓库 [$(TZ='CST-8' date +'%Y-%m-%d %H:%M')]"
             # 先 pull --rebase 避免冲突
-            git pull --rebase origin main || true
+            git pull --rebase --autostash origin main
             git push
             echo "✅ 已同步源仓库至 $(git log source/main -1 --format='%h')" >> $GITHUB_STEP_SUMMARY
           fi
