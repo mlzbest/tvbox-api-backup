@@ -233,12 +233,6 @@ def scan_interfaces():
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
-        # 容错：顶层必须是对象(dict)才含 lives；
-        # 顶层为 list（如 潇洒.json）或 spider 配置类文件直接跳过，避免整体崩溃
-        if not isinstance(data, dict):
-            print(f"  跳过 {json_file.name}: 顶层非对象(dict)，非直播列表格式")
-            continue
-
         lives = data.get("lives", [])
         if not isinstance(lives, list):
             continue
