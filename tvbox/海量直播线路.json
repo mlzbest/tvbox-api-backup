@@ -43,6 +43,12 @@
       "source": "海量直播聚合接口"
     },
     {
+      "name": "Guovin",
+      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "ua": "",
+      "source": "海量直播聚合接口"
+    },
+    {
       "name": "牛播一",
       "url": "http://127.0.0.1:9978/proxy?do=cctva",
       "ua": "",
@@ -51,12 +57,6 @@
     {
       "name": "Kimentanm1线",
       "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "ua": "",
-      "source": "海量直播聚合接口"
-    },
-    {
-      "name": "Guovin",
-      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
       "ua": "",
       "source": "海量直播聚合接口"
     }
