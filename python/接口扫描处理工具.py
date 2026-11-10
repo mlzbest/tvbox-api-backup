@@ -502,6 +502,12 @@ def scan_sites_all():
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
+        # 容错：顶层必须是对象(dict)才含 sites；
+        # 顶层为 list（如 潇洒.json）直接跳过，避免整体崩溃
+        if not isinstance(data, dict):
+            print(f"  跳过 {json_file.name}: 顶层非对象(dict)，非接口配置格式")
+            continue
+
         sites = data.get("sites", [])
         if not isinstance(sites, list):
             continue
