@@ -10,7 +10,7 @@ suxuang.m3u|20261112|262.3K|https://raw.githubusercontent.com/suxuang/myIPTV/mai
 Guovin.m3u|20261112|387.1K|https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u|clun|null|
 mlzlzj.m3u|20261112|504.3K|https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u|clun|null|
 gambiarras.m3u|20261112|652.2K|https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u|clun|null|
-综合直播.txt|20261112|184.5K|https://ds65.tv1288.xyz|东篱|bingcha/1.1 (mianfeifenxiang)|
+综合直播.txt|20261112|184.3K|https://ds65.tv1288.xyz|东篱|bingcha/1.1 (mianfeifenxiang)|
 develop202.txt|20261112|469B|https://gh-proxy.org/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt|东篱|null|
 EPG直播.txt|20261112|67.3K|http://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt|东篱|null|
 电视直播.txt|20261112|129.4K|http://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt|东篱|null|
@@ -29,7 +29,6 @@ Yoursmile.txt|20261112|112.9K|https://gh-proxy.org/https://raw.githubusercontent
 yuan.txt|20261112|131.9K|http://wangziduoqing.com/yuan/zb.txt|哈吉米|null|
 应该能看.txt|20261112|159.7K|https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt|哈吉米|null|
 全球.jpg|20261112|1.5K|http://xingioe.top/down.php/82d0754d79de3be03e9b63e4d2d96818.jpg|哈吉米|null|
-尘墨.php|20261112|11.7K|https://52xiaobai.cn/ceshi/zb.php|哈吉米|null|
 综合直播1线.php|20261112|41.9K|http://193.123.86.190:14888/TV/iptv.php|嗷呜|bingcha/1.1 (mianfeifenxiang)|
 Guovin1线.m3u|20261112|387.1K|https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u|夏夏影视|null|
 范明明需开启V6网络.m3u|20261112|12.5K|https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u|宝盒|null|
@@ -41,6 +40,7 @@ YY轮播1线.m3u|20261112|121.4K|https://file.icve.com.cn/file_doc/178/700/2C9AF
 咪咕.txt|20261112|469B|https://develop202.github.io/migu_video/interface.txt|小马|null|
 手动不知何时更新.txt|20261112|663.8K|https://szyyds.cn/tv/live/x.txt|小马|null|
 有效期27年7月.php|20261112|6.8K|http://m.szyyds.cn/api.php?token=8664f352657e8b13585bcf0f84fc3512|小马|null|
+音乐所.txt|20261112|8.0M|https://szyyds.cn/tv/live/yy.txt|小马|null|
 develop2021线.txt|20261112|92.3K|https://ztha.top/TVBox/lib/interface.txt|挺好|null|
 Kimentanm3线.m3u|20261112|21.4K|https://ztha.top/TVBox/lib/iptv.m3u|挺好|null|
 挺好直播.txt|20261112|4.6K|https://ztha.top/TVBox/tv/thtv.txt|挺好|null|
@@ -58,6 +58,30 @@ Kimentanm4线.m3u|20261112|21.5K|https://ghfast.top/https://raw.githubuserconten
 范明明.m3u|20261112|24.6K|https://live.fanmingming.cn/tv/m3u/ipv6.m3u|真六|null|
 APTV.m3u|20261112|21.5K|https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u|真六|okhttp/3.15,AptvPlayer/1.4.0|
 live1线.txt|20261112|258.5K|http://xhztv.top/xhz/live.txt|聚玩|okhttp/3.15|
+裤佬IPTV直播.m3u|20261112|553.0K|https://iptv.445569.xyz/live.m3u|裤佬线路|null|
+裤佬体育直播.m3u|20261112|22.9K|https://jsnzkpg.de5.net/all.m3u|裤佬线路|null|
+裤佬抖音直播.m3u|20261112|114.7K|https://douyin.445569.xyz/live.m3u|裤佬线路|null|
+裤佬虎牙直播.m3u|20261112|549.4K|https://yahu.445569.xyz/live.m3u|裤佬线路|null|
+裤佬斗鱼直播.m3u|20261112|272.3K|https://douyu.445569.xyz/live.m3u|裤佬线路|null|
+裤佬酷狗直播.m3u|20261112|59.5K|https://kugou.445569.xyz/live.m3u|裤佬线路|null|
+裤佬来疯直播.m3u|20261112|7.4K|https://laifeng.445569.xyz/live.m3u|裤佬线路|null|
+裤佬YY直播.m3u|20261112|105B|https://yy.445569.xyz/live.m3u|裤佬线路|null|
+裤佬Twitch直播.m3u|20261112|199.7K|https://twitch.445569.xyz/live.m3u|裤佬线路|null|
+裤佬TikTok直播.m3u|20261112|139.6K|https://tiktok.445569.xyz/live.m3u|裤佬线路|null|
+咪咕TV直播.php|20261112|123.5K|https://eastscreen.tv/iptvlist.php?token=N1pcBwAGHwkCAx8OTFhABgEFAA|裤佬线路|null|
+BMCH.txt|20261112|190.6K|https://play.iptv365.org/香雅情/lives/BMCH.txt|香雅情|null|
+Tianmu.txt|20261112|18.7K|https://play.iptv365.org/香雅情/lives/Tianmu.txt|香雅情|null|
+FMMIPV6.txt|20261112|14.9K|https://m3u.ibert.me/txt/fmml_ipv6.txt|高天流云_XYQ|null|
+初秋语.txt|20261112|15.7K|https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt|高天流云js|null|
+cluntoptest.m3u|20260915|326.7K|https://clun.top/lib/iptv_test.m3u|clun|null|
+移动.txt|20260915|22.4K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/移动|周J|okhttp/3.15|
+联通.txt|20260915|15.2K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/联通|周J|okhttp/3.15|
+优选.txt|20260915|31.2K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt|周J|okhttp/3.15|
+尘墨.php|20261112|11.7K|https://52xiaobai.cn/ceshi/zb.php|哈吉米|null|
+范明明需开启V6网络.m3u|20260915|12.5K|https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u|饭太硬5线|null|
+央视频.txt|20261112|8.7K|https://mpimg.cn/down.php/caac7a6dae8f835257a11e7a11291bf2.txt|小米|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8066.0 Safari/537.36|
+范明明需开启V6网络1线.m3u|20260915|12.5K|https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u|挺好|null|
+线路.txt|20260915|469B|https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt|星微Vip|okHttp/Mod-1.1.0|
 裤佬IPTV直播.m3u|20261112|578.9K|https://iptv.445569.xyz/live.m3u|裤佬线路|null|
 裤佬体育直播.m3u|20261112|23.2K|https://jsnzkpg.de5.net/all.m3u|裤佬线路|null|
 裤佬抖音直播.m3u|20261112|115.0K|https://douyin.445569.xyz/live.m3u|裤佬线路|null|
@@ -71,20 +95,13 @@ live1线.txt|20261112|258.5K|http://xhztv.top/xhz/live.txt|聚玩|okhttp/3.15|
 裤佬TikTok直播.m3u|20261112|124.7K|https://tiktok.445569.xyz/live.m3u|裤佬线路|null|
 咪咕TV直播.php|20261112|123.5K|https://eastscreen.tv/iptvlist.php?token=N1pcBwAGHwkCAx8OTFhABgEFAA|裤佬线路|null|
 地方台直播.txt|20261112|260.7K|https://sd.shandong.bbroot.com/xk/zb.txt|裤佬线路|null|
-BMCH.txt|20261112|190.6K|https://play.iptv365.org/香雅情/lives/BMCH.txt|香雅情|null|
-Tianmu.txt|20261112|18.7K|https://play.iptv365.org/香雅情/lives/Tianmu.txt|香雅情|null|
 FMMIPV6.txt|20261112|14.9K|https://m3u.ibert.me/txt/fmml_ipv6.txt|高天流云_XYQ|null|
-初秋语.txt|20261112|15.7K|https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt|高天流云js|null|
 Kimentanm1线.m3u|20261111|21.5K|https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|海量直播线路|null|
-范明明需开启V6网络.m3u|20260915|12.5K|https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u|饭太硬5线|null|
 驸马影视电信专线.m3u|20260915|17.0K|http://fmys.top/lib/live.m3u|驸马|null|
 驸马影视移动专线.m3u|20260915|21.0K|http://fmys.top/lib/yidong.m3u|驸马|null|
-cluntoptest.m3u|20260915|326.7K|https://clun.top/lib/iptv_test.m3u|clun|null|
 Kimentanm2线.m3u|20260915|21.4K|https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|clun|null|
 日后.nzk|20260915|119.5K|http://rihou.cc:555/gggg.nzk|东篱|okhttp/3|
-线路.txt|20260915|469B|https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt|星微Vip|okHttp/Mod-1.1.0|
 自动更新.txt|20260915|32.8K|https://z.szyyds.cn/iptv|小马|null|
-音乐所.txt|20260915|22.2M|https://szyyds.cn/tv/live/yy.txt|小马|null|
 live.txt|20260915|258.5K|http://xhztv.top/xhz/live.txt|聚玩|okhttp/3.15|
 幸福年年zb.txt|20260915|621.6K|http://150.158.52.248/tgyg/lib/ylzb.txt|幸福年年|null|
 轮播直播.txt|20260915|1.1M|http://150.158.52.248/tgyg/lib/dsj.txt|幸福年年|null|
@@ -93,8 +110,4 @@ live.txt|20260915|258.5K|http://xhztv.top/xhz/live.txt|聚玩|okhttp/3.15|
 天微.txt|20260915|111.3K|http://150.158.52.248/tgyg/lib/kjtwzb.txt|幸福年年|okhttp/3|
 develop2022线.txt|20260915|92.3K|https://ztha.top/TVBox/lib/interface.txt|挺好|null|
 Kimentanm5线.m3u|20260915|21.4K|https://ztha.top/TVBox/lib/iptv.m3u|挺好|null|
-范明明需开启V6网络1线.m3u|20260915|12.5K|https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u|挺好|null|
 Kimentanm6线.m3u|20260915|21.4K|https://ghfast.top/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u|王二小3线|null|
-移动.txt|20260915|22.4K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/移动|周J|okhttp/3.15|
-联通.txt|20260915|15.2K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/联通|周J|okhttp/3.15|
-优选.txt|20260915|31.2K|https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt|周J|okhttp/3.15|
