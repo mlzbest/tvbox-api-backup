@@ -193,16 +193,7 @@ def download_one(live, _chain=None):
 
     # 当前层就是最终有播放列表内容的一层
     size = len(content)
-
-    # 超大文件保护：GitHub 单文件硬限 100MB，超过阈值直接跳过该源
-    # 避免提交被 pre-receive hook 拒绝(GH001)导致整次聚合失败
-    MAX_SOURCE_BYTES = 50 * 1024 * 1024
-    if size > MAX_SOURCE_BYTES:
-        print(f"  跳过 {name}: 内容过大 ({size/1024/1024:.1f} MB)，超过 50MB 阈值，疑似异常源，避免提交超限")
-        return False, size, None, final_url
-
     final_url = target
-
 
     # 由最终 URL 决定后缀，拼接基础名称
     raw_filename = derive_filename(name, final_url)
