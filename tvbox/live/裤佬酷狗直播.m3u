@@ -1,6 +1,7 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="👖裤佬酷狗直播",👖裤佬酷狗直播
 #EXTM3U
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="51027949" tvg-name="o安屿o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e881fe7b50e9c86832abb81ecaf07890.jpg" group-title="推荐",o安屿o
 https://kugou.445569.xyz/live/51027949
 #EXTINF:-1 tvg-id="1529748" tvg-name="阿龙爱健身" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/75f21bbac36362a6f14f58e91331de80.jpg" group-title="推荐",阿龙爱健身
@@ -65,10 +66,87 @@ https://kugou.445569.xyz/live/6847243
 https://kugou.445569.xyz/live/51079401
 #EXTINF:-1 tvg-id="51093056" tvg-name="豆豆dodo" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/074d6212bd833ab3db242525fa88f609.jpg" group-title="推荐",豆豆dodo
 https://kugou.445569.xyz/live/51093056
+=======
+#EXTINF:-1 tvg-id="1529748" tvg-name="阿龙爱健身" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/75f21bbac36362a6f14f58e91331de80.jpg" group-title="推荐",阿龙爱健身
+https://kugou.445569.xyz/live/1529748
+#EXTINF:-1 tvg-id="5171815" tvg-name="郭温柔i恋心U" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/489f59626b1310e736bd661e498f5a6e.jpg" group-title="推荐",郭温柔i恋心U
+https://kugou.445569.xyz/live/5171815
+#EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="推荐",涉外北北同學
+https://kugou.445569.xyz/live/4624270
+#EXTINF:-1 tvg-id="5823638" tvg-name="DM伊菲" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/001634510b8aec889342c9f48c501b07.jpg" group-title="推荐",DM伊菲
+https://kugou.445569.xyz/live/5823638
+#EXTINF:-1 tvg-id="51052870" tvg-name="GK锦怡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6edec0c3f60aec08fb6bcde6ba7b023d.jpg" group-title="推荐",GK锦怡
+https://kugou.445569.xyz/live/51052870
+#EXTINF:-1 tvg-id="50686573" tvg-name="JY十一a" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/11465e7e74898b3b1823a4bbb2e9ec2a.jpg" group-title="推荐",JY十一a
+https://kugou.445569.xyz/live/50686573
+#EXTINF:-1 tvg-id="4578086" tvg-name="DM小敏儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d2bf7608c2844625036ef5ac7adb590f.jpg" group-title="推荐",DM小敏儿
+https://kugou.445569.xyz/live/4578086
+#EXTINF:-1 tvg-id="51085741" tvg-name="66大顺oO" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5efaa9d0471b073e991d7f1df8d0ae1.jpg" group-title="推荐",66大顺oO
+https://kugou.445569.xyz/live/51085741
+#EXTINF:-1 tvg-id="51027949" tvg-name="o安屿o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e881fe7b50e9c86832abb81ecaf07890.jpg" group-title="推荐",o安屿o
+https://kugou.445569.xyz/live/51027949
+#EXTINF:-1 tvg-id="2794649" tvg-name="龙玥颖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c2dbc6a76514079445092640147b51f6.jpg" group-title="推荐",龙玥颖
+https://kugou.445569.xyz/live/2794649
+#EXTINF:-1 tvg-id="1490257" tvg-name="红儿好声音" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9f1d3fdae2ad8a0410f64fbfca372953.jpg" group-title="推荐",红儿好声音
+https://kugou.445569.xyz/live/1490257
+#EXTINF:-1 tvg-id="5801596" tvg-name="丁屿夕" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/925cd8d3baa64d0882e739a546204037.jpg" group-title="推荐",丁屿夕
+https://kugou.445569.xyz/live/5801596
+#EXTINF:-1 tvg-id="51095206" tvg-name="星儿wait红颜28" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/107b36eb89ee55aa3d81ee164fcd7197.jpg" group-title="推荐",星儿wait红颜28
+https://kugou.445569.xyz/live/51095206
+#EXTINF:-1 tvg-id="51091435" tvg-name="qz雨微" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5b7c00be7de5958153808de9c87671a5.jpg" group-title="推荐",qz雨微
+https://kugou.445569.xyz/live/51091435
+#EXTINF:-1 tvg-id="51097352" tvg-name="小晚io" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7f0ddfd91d2bd3891e9ca0176cd61192.jpg" group-title="推荐",小晚io
+https://kugou.445569.xyz/live/51097352
+#EXTINF:-1 tvg-id="51202838" tvg-name="YH新人壹壹y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/cd6031848a04ac38a0de0130388cc272.jpg" group-title="推荐",YH新人壹壹y
+https://kugou.445569.xyz/live/51202838
+#EXTINF:-1 tvg-id="50932085" tvg-name="90念初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9ff0e817f93cbb20e91396cc8408f375.jpg" group-title="推荐",90念初
+https://kugou.445569.xyz/live/50932085
+#EXTINF:-1 tvg-id="3725482" tvg-name="似初oi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/65cad5ff6bb806d7aae72eaa35273aa0.jpg" group-title="推荐",似初oi
+https://kugou.445569.xyz/live/3725482
+#EXTINF:-1 tvg-id="3865631" tvg-name="菀菀0" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b3c9af0a0f04f2387d85dc0fb6477b2a.jpg" group-title="推荐",菀菀0
+https://kugou.445569.xyz/live/3865631
+#EXTINF:-1 tvg-id="51203064" tvg-name="苏小麦789" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/3773e0a1c0c921cb38e8d99f769f37b0.jpg" group-title="推荐",苏小麦789
+https://kugou.445569.xyz/live/51203064
+#EXTINF:-1 tvg-id="50254879" tvg-name="豫见嘟嘟湉" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5484b66b58078f1adaf94e55c4ca4893.jpg" group-title="推荐",豫见嘟嘟湉
+https://kugou.445569.xyz/live/50254879
+#EXTINF:-1 tvg-id="5646819" tvg-name="晚意." tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/134bdfeb34477780c7da3e69e0ff5e8a.jpg" group-title="推荐",晚意.
+https://kugou.445569.xyz/live/5646819
+#EXTINF:-1 tvg-id="51097525" tvg-name="新人丹丹蛋蛋" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b68632eccb1b1e82885fcbb2d65af3fa.jpg" group-title="推荐",新人丹丹蛋蛋
+https://kugou.445569.xyz/live/51097525
+#EXTINF:-1 tvg-id="51203050" tvg-name="芝士土司" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5fdbb32a58e17cb218f39f50d7cd9f00.jpg" group-title="推荐",芝士土司
+https://kugou.445569.xyz/live/51203050
+#EXTINF:-1 tvg-id="51096958" tvg-name="软软nn" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bdc0c93788de5ed129fd94e8aebee9ed.jpg" group-title="推荐",软软nn
+https://kugou.445569.xyz/live/51096958
+#EXTINF:-1 tvg-id="51098256" tvg-name="VV云初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/639bab48c9efde185d475fa4a0b3ec08.jpg" group-title="推荐",VV云初
+https://kugou.445569.xyz/live/51098256
+#EXTINF:-1 tvg-id="1312839" tvg-name="广东晴念念" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/64a60244b840ea6420fee26330a690e7.jpg" group-title="推荐",广东晴念念
+https://kugou.445569.xyz/live/1312839
+#EXTINF:-1 tvg-id="51201628" tvg-name="JZ软软" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/26794ea200d3fd899aba904539217c56.jpg" group-title="推荐",JZ软软
+https://kugou.445569.xyz/live/51201628
+#EXTINF:-1 tvg-id="51072986" tvg-name="新人知心A" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c4b11b2f5bb38824a822e7aef00224bf.jpg" group-title="推荐",新人知心A
+https://kugou.445569.xyz/live/51072986
+#EXTINF:-1 tvg-id="51047438" tvg-name="YH乔乔777" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bc33560756bc8c61687ea9ecb5d246db.jpg" group-title="推荐",YH乔乔777
+https://kugou.445569.xyz/live/51047438
+#EXTINF:-1 tvg-id="6247927" tvg-name="穗儿Ss" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5ee22cfc76a3f6b79b22e605bab697b.jpg" group-title="推荐",穗儿Ss
+https://kugou.445569.xyz/live/6247927
+#EXTINF:-1 tvg-id="51202153" tvg-name="新人一小绵羊" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d98fdbd82b378246523d2e019468e8ce.jpg" group-title="推荐",新人一小绵羊
+https://kugou.445569.xyz/live/51202153
+#EXTINF:-1 tvg-id="51093240" tvg-name="涵团洋洋" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/d9865a3cae1d0c2577190dd275a48209.jpg" group-title="推荐",涵团洋洋
+https://kugou.445569.xyz/live/51093240
+#EXTINF:-1 tvg-id="6847243" tvg-name="星冉mm" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1f327a8005e0d8d16d79ce552a80f485.jpg" group-title="推荐",星冉mm
+https://kugou.445569.xyz/live/6847243
+#EXTINF:-1 tvg-id="51202158" tvg-name="米老猪Oo" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/f88ed5fcfed630ee4785dc8bed5b4775.jpg" group-title="推荐",米老猪Oo
+https://kugou.445569.xyz/live/51202158
+#EXTINF:-1 tvg-id="50908180" tvg-name="星联汇i小晶软糖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/fe3d5815492bce3fda4b2e067108a825.jpg" group-title="推荐",星联汇i小晶软糖
+https://kugou.445569.xyz/live/50908180
+#EXTINF:-1 tvg-id="51079401" tvg-name="丫丫Uu" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/21ede34a6d58ce63fb8b1d23faaa3140.jpg" group-title="推荐",丫丫Uu
+https://kugou.445569.xyz/live/51079401
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="50198642" tvg-name="猪猪88999" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0dbee56ffd8076ca76483edfe1eb67d3.jpg" group-title="推荐",猪猪88999
 https://kugou.445569.xyz/live/50198642
 #EXTINF:-1 tvg-id="51203068" tvg-name="新人米多多CC" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/43e69e9234796d8c649f79f85ba547a5.jpg" group-title="推荐",新人米多多CC
 https://kugou.445569.xyz/live/51203068
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="51096958" tvg-name="软软nn" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bdc0c93788de5ed129fd94e8aebee9ed.jpg" group-title="推荐",软软nn
 https://kugou.445569.xyz/live/51096958
 #EXTINF:-1 tvg-id="3725482" tvg-name="似初oi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/65cad5ff6bb806d7aae72eaa35273aa0.jpg" group-title="推荐",似初oi
@@ -109,18 +187,56 @@ https://kugou.445569.xyz/live/50787471
 https://kugou.445569.xyz/live/3109817
 #EXTINF:-1 tvg-id="50297619" tvg-name="凝淡墨a玥如如n" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/03bc4983c73c7151878a512f7792d782.jpg" group-title="一起玩",凝淡墨a玥如如n
 https://kugou.445569.xyz/live/50297619
+=======
+#EXTINF:-1 tvg-id="1525160" tvg-name="丹丹.R" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0674476b2e3c7d85c5c3f6c8216197d3.jpg" group-title="推荐",丹丹.R
+https://kugou.445569.xyz/live/1525160
+#EXTINF:-1 tvg-id="51045283" tvg-name="曾可i" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1b5d09ec153f7d8ffdd35914adfbba23.jpg" group-title="推荐",曾可i
+https://kugou.445569.xyz/live/51045283
+#EXTINF:-1 tvg-id="51084905" tvg-name="YH怡宝1118生日" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7ecc168328b641fbed79d48de8eddf87.jpg" group-title="推荐",YH怡宝1118生日
+https://kugou.445569.xyz/live/51084905
+#EXTINF:-1 tvg-id="50982840" tvg-name="吉A小郭" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/175f07d5280b55c4be8cd5f6a31f0be5.jpg" group-title="推荐",吉A小郭
+https://kugou.445569.xyz/live/50982840
+#EXTINF:-1 tvg-id="1248984" tvg-name="Top蔡珊珊" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c405963476bb09a8aa5287c769156c2b.jpg" group-title="推荐",Top蔡珊珊
+https://kugou.445569.xyz/live/1248984
+#EXTINF:-1 tvg-id="51096069" tvg-name="Vv新人软软" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6200bbff69b413b7c7ce02f9031fc7df.jpg" group-title="推荐",Vv新人软软
+https://kugou.445569.xyz/live/51096069
+#EXTINF:-1 tvg-id="5239589" tvg-name="井瑶儿hm" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2e3d39b242238957e404951a187aa7d0.jpg" group-title="推荐",井瑶儿hm
+https://kugou.445569.xyz/live/5239589
+#EXTINF:-1 tvg-id="51026931" tvg-name="六星少女团" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7a3cfdda4e79050d54a14cf2fdac06e9.jpg" group-title="推荐",六星少女团
+https://kugou.445569.xyz/live/51026931
+#EXTINF:-1 tvg-id="50287103" tvg-name="aa唯一aaa" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9986be41f49c6098dd594e307f11e77d.jpg" group-title="推荐",aa唯一aaa
+https://kugou.445569.xyz/live/50287103
+#EXTINF:-1 tvg-id="4641526" tvg-name="石宝吖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/4281441b69b8786d280529740c424483.jpg" group-title="推荐",石宝吖
+https://kugou.445569.xyz/live/4641526
+#EXTINF:-1 tvg-id="51201675" tvg-name="困泡泡泡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2bef4f6d6ba32a403c593cfab623ec3c.jpg" group-title="推荐",困泡泡泡
+https://kugou.445569.xyz/live/51201675
+#EXTINF:-1 tvg-id="6597960" tvg-name="DF舞蹈小妖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bb65f2864ea4ce607429181eb23de393.jpg" group-title="推荐",DF舞蹈小妖
+https://kugou.445569.xyz/live/6597960
+#EXTINF:-1 tvg-id="4702486" tvg-name="玥如如" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9f64516e1cf316135f933b425bac7836.jpg" group-title="一起玩",玥如如
+https://kugou.445569.xyz/live/4702486
+#EXTINF:-1 tvg-id="51097958" tvg-name="路程坤" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ed4884bf40c3f757cbbc5369ab8b1899.jpg" group-title="一起玩",路程坤
+https://kugou.445569.xyz/live/51097958
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="1046029" tvg-name="闪闪BLING" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6092e647185474524e15028487c4a794.jpg" group-title="一起玩",闪闪BLING
 https://kugou.445569.xyz/live/1046029
 #EXTINF:-1 tvg-id="1056139" tvg-name="疯善柔" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/18f2dc95c7d594785e5b47736587a05d.jpg" group-title="一起玩",疯善柔
 https://kugou.445569.xyz/live/1056139
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="1370769" tvg-name="佐佐s小乔5208" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/cff81e077e3ae3026068424b721343ab.jpg" group-title="一起玩",佐佐s小乔5208
 https://kugou.445569.xyz/live/1370769
 #EXTINF:-1 tvg-id="1258056" tvg-name="Yy茉莉" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/73760a8e302574a5d18340db18232dc1.jpg" group-title="一起玩",Yy茉莉
 https://kugou.445569.xyz/live/1258056
+=======
+#EXTINF:-1 tvg-id="51096864" tvg-name="三叁哥歌" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a34ede38f9a9193927b7e50610c5524a.jpg" group-title="一起玩",三叁哥歌
+https://kugou.445569.xyz/live/51096864
+#EXTINF:-1 tvg-id="5086120" tvg-name="指挥官33343" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bf020ae79df0a7b59103850ff94a8a86.jpg" group-title="一起玩",指挥官33343
+https://kugou.445569.xyz/live/5086120
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="5194215" tvg-name="豫见潮汕一纯儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1b02600cd9d1ba27eb0728246905a543.jpg" group-title="一起玩",豫见潮汕一纯儿
 https://kugou.445569.xyz/live/5194215
 #EXTINF:-1 tvg-id="1053913" tvg-name="安儿菇凉" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a9b2e200e2d1340836ff36c1c2458521.jpg" group-title="一起玩",安儿菇凉
 https://kugou.445569.xyz/live/1053913
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50853135" tvg-name="狂野之缘" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c2e14a29d7c9b9cc65f9093df5042c3b.jpg" group-title="一起玩",狂野之缘
 https://kugou.445569.xyz/live/50853135
 #EXTINF:-1 tvg-id="51202389" tvg-name="陌丄重染114" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/27f5d9d6846997a2dc84db7f2701f18d.jpg" group-title="一起玩",陌丄重染114
@@ -141,42 +257,93 @@ https://kugou.445569.xyz/live/2580541
 https://kugou.445569.xyz/live/5489680
 #EXTINF:-1 tvg-id="50409705" tvg-name="温柔静静888" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b754626fc54dbedcf5e08eb3bb6928be.jpg" group-title="一起玩",温柔静静888
 https://kugou.445569.xyz/live/50409705
+=======
+#EXTINF:-1 tvg-id="4160758" tvg-name="Q李长乐" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/cc49472e083e46d6be7f44e59d5c3219.jpg" group-title="一起玩",Q李长乐
+https://kugou.445569.xyz/live/4160758
+#EXTINF:-1 tvg-id="4631687" tvg-name="宋景儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b2655bb7ffae56221cce8e9eaf4daa0b.jpg" group-title="一起玩",宋景儿
+https://kugou.445569.xyz/live/4631687
+#EXTINF:-1 tvg-id="50820352" tvg-name="鹿拾一" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/42671976eb80e0fe55707a1480b88982.jpg" group-title="一起玩",鹿拾一
+https://kugou.445569.xyz/live/50820352
+#EXTINF:-1 tvg-id="51029286" tvg-name="钞票快递员" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/71488ed24c3cc4f1b19aacbe87269431.jpg" group-title="一起玩",钞票快递员
+https://kugou.445569.xyz/live/51029286
+#EXTINF:-1 tvg-id="1074845" tvg-name="张白猫" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6134fcd573cbc14a9236492bb77f50f0.jpg" group-title="一起玩",张白猫
+https://kugou.445569.xyz/live/1074845
+#EXTINF:-1 tvg-id="50191438" tvg-name="间歇性厌人症" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c6612ffd9a158e5353c768d8ddbfb10c.jpg" group-title="一起玩",间歇性厌人症
+https://kugou.445569.xyz/live/50191438
+#EXTINF:-1 tvg-id="3786282" tvg-name="恋心i天心阁悠然" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/83033d91d2152ad715c7fcd734782a00.jpg" group-title="一起玩",恋心i天心阁悠然
+https://kugou.445569.xyz/live/3786282
+#EXTINF:-1 tvg-id="2580541" tvg-name="黄予萱" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20dbdcdd73d4be5abc316b6fc50b6d14.jpg" group-title="一起玩",黄予萱
+https://kugou.445569.xyz/live/2580541
+#EXTINF:-1 tvg-id="51083696" tvg-name="6星月6" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e7f539c8f48fc449f16a88310e75700f.jpg" group-title="一起玩",6星月6
+https://kugou.445569.xyz/live/51083696
+#EXTINF:-1 tvg-id="3465924" tvg-name="沫桐768" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b4a155fd51ba5355b102cf8a751a7a2c.jpg" group-title="一起玩",沫桐768
+https://kugou.445569.xyz/live/3465924
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="1058176" tvg-name="林媚媚" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/931be4a7df3d2449a9125e360cf9f6b3.jpg" group-title="一起玩",林媚媚
 https://kugou.445569.xyz/live/1058176
 #EXTINF:-1 tvg-id="1094035" tvg-name="暖心温暖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c7732caf6003eed3b20e149135d20f6f.jpg" group-title="一起玩",暖心温暖
 https://kugou.445569.xyz/live/1094035
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50191438" tvg-name="间歇性厌人症" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c6612ffd9a158e5353c768d8ddbfb10c.jpg" group-title="一起玩",间歇性厌人症
 https://kugou.445569.xyz/live/50191438
 #EXTINF:-1 tvg-id="1342481" tvg-name="Yj沈梦楠说大佬们赏条锦鲤吖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/914056539a8d8fa0563f2fd68b87d8bb.jpg" group-title="一起玩",Yj沈梦楠说大佬们赏条锦鲤吖
 https://kugou.445569.xyz/live/1342481
+=======
+#EXTINF:-1 tvg-id="5489680" tvg-name="桑桑s" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2ef3a3f4af915126cd67dec5884108f2.jpg" group-title="一起玩",桑桑s
+https://kugou.445569.xyz/live/5489680
+#EXTINF:-1 tvg-id="50297619" tvg-name="凝淡墨a玥如如n" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/03bc4983c73c7151878a512f7792d782.jpg" group-title="一起玩",凝淡墨a玥如如n
+https://kugou.445569.xyz/live/50297619
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="1075384" tvg-name="恋依依21211111" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7ff82b806d7d44cc14766d9b6f8b66be.jpg" group-title="一起玩",恋依依21211111
 https://kugou.445569.xyz/live/1075384
 #EXTINF:-1 tvg-id="2717364" tvg-name="疯嫣然" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2ced7d5ff93c224ea9d070f20a952570.jpg" group-title="一起玩",疯嫣然
 https://kugou.445569.xyz/live/2717364
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="7457065" tvg-name="YW沐心" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/fc01b354e495aa721be7e7c59326c3f9.jpg" group-title="一起玩",YW沐心
 https://kugou.445569.xyz/live/7457065
 #EXTINF:-1 tvg-id="50230314" tvg-name="l婉婉" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5d62f4552967c5940f2c6ae4e8924b72.jpg" group-title="一起玩",l婉婉
 https://kugou.445569.xyz/live/50230314
+=======
+#EXTINF:-1 tvg-id="50784713" tvg-name="玥芊芊r" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5cf456b8759fd7dd1e7b175ae01c94ab.jpg" group-title="一起玩",玥芊芊r
+https://kugou.445569.xyz/live/50784713
+#EXTINF:-1 tvg-id="50425217" tvg-name="YW昭盈超幸运" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/824c1fe671df2930ff2f8e82ff18bbf0.jpg" group-title="一起玩",YW昭盈超幸运
+https://kugou.445569.xyz/live/50425217
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="1659310" tvg-name="凶小别说话2" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c8da885a39c03c8afec399978d91264c.jpg" group-title="一起玩",凶小别说话2
 https://kugou.445569.xyz/live/1659310
 #EXTINF:-1 tvg-id="1471246" tvg-name="小菜菜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/989e08941f6772083e7e9c9ec44ef784.jpg" group-title="一起玩",小菜菜
 https://kugou.445569.xyz/live/1471246
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="4876402" tvg-name="Elio知鱼" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/41614b262285a1a6089f72a2e200b128.jpg" group-title="一起玩",Elio知鱼
 https://kugou.445569.xyz/live/4876402
 #EXTINF:-1 tvg-id="50810164" tvg-name="无敌小羊oi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/830141c48e14cad44a53957fc06bf7cb.jpg" group-title="一起玩",无敌小羊oi
 https://kugou.445569.xyz/live/50810164
+=======
+#EXTINF:-1 tvg-id="5308165" tvg-name="温柔熙熙888" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d7a6582d9f13615fd9fca025a6d87b7f.jpg" group-title="一起玩",温柔熙熙888
+https://kugou.445569.xyz/live/5308165
+#EXTINF:-1 tvg-id="2843021" tvg-name="沐星微笑苒汐" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/33635038db8a6155c03b8724ca20d0a3.jpg" group-title="一起玩",沐星微笑苒汐
+https://kugou.445569.xyz/live/2843021
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="6716421" tvg-name="Ms肉肉188888" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d9d7123d8729db65ff6f5a4a2cf00ad5.jpg" group-title="一起玩",Ms肉肉188888
 https://kugou.445569.xyz/live/6716421
 #EXTINF:-1 tvg-id="4728761" tvg-name="浪子天命00" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0c7643e638c2723da8fdf26e81ced967.jpg" group-title="一起玩",浪子天命00
 https://kugou.445569.xyz/live/4728761
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50810754" tvg-name="YW小豆包" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bbaa53b43a1c4e818ad5593d4c1e304d.jpg" group-title="一起玩",YW小豆包
 https://kugou.445569.xyz/live/50810754
 #EXTINF:-1 tvg-id="4702486" tvg-name="玥如如" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9f64516e1cf316135f933b425bac7836.jpg" group-title="一起玩",玥如如
 https://kugou.445569.xyz/live/4702486
+=======
+#EXTINF:-1 tvg-id="1584941" tvg-name="何温暖." tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a1a02d72b7aab486ddf7696bfcd417b6.jpg" group-title="一起玩",何温暖.
+https://kugou.445569.xyz/live/1584941
+#EXTINF:-1 tvg-id="50587472" tvg-name="聽雨哥" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/962d700edfcf99d11e6c71ef389b39fc.jpg" group-title="一起玩",聽雨哥
+https://kugou.445569.xyz/live/50587472
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="4524610" tvg-name="薰衣草没有草" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/da9a273d22f68ee198c99ee7c3a1adee.jpg" group-title="一起玩",薰衣草没有草
 https://kugou.445569.xyz/live/4524610
 #EXTINF:-1 tvg-id="5298659" tvg-name="安儿笑笑" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/ff1810a44b8c8c6a74cfc79b468f351a.jpg" group-title="一起玩",安儿笑笑
 https://kugou.445569.xyz/live/5298659
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50784713" tvg-name="玥芊芊r" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5cf456b8759fd7dd1e7b175ae01c94ab.jpg" group-title="一起玩",玥芊芊r
 https://kugou.445569.xyz/live/50784713
 #EXTINF:-1 tvg-id="6217819" tvg-name="北棠战国18小时" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0e1faddb0c12da7c4460ed8ab76fadf2.jpg" group-title="一起玩",北棠战国18小时
@@ -205,30 +372,80 @@ https://kugou.445569.xyz/live/5718480
 https://kugou.445569.xyz/live/50363573
 #EXTINF:-1 tvg-id="5389582" tvg-name="桂貝貝" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/35f641c51878ed66bc5912b775c83fd3.jpg" group-title="一起玩",桂貝貝
 https://kugou.445569.xyz/live/5389582
+=======
+#EXTINF:-1 tvg-id="51089752" tvg-name="qo宾果" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b065b67987d50f3215d13d7073c7c53c.jpg" group-title="一起玩",qo宾果
+https://kugou.445569.xyz/live/51089752
+#EXTINF:-1 tvg-id="51096849" tvg-name="koi洋洋得亿Yi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2c1e394c6194ec971afc4fa0fac726a7.jpg" group-title="一起玩",koi洋洋得亿Yi
+https://kugou.445569.xyz/live/51096849
+#EXTINF:-1 tvg-id="1308743" tvg-name="李莹小熊" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d32f7ef4737fd70e93301bb67262dd29.jpg" group-title="一起玩",李莹小熊
+https://kugou.445569.xyz/live/1308743
+#EXTINF:-1 tvg-id="50472128" tvg-name="恋心i佬哥" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2d4a2d5b5c374bd73e92d191404246b3.jpg" group-title="一起玩",恋心i佬哥
+https://kugou.445569.xyz/live/50472128
+#EXTINF:-1 tvg-id="51096857" tvg-name="墨墨莫魔膜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9cdfffa5c3f297ef1e4152e8fd12b7eb.jpg" group-title="一起玩",墨墨莫魔膜
+https://kugou.445569.xyz/live/51096857
+#EXTINF:-1 tvg-id="51089795" tvg-name="黄大大zip" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/860cfd0e691b8a8af6beaef4267bb61d.jpg" group-title="一起玩",黄大大zip
+https://kugou.445569.xyz/live/51089795
+#EXTINF:-1 tvg-id="50931965" tvg-name="任穗穗1094035" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a760c71405a13d89aab0df4e794dccf3.jpg" group-title="一起玩",任穗穗1094035
+https://kugou.445569.xyz/live/50931965
+#EXTINF:-1 tvg-id="5718480" tvg-name="橪橪l勿忘初心" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/79bf55f3ac30604ffe4afda1b10da041.jpg" group-title="一起玩",橪橪l勿忘初心
+https://kugou.445569.xyz/live/5718480
+#EXTINF:-1 tvg-id="50543189" tvg-name="enn安安" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d7e10bf440fd49329f76c4f437cf1a07.jpg" group-title="一起玩",enn安安
+https://kugou.445569.xyz/live/50543189
+#EXTINF:-1 tvg-id="51202395" tvg-name="2617456566" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9d1ae91817f3ce568f91216d55285ab5.jpg" group-title="一起玩",2617456566
+https://kugou.445569.xyz/live/51202395
+#EXTINF:-1 tvg-id="4318545" tvg-name="小梦子100" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/03f8a59807d4915b65f9691b3d9aeadb.jpg" group-title="一起玩",小梦子100
+https://kugou.445569.xyz/live/4318545
+#EXTINF:-1 tvg-id="51023925" tvg-name="任盈盈40987" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/71488ed24c3cc4f1b19aacbe87269431.jpg" group-title="一起玩",任盈盈40987
+https://kugou.445569.xyz/live/51023925
+#EXTINF:-1 tvg-id="50853135" tvg-name="狂野之缘" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c2e14a29d7c9b9cc65f9093df5042c3b.jpg" group-title="一起玩",狂野之缘
+https://kugou.445569.xyz/live/50853135
+#EXTINF:-1 tvg-id="1458679" tvg-name="RY咖啡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/f2efc5d12419e6b0cf459294641f5452.jpg" group-title="一起玩",RY咖啡
+https://kugou.445569.xyz/live/1458679
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="2572746" tvg-name="YL夏子" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c1599723b88b761f854a785fa73214bf.jpg" group-title="音乐",YL夏子
 https://kugou.445569.xyz/live/2572746
 #EXTINF:-1 tvg-id="1271053" tvg-name="陈思芸" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ed66dbb1df8c6569b1d19e668f1f8ec5.jpg" group-title="音乐",陈思芸
 https://kugou.445569.xyz/live/1271053
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="2794649" tvg-name="龙玥颖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c2dbc6a76514079445092640147b51f6.jpg" group-title="音乐",龙玥颖
 https://kugou.445569.xyz/live/2794649
+=======
+#EXTINF:-1 tvg-id="1083564" tvg-name="佳小饼JXB" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/f63eb45af49f1311d72040460047c776.jpg" group-title="音乐",佳小饼JXB
+https://kugou.445569.xyz/live/1083564
+#EXTINF:-1 tvg-id="1346424" tvg-name="花幺妹h" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c19d7daff8b47ff155f75e3da6b2f1bb.jpg" group-title="音乐",花幺妹h
+https://kugou.445569.xyz/live/1346424
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="5730952" tvg-name="书明月" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6286c644a626614d61a90622f26396f3.jpg" group-title="音乐",书明月
 https://kugou.445569.xyz/live/5730952
 #EXTINF:-1 tvg-id="7379298" tvg-name="歌手芸影" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/809f33f1fcc24d31da3443d6d88b1715.jpg" group-title="音乐",歌手芸影
 https://kugou.445569.xyz/live/7379298
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="1508175" tvg-name="亿安 yan 老闫" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8f77baf550f37b7e86d2c749513dc0e8.jpg" group-title="音乐",亿安 yan 老闫
 https://kugou.445569.xyz/live/1508175
+=======
+#EXTINF:-1 tvg-id="2610251" tvg-name="十雾five" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8f33ed10751ce32fb5d207b1078aaa17.jpg" group-title="音乐",十雾five
+https://kugou.445569.xyz/live/2610251
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="4151640" tvg-name="chen美娜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/64f321b90f97d7a0ae1e672c11d1adc6.jpg" group-title="音乐",chen美娜
 https://kugou.445569.xyz/live/4151640
 #EXTINF:-1 tvg-id="1383105" tvg-name="魏凡恩" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/38617149045eb4c81343b627950973cb.jpg" group-title="音乐",魏凡恩
 https://kugou.445569.xyz/live/1383105
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="1302505" tvg-name="狼性S淘淘" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7b4371d1d79ff1ea19409b1afdf9af8c.jpg" group-title="音乐",狼性S淘淘
 https://kugou.445569.xyz/live/1302505
+=======
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="5613846" tvg-name="岁星遥" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1c9b86ac0caddee64a03a0eb29c449f0.jpg" group-title="音乐",岁星遥
 https://kugou.445569.xyz/live/5613846
 #EXTINF:-1 tvg-id="3275238" tvg-name="郑七安安" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/af7830ba7a43bc1bf0465a7ee526b915.jpg" group-title="音乐",郑七安安
 https://kugou.445569.xyz/live/3275238
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="4937538" tvg-name="槿繁I" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c46f903af5533f5df4c04dd80c09935a.jpg" group-title="音乐",槿繁I
 https://kugou.445569.xyz/live/4937538
+=======
+#EXTINF:-1 tvg-id="3536178" tvg-name="最爱琴三岁" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/489295cc39cb5fdf47a11759ac36f088.jpg" group-title="音乐",最爱琴三岁
+https://kugou.445569.xyz/live/3536178
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="50952153" tvg-name="林焱iis" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c47b403cf889c458d96078f4116b002e.jpg" group-title="音乐",林焱iis
 https://kugou.445569.xyz/live/50952153
 #EXTINF:-1 tvg-id="3467416" tvg-name="任菲菲·" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/22e34b7dfc6554f503dcca1e0fd24281.jpg" group-title="音乐",任菲菲·
@@ -241,10 +458,22 @@ https://kugou.445569.xyz/live/2890463
 https://kugou.445569.xyz/live/1051859
 #EXTINF:-1 tvg-id="5041725" tvg-name="UC璐璐Grace" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/50b8fff6814b951917faf5482469941d.jpg" group-title="音乐",UC璐璐Grace
 https://kugou.445569.xyz/live/5041725
+<<<<<<< Updated upstream
+=======
+#EXTINF:-1 tvg-id="50692873" tvg-name="唯一Y888" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/65dd2fc9d884aa0d38671546db6bc7d5.jpg" group-title="音乐",唯一Y888
+https://kugou.445569.xyz/live/50692873
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="51073524" tvg-name="o允琪吖o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/cd5d0381de7acf7d42523475001638bb.jpg" group-title="音乐",o允琪吖o
 https://kugou.445569.xyz/live/51073524
 #EXTINF:-1 tvg-id="3060583" tvg-name="MY甜姐" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e9e25d9d801c4ecfcfdcdb61052a08cd.jpg" group-title="音乐",MY甜姐
 https://kugou.445569.xyz/live/3060583
+<<<<<<< Updated upstream
+=======
+#EXTINF:-1 tvg-id="1067463" tvg-name="Only羽航" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/96b7807b5eda596e643b6883dd46c8ca.jpg" group-title="音乐",Only羽航
+https://kugou.445569.xyz/live/1067463
+#EXTINF:-1 tvg-id="51098216" tvg-name="新人梦梦i" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2e299b06e1c82990ab371f7612383d0e.jpg" group-title="音乐",新人梦梦i
+https://kugou.445569.xyz/live/51098216
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="2497369" tvg-name="ZF晨宝回来咯" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/edeb2247463cd84f83cc2e34189ed819.jpg" group-title="音乐",ZF晨宝回来咯
 https://kugou.445569.xyz/live/2497369
 #EXTINF:-1 tvg-id="5352840" tvg-name="Hello小倩" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7947d667d93deba9a143a33366ee7871.jpg" group-title="音乐",Hello小倩
@@ -255,8 +484,11 @@ https://kugou.445569.xyz/live/3017864
 https://kugou.445569.xyz/live/3761056
 #EXTINF:-1 tvg-id="1362758" tvg-name="陈小雅·" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/acec29b116100d11baf4a2cbc2e95481.jpg" group-title="音乐",陈小雅·
 https://kugou.445569.xyz/live/1362758
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="1246947" tvg-name="恋心i金汐涵" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ac341f0305c05536b92a3465f43d860e.jpg" group-title="音乐",恋心i金汐涵
 https://kugou.445569.xyz/live/1246947
+=======
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="4845978" tvg-name="怪兽长犄角" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5ecf18eb208ffc16763089759494251.jpg" group-title="音乐",怪兽长犄角
 https://kugou.445569.xyz/live/4845978
 #EXTINF:-1 tvg-id="1013962" tvg-name="钟歆乐" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5356a45e9e76234322eb8e93aa27318b.jpg" group-title="音乐",钟歆乐
@@ -269,6 +501,7 @@ https://kugou.445569.xyz/live/4187067
 https://kugou.445569.xyz/live/5639164
 #EXTINF:-1 tvg-id="1591870" tvg-name="井宝儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/923f246905836938a31c1dbad4f99698.jpg" group-title="音乐",井宝儿
 https://kugou.445569.xyz/live/1591870
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="音乐",涉外北北同學
 https://kugou.445569.xyz/live/4624270
 #EXTINF:-1 tvg-id="51061379" tvg-name="o新星" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bc1c37d8a3c2f8b9be223e9601651ca1.jpg" group-title="音乐",o新星
@@ -277,12 +510,15 @@ https://kugou.445569.xyz/live/51061379
 https://kugou.445569.xyz/live/1043676
 #EXTINF:-1 tvg-id="50287259" tvg-name="万美灬布丁" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/3d27e64983667c9de844f9abad9615d1.jpg" group-title="音乐",万美灬布丁
 https://kugou.445569.xyz/live/50287259
+=======
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="高清",涉外北北同學
 https://kugou.445569.xyz/live/4624270
 #EXTINF:-1 tvg-id="50293863" tvg-name="mini姵児" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/74a95fca4b046e0ca28641f7575b752f.jpg" group-title="高清",mini姵児
 https://kugou.445569.xyz/live/50293863
 #EXTINF:-1 tvg-id="50341781" tvg-name="钛白兔" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/58989253e4cbd3d070c997c012520310.jpg" group-title="高清",钛白兔
 https://kugou.445569.xyz/live/50341781
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="舞蹈",涉外北北同學
 https://kugou.445569.xyz/live/4624270
 #EXTINF:-1 tvg-id="51085257" tvg-name="XN妙妙新主播" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/409000a920115908c2ae1ca6cdf7010d.jpg" group-title="舞蹈",XN妙妙新主播
@@ -291,10 +527,29 @@ https://kugou.445569.xyz/live/51085257
 https://kugou.445569.xyz/live/3725482
 #EXTINF:-1 tvg-id="1606127" tvg-name="一然666666" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5f2ec27ad7d8c9a018349c4814622996.jpg" group-title="舞蹈",一然666666
 https://kugou.445569.xyz/live/1606127
+=======
+#EXTINF:-1 tvg-id="1606127" tvg-name="一然666666" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5f2ec27ad7d8c9a018349c4814622996.jpg" group-title="舞蹈",一然666666
+https://kugou.445569.xyz/live/1606127
+#EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="舞蹈",涉外北北同學
+https://kugou.445569.xyz/live/4624270
+#EXTINF:-1 tvg-id="3725482" tvg-name="似初oi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/65cad5ff6bb806d7aae72eaa35273aa0.jpg" group-title="舞蹈",似初oi
+https://kugou.445569.xyz/live/3725482
+#EXTINF:-1 tvg-id="51098256" tvg-name="VV云初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/639bab48c9efde185d475fa4a0b3ec08.jpg" group-title="舞蹈",VV云初
+https://kugou.445569.xyz/live/51098256
+#EXTINF:-1 tvg-id="4925762" tvg-name="筱贝壳兒" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/51abc5ca151fafe916a7232dab4b9688.jpg" group-title="舞蹈",筱贝壳兒
+https://kugou.445569.xyz/live/4925762
+#EXTINF:-1 tvg-id="3937179" tvg-name="九亿光" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/4fc0f00ac23e6dacc6c6a419f12507d9.jpg" group-title="舞蹈",九亿光
+https://kugou.445569.xyz/live/3937179
+#EXTINF:-1 tvg-id="6750190" tvg-name="会跳舞的孙小姐" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ff0e029679f3c38c6015ebd27e8b9d41.jpg" group-title="舞蹈",会跳舞的孙小姐
+https://kugou.445569.xyz/live/6750190
+#EXTINF:-1 tvg-id="1304037" tvg-name="女神Y瑶" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/3b7f940c637c3347a74bf191e99814d6.jpg" group-title="舞蹈",女神Y瑶
+https://kugou.445569.xyz/live/1304037
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="3840549" tvg-name="会笑的彩虹3" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ea02e67f49772c33e9bf621fb5727c8f.jpg" group-title="舞蹈",会笑的彩虹3
 https://kugou.445569.xyz/live/3840549
 #EXTINF:-1 tvg-id="50743572" tvg-name="XN妮妮娜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/4eeae1ca55f0bf950aa3d9393638060e.jpg" group-title="舞蹈",XN妮妮娜
 https://kugou.445569.xyz/live/50743572
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="6197293" tvg-name="糖狗狗不狗" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/49aedc54f18450779176571821dd7e34.jpg" group-title="舞蹈",糖狗狗不狗
 https://kugou.445569.xyz/live/6197293
 #EXTINF:-1 tvg-id="50924970" tvg-name="小考V" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0f44a3670e310032fab141378cc40a8c.jpg" group-title="舞蹈",小考V
@@ -323,6 +578,42 @@ https://kugou.445569.xyz/live/51082350
 https://kugou.445569.xyz/live/51097483
 #EXTINF:-1 tvg-id="51073906" tvg-name="CY林芷" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6ae31248b02978872b49adc42e0364c1.jpg" group-title="舞蹈",CY林芷
 https://kugou.445569.xyz/live/51073906
+=======
+#EXTINF:-1 tvg-id="51039329" tvg-name="星联汇i禾甜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/44300b75e38b44882a2ebe18dc4a194d.jpg" group-title="舞蹈",星联汇i禾甜
+https://kugou.445569.xyz/live/51039329
+#EXTINF:-1 tvg-id="50924970" tvg-name="小考V" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0f44a3670e310032fab141378cc40a8c.jpg" group-title="舞蹈",小考V
+https://kugou.445569.xyz/live/50924970
+#EXTINF:-1 tvg-id="4826523" tvg-name="哆唻A矇" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/47badefe09095bdfb7e7c8635e385373.jpg" group-title="舞蹈",哆唻A矇
+https://kugou.445569.xyz/live/4826523
+#EXTINF:-1 tvg-id="51086237" tvg-name="幸韫o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7e5a168781692ac6e560ece43b595b40.jpg" group-title="舞蹈",幸韫o
+https://kugou.445569.xyz/live/51086237
+#EXTINF:-1 tvg-id="50908180" tvg-name="星联汇i小晶软糖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/fe3d5815492bce3fda4b2e067108a825.jpg" group-title="舞蹈",星联汇i小晶软糖
+https://kugou.445569.xyz/live/50908180
+#EXTINF:-1 tvg-id="6597960" tvg-name="DF舞蹈小妖" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bb65f2864ea4ce607429181eb23de393.jpg" group-title="舞蹈",DF舞蹈小妖
+https://kugou.445569.xyz/live/6597960
+#EXTINF:-1 tvg-id="4056750" tvg-name="Zz思舞" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/70215f81ddcd86bf7f976c5831294976.jpg" group-title="舞蹈",Zz思舞
+https://kugou.445569.xyz/live/4056750
+#EXTINF:-1 tvg-id="50907085" tvg-name="星联汇小鱼鱼儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/54f90caabab6e292b4bea075ef40f453.jpg" group-title="舞蹈",星联汇小鱼鱼儿
+https://kugou.445569.xyz/live/50907085
+#EXTINF:-1 tvg-id="51031485" tvg-name="Hi温十一" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/861886d15d1532db8a20c4a63a3a17c3.jpg" group-title="舞蹈",Hi温十一
+https://kugou.445569.xyz/live/51031485
+#EXTINF:-1 tvg-id="51063691" tvg-name="星联汇金诗幼" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/f12d5efbc658553da56ead0e4e039a38.jpg" group-title="舞蹈",星联汇金诗幼
+https://kugou.445569.xyz/live/51063691
+#EXTINF:-1 tvg-id="5171815" tvg-name="郭温柔i恋心U" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/489f59626b1310e736bd661e498f5a6e.jpg" group-title="颜值",郭温柔i恋心U
+https://kugou.445569.xyz/live/5171815
+#EXTINF:-1 tvg-id="4624270" tvg-name="涉外北北同學" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/20964d34222c67d0aef1ca568bd8161b.jpg" group-title="颜值",涉外北北同學
+https://kugou.445569.xyz/live/4624270
+#EXTINF:-1 tvg-id="5823638" tvg-name="DM伊菲" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/001634510b8aec889342c9f48c501b07.jpg" group-title="颜值",DM伊菲
+https://kugou.445569.xyz/live/5823638
+#EXTINF:-1 tvg-id="51052870" tvg-name="GK锦怡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6edec0c3f60aec08fb6bcde6ba7b023d.jpg" group-title="颜值",GK锦怡
+https://kugou.445569.xyz/live/51052870
+#EXTINF:-1 tvg-id="50686573" tvg-name="JY十一a" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/11465e7e74898b3b1823a4bbb2e9ec2a.jpg" group-title="颜值",JY十一a
+https://kugou.445569.xyz/live/50686573
+#EXTINF:-1 tvg-id="4578086" tvg-name="DM小敏儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d2bf7608c2844625036ef5ac7adb590f.jpg" group-title="颜值",DM小敏儿
+https://kugou.445569.xyz/live/4578086
+#EXTINF:-1 tvg-id="51085741" tvg-name="66大顺oO" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5efaa9d0471b073e991d7f1df8d0ae1.jpg" group-title="颜值",66大顺oO
+https://kugou.445569.xyz/live/51085741
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="51027949" tvg-name="o安屿o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e881fe7b50e9c86832abb81ecaf07890.jpg" group-title="颜值",o安屿o
 https://kugou.445569.xyz/live/51027949
 #EXTINF:-1 tvg-id="3809716" tvg-name="Morning清慕" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e901c09b09625c14316c450bb06d5f03.jpg" group-title="颜值",Morning清慕
@@ -333,6 +624,7 @@ https://kugou.445569.xyz/live/5171815
 https://kugou.445569.xyz/live/3624549
 #EXTINF:-1 tvg-id="1490257" tvg-name="红儿好声音" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9f1d3fdae2ad8a0410f64fbfca372953.jpg" group-title="颜值",红儿好声音
 https://kugou.445569.xyz/live/1490257
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="51052870" tvg-name="GK锦怡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6edec0c3f60aec08fb6bcde6ba7b023d.jpg" group-title="颜值",GK锦怡
 https://kugou.445569.xyz/live/51052870
 #EXTINF:-1 tvg-id="51097352" tvg-name="小晚io" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7f0ddfd91d2bd3891e9ca0176cd61192.jpg" group-title="颜值",小晚io
@@ -405,6 +697,76 @@ https://kugou.445569.xyz/live/51096958
 https://kugou.445569.xyz/live/51091435
 #EXTINF:-1 tvg-id="4351461" tvg-name="云南王百万" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1b8c90dafc96fe309e2519f675b7f58c.jpg" group-title="酷次元",云南王百万
 https://kugou.445569.xyz/live/4351461
+=======
+#EXTINF:-1 tvg-id="5801596" tvg-name="丁屿夕" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/925cd8d3baa64d0882e739a546204037.jpg" group-title="颜值",丁屿夕
+https://kugou.445569.xyz/live/5801596
+#EXTINF:-1 tvg-id="51095206" tvg-name="星儿wait红颜28" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/107b36eb89ee55aa3d81ee164fcd7197.jpg" group-title="颜值",星儿wait红颜28
+https://kugou.445569.xyz/live/51095206
+#EXTINF:-1 tvg-id="51097352" tvg-name="小晚io" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7f0ddfd91d2bd3891e9ca0176cd61192.jpg" group-title="颜值",小晚io
+https://kugou.445569.xyz/live/51097352
+#EXTINF:-1 tvg-id="50932085" tvg-name="90念初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9ff0e817f93cbb20e91396cc8408f375.jpg" group-title="颜值",90念初
+https://kugou.445569.xyz/live/50932085
+#EXTINF:-1 tvg-id="3725482" tvg-name="似初oi" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/65cad5ff6bb806d7aae72eaa35273aa0.jpg" group-title="颜值",似初oi
+https://kugou.445569.xyz/live/3725482
+#EXTINF:-1 tvg-id="3865631" tvg-name="菀菀0" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b3c9af0a0f04f2387d85dc0fb6477b2a.jpg" group-title="颜值",菀菀0
+https://kugou.445569.xyz/live/3865631
+#EXTINF:-1 tvg-id="51096958" tvg-name="软软nn" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bdc0c93788de5ed129fd94e8aebee9ed.jpg" group-title="颜值",软软nn
+https://kugou.445569.xyz/live/51096958
+#EXTINF:-1 tvg-id="51098256" tvg-name="VV云初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/639bab48c9efde185d475fa4a0b3ec08.jpg" group-title="颜值",VV云初
+https://kugou.445569.xyz/live/51098256
+#EXTINF:-1 tvg-id="1312839" tvg-name="广东晴念念" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/64a60244b840ea6420fee26330a690e7.jpg" group-title="颜值",广东晴念念
+https://kugou.445569.xyz/live/1312839
+#EXTINF:-1 tvg-id="51047438" tvg-name="YH乔乔777" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bc33560756bc8c61687ea9ecb5d246db.jpg" group-title="颜值",YH乔乔777
+https://kugou.445569.xyz/live/51047438
+#EXTINF:-1 tvg-id="6847243" tvg-name="星冉mm" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/1f327a8005e0d8d16d79ce552a80f485.jpg" group-title="颜值",星冉mm
+https://kugou.445569.xyz/live/6847243
+#EXTINF:-1 tvg-id="51091435" tvg-name="qz雨微" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5b7c00be7de5958153808de9c87671a5.jpg" group-title="新秀",qz雨微
+https://kugou.445569.xyz/live/51091435
+#EXTINF:-1 tvg-id="51092769" tvg-name="腾东新人拉面" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b0458b562db497e232ec2a6f5621ea14.jpg" group-title="新秀",腾东新人拉面
+https://kugou.445569.xyz/live/51092769
+#EXTINF:-1 tvg-id="51201628" tvg-name="JZ软软" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/26794ea200d3fd899aba904539217c56.jpg" group-title="新秀",JZ软软
+https://kugou.445569.xyz/live/51201628
+#EXTINF:-1 tvg-id="51203064" tvg-name="苏小麦789" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/3773e0a1c0c921cb38e8d99f769f37b0.jpg" group-title="新秀",苏小麦789
+https://kugou.445569.xyz/live/51203064
+#EXTINF:-1 tvg-id="51092540" tvg-name="湾湾u" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/991c20684346272082d1e486d7762ad8.jpg" group-title="新秀",湾湾u
+https://kugou.445569.xyz/live/51092540
+#EXTINF:-1 tvg-id="51085741" tvg-name="66大顺oO" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5efaa9d0471b073e991d7f1df8d0ae1.jpg" group-title="新秀",66大顺oO
+https://kugou.445569.xyz/live/51085741
+#EXTINF:-1 tvg-id="51202153" tvg-name="新人一小绵羊" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d98fdbd82b378246523d2e019468e8ce.jpg" group-title="新秀",新人一小绵羊
+https://kugou.445569.xyz/live/51202153
+#EXTINF:-1 tvg-id="51203050" tvg-name="芝士土司" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/5fdbb32a58e17cb218f39f50d7cd9f00.jpg" group-title="新秀",芝士土司
+https://kugou.445569.xyz/live/51203050
+#EXTINF:-1 tvg-id="51097525" tvg-name="新人丹丹蛋蛋" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b68632eccb1b1e82885fcbb2d65af3fa.jpg" group-title="新秀",新人丹丹蛋蛋
+https://kugou.445569.xyz/live/51097525
+#EXTINF:-1 tvg-id="51203068" tvg-name="新人米多多CC" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/43e69e9234796d8c649f79f85ba547a5.jpg" group-title="新秀",新人米多多CC
+https://kugou.445569.xyz/live/51203068
+#EXTINF:-1 tvg-id="51092073" tvg-name="时念念a" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b6a66e50d4a8bf6ec2a4b2a2f98a424e.jpg" group-title="新秀",时念念a
+https://kugou.445569.xyz/live/51092073
+#EXTINF:-1 tvg-id="51093240" tvg-name="涵团洋洋" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/d9865a3cae1d0c2577190dd275a48209.jpg" group-title="新秀",涵团洋洋
+https://kugou.445569.xyz/live/51093240
+#EXTINF:-1 tvg-id="51095206" tvg-name="星儿wait红颜28" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/107b36eb89ee55aa3d81ee164fcd7197.jpg" group-title="新秀",星儿wait红颜28
+https://kugou.445569.xyz/live/51095206
+#EXTINF:-1 tvg-id="51096958" tvg-name="软软nn" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bdc0c93788de5ed129fd94e8aebee9ed.jpg" group-title="新秀",软软nn
+https://kugou.445569.xyz/live/51096958
+#EXTINF:-1 tvg-id="51089828" tvg-name="J万念" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/197321a90e2b8974eab9300cf758a9d8.jpg" group-title="新秀",J万念
+https://kugou.445569.xyz/live/51089828
+#EXTINF:-1 tvg-id="51097352" tvg-name="小晚io" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7f0ddfd91d2bd3891e9ca0176cd61192.jpg" group-title="新秀",小晚io
+https://kugou.445569.xyz/live/51097352
+#EXTINF:-1 tvg-id="51202158" tvg-name="米老猪Oo" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/f88ed5fcfed630ee4785dc8bed5b4775.jpg" group-title="新秀",米老猪Oo
+https://kugou.445569.xyz/live/51202158
+#EXTINF:-1 tvg-id="51098256" tvg-name="VV云初" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/639bab48c9efde185d475fa4a0b3ec08.jpg" group-title="新秀",VV云初
+https://kugou.445569.xyz/live/51098256
+#EXTINF:-1 tvg-id="51202838" tvg-name="YH新人壹壹y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/cd6031848a04ac38a0de0130388cc272.jpg" group-title="新秀",YH新人壹壹y
+https://kugou.445569.xyz/live/51202838
+#EXTINF:-1 tvg-id="51079401" tvg-name="丫丫Uu" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/21ede34a6d58ce63fb8b1d23faaa3140.jpg" group-title="新秀",丫丫Uu
+https://kugou.445569.xyz/live/51079401
+#EXTINF:-1 tvg-id="50690382" tvg-name="遇王逢祥瑞" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/4429b6949f6a760f027e3046d04bdd28.jpg" group-title="酷次元",遇王逢祥瑞
+https://kugou.445569.xyz/live/50690382
+#EXTINF:-1 tvg-id="5256451" tvg-name="WWWWWWWWW清風" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/667901a9002f6c1f450b1cf4c94f31a4.jpg" group-title="酷次元",WWWWWWWWW清風
+https://kugou.445569.xyz/live/5256451
+#EXTINF:-1 tvg-id="50191430" tvg-name="小宝不吃糖y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b810e3a29fd7254690e8a908d39039f6.jpg" group-title="酷次元",小宝不吃糖y
+https://kugou.445569.xyz/live/50191430
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="6217819" tvg-name="北棠战国18小时" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0e1faddb0c12da7c4460ed8ab76fadf2.jpg" group-title="酷次元",北棠战国18小时
 https://kugou.445569.xyz/live/6217819
 #EXTINF:-1 tvg-id="1427485" tvg-name="勿逝" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/58df8e84603433858a09e59cd57ed8ed.jpg" group-title="酷次元",勿逝
@@ -415,20 +777,28 @@ https://kugou.445569.xyz/live/50952985
 https://kugou.445569.xyz/live/6598783
 #EXTINF:-1 tvg-id="5218385" tvg-name="凌舟l" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c441e41f8e9ce7ac9b10c62ef7cebc31.jpg" group-title="酷次元",凌舟l
 https://kugou.445569.xyz/live/5218385
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="7092302" tvg-name="FY莫子凡" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/fa4146a9035b878ddeeccc863bd18521.jpg" group-title="酷次元",FY莫子凡
 https://kugou.445569.xyz/live/7092302
+=======
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="3282961" tvg-name="MT小麦芽" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9091b156954eaefe5a40bed34481cbd2.jpg" group-title="酷次元",MT小麦芽
 https://kugou.445569.xyz/live/3282961
 #EXTINF:-1 tvg-id="2981896" tvg-name="蛋olo蛋" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c8da885a39c03c8afec399978d91264c.jpg" group-title="酷次元",蛋olo蛋
 https://kugou.445569.xyz/live/2981896
 #EXTINF:-1 tvg-id="5146726" tvg-name="只是挂机的兜兜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2dbff7fd7ceb21b3668760e69dc80b84.jpg" group-title="酷次元",只是挂机的兜兜
 https://kugou.445569.xyz/live/5146726
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50295473" tvg-name="京城付威w沈梦楠" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/e4dab8fb8d3af1481e98e179253cbddc.jpg" group-title="酷次元",京城付威w沈梦楠
 https://kugou.445569.xyz/live/50295473
 #EXTINF:-1 tvg-id="51084123" tvg-name="豫见初夏" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a622ec0f39402e7466f50da0960ea8f4.jpg" group-title="酷次元",豫见初夏
 https://kugou.445569.xyz/live/51084123
 #EXTINF:-1 tvg-id="5378098" tvg-name="大小姐nn" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/593715538778842d2fe8a62003b33010.jpg" group-title="酷次元",大小姐nn
 https://kugou.445569.xyz/live/5378098
+=======
+#EXTINF:-1 tvg-id="50295473" tvg-name="京城付威w沈梦楠" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/d772e4864dc107b6841024a1e830c568.jpg" group-title="酷次元",京城付威w沈梦楠
+https://kugou.445569.xyz/live/50295473
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="6039612" tvg-name="龍九鳳" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/c4845bce796e0012e191b006d546a2f6.jpg" group-title="酷次元",龍九鳳
 https://kugou.445569.xyz/live/6039612
 #EXTINF:-1 tvg-id="50527079" tvg-name="百万富婆想起飞" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/127b0b4cba993232d89d9e3352bfeea1.jpg" group-title="酷次元",百万富婆想起飞
@@ -437,6 +807,7 @@ https://kugou.445569.xyz/live/50527079
 https://kugou.445569.xyz/live/2406472
 #EXTINF:-1 tvg-id="50621289" tvg-name="i甜喵Yaaa" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/60c1195c5cdf1d2bea0fb192954c39d0.jpg" group-title="酷次元",i甜喵Yaaa
 https://kugou.445569.xyz/live/50621289
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="50942852" tvg-name="筱熊922" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a645a60be7550a4a15d7f90f9b9c86b1.jpg" group-title="酷次元",筱熊922
 https://kugou.445569.xyz/live/50942852
 #EXTINF:-1 tvg-id="4585684" tvg-name="荜耘涛" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/0063c48c92c625ee47789e7bbaedbe38.jpg" group-title="酷次元",荜耘涛
@@ -539,6 +910,106 @@ https://kugou.445569.xyz/live/5785416
 https://kugou.445569.xyz/live/5239589
 #EXTINF:-1 tvg-id="51092303" tvg-name="瑞雪林英" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/25e4e62edf0f035902082bd06513db35.jpg" group-title="弹幕互动",瑞雪林英
 https://kugou.445569.xyz/live/51092303
+=======
+#EXTINF:-1 tvg-id="5163212" tvg-name="北影一校草" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6c8d815f7289f675f898d1f66283e818.jpg" group-title="酷次元",北影一校草
+https://kugou.445569.xyz/live/5163212
+#EXTINF:-1 tvg-id="3217590" tvg-name="凡心向晚" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d8c626ff1026d9b447ef899107d50fcd.jpg" group-title="酷次元",凡心向晚
+https://kugou.445569.xyz/live/3217590
+#EXTINF:-1 tvg-id="50975619" tvg-name="贤贤4960" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/d69e72045ba7b089cb6c833afd21bd39.jpg" group-title="酷次元",贤贤4960
+https://kugou.445569.xyz/live/50975619
+#EXTINF:-1 tvg-id="50942852" tvg-name="筱熊922" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a645a60be7550a4a15d7f90f9b9c86b1.jpg" group-title="酷次元",筱熊922
+https://kugou.445569.xyz/live/50942852
+#EXTINF:-1 tvg-id="1475863" tvg-name="呆宝8888888886" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/731ea0862cf60b4c8f98345c92cb7382.jpg" group-title="游戏女神",呆宝8888888886
+https://kugou.445569.xyz/live/1475863
+#EXTINF:-1 tvg-id="7395101" tvg-name="洛璃e" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/83618f98013976689ed1850397cc98c1.jpg" group-title="游戏女神",洛璃e
+https://kugou.445569.xyz/live/7395101
+#EXTINF:-1 tvg-id="50367390" tvg-name="易点点y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8af04a5154becca0518d489ed72aff9d.jpg" group-title="游戏女神",易点点y
+https://kugou.445569.xyz/live/50367390
+#EXTINF:-1 tvg-id="50307498" tvg-name="樱桃小玩子y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/c6b97aaac3bfdb74689a2098e32cdafa.jpg" group-title="游戏女神",樱桃小玩子y
+https://kugou.445569.xyz/live/50307498
+#EXTINF:-1 tvg-id="50641357" tvg-name="朵朵me" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d9112bc53e7cc0957ce62381a45e3f79.jpg" group-title="游戏女神",朵朵me
+https://kugou.445569.xyz/live/50641357
+#EXTINF:-1 tvg-id="51031871" tvg-name="爱玩铠的然岚" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/edc1879218589fd86b0f76f349d5f0a5.jpg" group-title="王者荣耀",爱玩铠的然岚
+https://kugou.445569.xyz/live/51031871
+#EXTINF:-1 tvg-id="51098656" tvg-name="新人兔兎" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/735f09178700d014caaa545df49180a5.jpg" group-title="王者荣耀",新人兔兎
+https://kugou.445569.xyz/live/51098656
+#EXTINF:-1 tvg-id="3680502" tvg-name="7y浪孩" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6159d0071948deedab45f9e3c088db3c.jpg" group-title="王者荣耀",7y浪孩
+https://kugou.445569.xyz/live/3680502
+#EXTINF:-1 tvg-id="51201949" tvg-name="雨天love" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7b723c718824764acb2737f233b902a6.jpg" group-title="王者荣耀",雨天love
+https://kugou.445569.xyz/live/51201949
+#EXTINF:-1 tvg-id="51096287" tvg-name="小优哟哟哟yo" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/06722638a19094243c95bf2fbc59a977.jpg" group-title="王者荣耀",小优哟哟哟yo
+https://kugou.445569.xyz/live/51096287
+#EXTINF:-1 tvg-id="50917475" tvg-name="国服万花筒阿宸" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9d37d289a7cd3945697da3dee4ce8520.jpg" group-title="王者荣耀",国服万花筒阿宸
+https://kugou.445569.xyz/live/50917475
+#EXTINF:-1 tvg-id="3087490" tvg-name="全能女神小梅梅" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/3dfde2806a47c7589d5a33061f1cbe42.jpg" group-title="王者荣耀",全能女神小梅梅
+https://kugou.445569.xyz/live/3087490
+#EXTINF:-1 tvg-id="50170694" tvg-name="河南阿宽" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/88908bf5a20d5a0fbe4ed1b18ecac016.jpg" group-title="王者荣耀",河南阿宽
+https://kugou.445569.xyz/live/50170694
+#EXTINF:-1 tvg-id="1918965" tvg-name="做一个中年老登" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/292d5be9a5293636965f9c01b189911d.jpg" group-title="王者荣耀",做一个中年老登
+https://kugou.445569.xyz/live/1918965
+#EXTINF:-1 tvg-id="50307498" tvg-name="樱桃小玩子y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7c8c2e6776cfcdbfd7242ec5da89989d.jpg" group-title="王者荣耀",樱桃小玩子y
+https://kugou.445569.xyz/live/50307498
+#EXTINF:-1 tvg-id="50367390" tvg-name="易点点y" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8af04a5154becca0518d489ed72aff9d.jpg" group-title="王者荣耀",易点点y
+https://kugou.445569.xyz/live/50367390
+#EXTINF:-1 tvg-id="51091214" tvg-name="阳岁岁" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/be86a629df394b54047acb0913fa9971.jpg" group-title="王者荣耀",阳岁岁
+https://kugou.445569.xyz/live/51091214
+#EXTINF:-1 tvg-id="7395101" tvg-name="洛璃e" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/83618f98013976689ed1850397cc98c1.jpg" group-title="王者荣耀",洛璃e
+https://kugou.445569.xyz/live/7395101
+#EXTINF:-1 tvg-id="4932156" tvg-name="广西苟分小明哥" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/0f79344c6b638020772cf084ec5ec75a.jpg" group-title="和平精英",广西苟分小明哥
+https://kugou.445569.xyz/live/4932156
+#EXTINF:-1 tvg-id="2469056" tvg-name="氿妹小趴菜" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/069e36588ee8840f8d2421dfc907e0e2.jpg" group-title="和平精英",氿妹小趴菜
+https://kugou.445569.xyz/live/2469056
+#EXTINF:-1 tvg-id="50745973" tvg-name="王者荣耀一潘少" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e199a7a20a69a922d9d4dc983d38b7ef.jpg" group-title="和平精英",王者荣耀一潘少
+https://kugou.445569.xyz/live/50745973
+#EXTINF:-1 tvg-id="51086295" tvg-name="CY萧策" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/eac1dfd840237ade4a31b71c69baa28e.jpg" group-title="和平精英",CY萧策
+https://kugou.445569.xyz/live/51086295
+#EXTINF:-1 tvg-id="1032041" tvg-name="唇儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6cf0f81c01729234732b32aa234a01a8.jpg" group-title="网游竞技",唇儿
+https://kugou.445569.xyz/live/1032041
+#EXTINF:-1 tvg-id="4254689" tvg-name="古筝筝昕" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/855f69ccaa440fa2b184f55fc36f64a7.jpg" group-title="网游竞技",古筝筝昕
+https://kugou.445569.xyz/live/4254689
+#EXTINF:-1 tvg-id="5239589" tvg-name="井瑶儿hm" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2e3d39b242238957e404951a187aa7d0.jpg" group-title="网游竞技",井瑶儿hm
+https://kugou.445569.xyz/live/5239589
+#EXTINF:-1 tvg-id="5627485" tvg-name="卜星瑶" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/ad0a4be8f585bca1e86ee65f885023f9.jpg" group-title="网游竞技",卜星瑶
+https://kugou.445569.xyz/live/5627485
+#EXTINF:-1 tvg-id="2814161" tvg-name="狸仙子" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/a78762226393d31113732aeb8de4cc48.jpg" group-title="网游竞技",狸仙子
+https://kugou.445569.xyz/live/2814161
+#EXTINF:-1 tvg-id="1308743" tvg-name="李莹小熊" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d32f7ef4737fd70e93301bb67262dd29.jpg" group-title="网游竞技",李莹小熊
+https://kugou.445569.xyz/live/1308743
+#EXTINF:-1 tvg-id="4318545" tvg-name="小梦子100" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/461ad178adc4b0a8f2cb0b55ef90d581.jpg" group-title="网游竞技",小梦子100
+https://kugou.445569.xyz/live/4318545
+#EXTINF:-1 tvg-id="50960651" tvg-name="陈阎芙蓉" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/fd9ce131adf52791b7135027011e0125.jpg" group-title="网游竞技",陈阎芙蓉
+https://kugou.445569.xyz/live/50960651
+#EXTINF:-1 tvg-id="1318191" tvg-name="Y伊瑶" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8b83237be657dd8a12c7d9e64c2301b0.jpg" group-title="网游竞技",Y伊瑶
+https://kugou.445569.xyz/live/1318191
+#EXTINF:-1 tvg-id="5243981" tvg-name="小影儿88888" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/24e0d39a8efa7d4110529bbb01d671d9.jpg" group-title="网游竞技",小影儿88888
+https://kugou.445569.xyz/live/5243981
+#EXTINF:-1 tvg-id="3786282" tvg-name="恋心i天心阁悠然" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/bdd955ecd5c9073f7fca60a9fc5d9f8d.jpg" group-title="网游竞技",恋心i天心阁悠然
+https://kugou.445569.xyz/live/3786282
+#EXTINF:-1 tvg-id="1436032" tvg-name="月儿同学" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b91ac68188a7878b7f33327d81fe77b8.jpg" group-title="网游竞技",月儿同学
+https://kugou.445569.xyz/live/1436032
+#EXTINF:-1 tvg-id="1051623" tvg-name="仙儿Lucky" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6363202e7c028f7f244444da16f6c96d.jpg" group-title="网游竞技",仙儿Lucky
+https://kugou.445569.xyz/live/1051623
+#EXTINF:-1 tvg-id="1056139" tvg-name="疯善柔" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/264fcc485af9456e5abcb15d4d6f03b5.jpg" group-title="网游竞技",疯善柔
+https://kugou.445569.xyz/live/1056139
+#EXTINF:-1 tvg-id="1046029" tvg-name="闪闪BLING" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/6092e647185474524e15028487c4a794.jpg" group-title="网游竞技",闪闪BLING
+https://kugou.445569.xyz/live/1046029
+#EXTINF:-1 tvg-id="50820352" tvg-name="鹿拾一" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/42671976eb80e0fe55707a1480b88982.jpg" group-title="网游竞技",鹿拾一
+https://kugou.445569.xyz/live/50820352
+#EXTINF:-1 tvg-id="6701615" tvg-name="林随心l" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8d02225d70746b36fa1f48914d1e87cf.jpg" group-title="网游竞技",林随心l
+https://kugou.445569.xyz/live/6701615
+#EXTINF:-1 tvg-id="3761056" tvg-name="槿歌I" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/028610c45fa0eca428e5be023757bf7d.jpg" group-title="网游竞技",槿歌I
+https://kugou.445569.xyz/live/3761056
+#EXTINF:-1 tvg-id="50384974" tvg-name="df小助理" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/4dc5d60b93794f61b5a23360048c8a71.jpg" group-title="网游竞技",df小助理
+https://kugou.445569.xyz/live/50384974
+#EXTINF:-1 tvg-id="4524610" tvg-name="薰衣草没有草" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/b6be33f2bbdebca7a34e457f124d8808.jpg" group-title="网游竞技",薰衣草没有草
+https://kugou.445569.xyz/live/4524610
+#EXTINF:-1 tvg-id="5239589" tvg-name="井瑶儿hm" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2e3d39b242238957e404951a187aa7d0.jpg" group-title="弹幕互动",井瑶儿hm
+https://kugou.445569.xyz/live/5239589
+#EXTINF:-1 tvg-id="1309123" tvg-name="小妖女一" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/9015cc138c498c5f8e0035cdc534e84f.jpg" group-title="弹幕互动",小妖女一
+https://kugou.445569.xyz/live/1309123
+#EXTINF:-1 tvg-id="5256451" tvg-name="WWWWWWWWW清風" tvg-logo="http://p3.fx.kgimg.com/v2/fxmobilecover/667901a9002f6c1f450b1cf4c94f31a4.jpg" group-title="弹幕互动",WWWWWWWWW清風
+https://kugou.445569.xyz/live/5256451
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="4845978" tvg-name="怪兽长犄角" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/e5ecf18eb208ffc16763089759494251.jpg" group-title="弹幕互动",怪兽长犄角
 https://kugou.445569.xyz/live/4845978
 #EXTINF:-1 tvg-id="50746960" tvg-name="梦oOo流云" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/66c87a4a6fbd2da6584ef05cd2eafda1.jpg" group-title="弹幕互动",梦oOo流云
@@ -551,10 +1022,13 @@ https://kugou.445569.xyz/live/51079084
 https://kugou.445569.xyz/live/6187284
 #EXTINF:-1 tvg-id="3639806" tvg-name="0o沧海一笑o0" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/515a8ac45f9c92fa76a440c2473b8e63.jpg" group-title="弹幕互动",0o沧海一笑o0
 https://kugou.445569.xyz/live/3639806
+<<<<<<< Updated upstream
 #EXTINF:-1 tvg-id="1320946" tvg-name="钰儿很哇塞" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/091159235cc9e6883d09a90359bb7977.jpg" group-title="弹幕互动",钰儿很哇塞
 https://kugou.445569.xyz/live/1320946
 #EXTINF:-1 tvg-id="1015917" tvg-name="沈筱静" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/57f2d276bc9d19c1d741ddbbd9b5dad2.jpg" group-title="弹幕互动",沈筱静
 https://kugou.445569.xyz/live/1015917
+=======
+>>>>>>> Stashed changes
 #EXTINF:-1 tvg-id="51014643" tvg-name="任婉柒" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/2b3aff1b4363656b9fab8d8bff3d0903.jpg" group-title="弹幕互动",任婉柒
 https://kugou.445569.xyz/live/51014643
 #EXTINF:-1 tvg-id="1056139" tvg-name="疯善柔" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/18f2dc95c7d594785e5b47736587a05d.jpg" group-title="弹幕互动",疯善柔
@@ -569,9 +1043,14 @@ https://kugou.445569.xyz/live/4524610
 https://kugou.445569.xyz/live/4312047
 #EXTINF:-1 tvg-id="1073619" tvg-name="Forever一颜儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/030608d804bec459a7f0a783659fc607.jpg" group-title="弹幕互动",Forever一颜儿
 https://kugou.445569.xyz/live/1073619
-#EXTINF:-1 tvg-id="4614817" tvg-name="一夏可一" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/eaf5c1334e97f5d76293b2cf43da102e.jpg" group-title="弹幕互动",一夏可一
-https://kugou.445569.xyz/live/4614817
 #EXTINF:-1 tvg-id="1092524" tvg-name="7y菟宝" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7d897ef000d9a762efc3f15e1beb7b31.jpg" group-title="弹幕互动",7y菟宝
 https://kugou.445569.xyz/live/1092524
 #EXTINF:-1 tvg-id="50979874" tvg-name="小金条o" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/8b306404cc8bfa68a8fc8f314f9f1d49.jpg" group-title="弹幕互动",小金条o
 https://kugou.445569.xyz/live/50979874
+<<<<<<< Updated upstream
+=======
+#EXTINF:-1 tvg-id="2125378" tvg-name="晚风叙柔" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/7209605cecd08bef4c7e417675f27ed1.jpg" group-title="弹幕互动",晚风叙柔
+https://kugou.445569.xyz/live/2125378
+#EXTINF:-1 tvg-id="1252705" tvg-name="缘晴儿" tvg-logo="http://p3.fx.kgimg.com/v2/fxroomcover/d643f7da6b4b6600ee7d848ce952aa1f.jpg" group-title="弹幕互动",缘晴儿
+https://kugou.445569.xyz/live/1252705
+>>>>>>> Stashed changes
