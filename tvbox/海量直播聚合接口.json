@@ -541,12 +541,6 @@
       "source": "海量直播线路"
     },
     {
-      "name": "👖裤佬YY直播",
-      "url": "https://yy.445569.xyz/live.m3u",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
       "name": "👖裤佬Twitch直播",
       "url": "https://twitch.445569.xyz/live.m3u",
       "ua": "",
@@ -565,12 +559,6 @@
       "source": "海量直播线路"
     },
     {
-      "name": "🍿地方台直播",
-      "url": "https://sd.shandong.bbroot.com/xk/zb.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
       "name": "初秋语",
       "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
       "ua": "",
@@ -579,6 +567,18 @@
     {
       "name": "Ray",
       "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "👖裤佬YY直播",
+      "url": "https://yy.445569.xyz/live.m3u",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "🍿地方台直播",
+      "url": "https://sd.shandong.bbroot.com/xk/zb.txt",
       "ua": "",
       "source": "海量直播线路"
     },
