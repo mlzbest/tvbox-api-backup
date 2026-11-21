@@ -559,6 +559,18 @@
       "source": "海量直播线路"
     },
     {
+      "name": "政治时事",
+      "url": "http://zhangqun66.com/141.php",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "野火直播",
+      "url": "https://zhangqun1818.serv00.net/zq/野火改.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
       "name": "初秋语",
       "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
       "ua": "",
@@ -567,6 +579,48 @@
     {
       "name": "Ray",
       "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "本地live文件",
+      "url": "http://127.0.0.1:9978/file/XYQTVBox/live.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "FMM_IPV6",
+      "url": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "live1线",
+      "url": "http://xhztv.top/xhz/live.txt",
+      "ua": "okhttp/3.15",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "Kimentanm1线1线",
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "BMCH",
+      "url": "https://play.iptv365.org/香雅情/lives/BMCH.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "Tianmu",
+      "url": "https://play.iptv365.org/香雅情/lives/Tianmu.txt",
+      "ua": "",
+      "source": "海量直播线路"
+    },
+    {
+      "name": "fanmingming",
+      "url": "https://play.iptv365.org/香雅情/lives/fanmingming.txt",
       "ua": "",
       "source": "海量直播线路"
     },
@@ -585,12 +639,6 @@
     {
       "name": "牛播一",
       "url": "http://127.0.0.1:9978/proxy?do=cctva",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "Kimentanm1线1线",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "ua": "",
       "source": "海量直播线路"
     },
@@ -658,54 +706,6 @@
       "name": "APTV",
       "url": "https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
       "ua": "okhttp/3.15,AptvPlayer/1.4.0",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "政治时事",
-      "url": "http://zhangqun66.com/141.php",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "野火直播",
-      "url": "https://zhangqun1818.serv00.net/zq/野火改.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "live1线",
-      "url": "http://xhztv.top/xhz/live.txt",
-      "ua": "okhttp/3.15",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "BMCH",
-      "url": "https://play.iptv365.org/香雅情/lives/BMCH.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "Tianmu",
-      "url": "https://play.iptv365.org/香雅情/lives/Tianmu.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "fanmingming",
-      "url": "https://play.iptv365.org/香雅情/lives/fanmingming.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "本地live文件",
-      "url": "http://127.0.0.1:9978/file/XYQTVBox/live.txt",
-      "ua": "",
-      "source": "海量直播线路"
-    },
-    {
-      "name": "FMM_IPV6",
-      "url": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
-      "ua": "",
       "source": "海量直播线路"
     }
   ]
