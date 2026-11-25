@@ -1,5 +1,5 @@
 {
-  "spider": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261121/6n97/0X0/11212343.png;md5;efdb2c1d9a2e8c26e5a74ba5f53dfc56",
+  "spider": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261125/w6zx/0X0/11250121.png;md5;64622ff0fdba63ce7e76ee77e263b35c",
   "wallpaper": "http://127.0.0.1:9978/proxy?do=wallpaper",
   "logo": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20251224/dJkT/1080X1080/logo.jpg/webp",
   "sites": [
@@ -416,22 +416,6 @@
       "timeout": 60
     },
     {
-      "key": "闪电",
-      "name": "闪电 • 4K",
-      "type": 3,
-      "api": "csp_PanWebShare",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 1,
-      "ext": {
-        "site": [
-          "http://shandian.blog"
-        ]
-      },
-      "timeout": 60
-    },
-    {
       "key": "蜡笔",
       "name": "蜡笔 • 4K",
       "type": 3,
@@ -446,6 +430,23 @@
           "https://www.mmpanpan.site",
           "http://tvpanpan.site",
           "http://www.tvpanpan.site"
+        ]
+      },
+      "timeout": 60
+    },
+    {
+      "key": "闪电",
+      "name": "闪电 • 4K",
+      "type": 3,
+      "api": "csp_PanWebShare",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": {
+        "site": [
+          "http://oo.sduc.site",
+          "http://sd.sduc.site"
         ]
       },
       "timeout": 60

@@ -1,5 +1,5 @@
 {
-  "spider": "https://img2.gelonghui.com/library/73c42-e8ed973d-4e97-42d9-b486-1a55057741ed.png;md5;73c42d5c2f86efd6ddc6c85fd286069c",
+  "spider": "https://img2.gelonghui.com/library/252d4-9c2ceac7-d615-4058-98ab-fe13818b0ce4.png;md5;‎252d4d890b6e61a4cd29c3b67f4b8a30‎",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "logo": "http://w.junce.dpdns.org/fm.gif",
   "sites": [
@@ -69,7 +69,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "http:///game"
+      "ext": "http://肥猫.net/game"
     },
     {
       "key": "csp_FeiMaoUC",
@@ -80,13 +80,14 @@
       "timeout": 30,
       "ext": {
         "site_urls": [
+          "http://sd.sduc.site/",
           "http://sd.sduc.site/"
         ],
         "threadinfo": {
           "chunksize": 512,
           "threads": 16
         },
-        "url_key": "http:///FeiMaoUC"
+        "url_key": "http://肥猫.net/FeiMaoUC"
       }
     },
     {
@@ -109,7 +110,7 @@
           "chunksize": 512,
           "threads": 16
         },
-        "url_key": "http:///Duopan2"
+        "url_key": "http://肥猫.net/Duopan2"
       }
     },
     {
@@ -132,14 +133,14 @@
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
-        "appName": "http:///小苹果",
-        "publicKey": "http:///MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
-        "dataKey": "http:///S0VNDTJHOFHHCNMRAW5IV2TOS2PBPQ==",
-        "dataIv": "http:///OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "http:///com.juechufsh.android.xpg1",
+        "appName": "http://肥猫.net/小苹果",
+        "publicKey": "http://肥猫.net/MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
+        "dataKey": "http://肥猫.net/S0VNDTJHOFHHCNMRAW5IV2TOS2PBPQ==",
+        "dataIv": "http://肥猫.net/OC1A06E197EF10CF3F6058CA7A803B5E",
+        "pkg": "http://肥猫.net/com.juechufsh.android.xpg1",
         "host": "",
         "site": "https://xpgandroid03-1372779881.cos.ap-beijing.myqcloud.com/app_xpg_android.txt",
-        "version": "http:///1.0.0.3",
+        "version": "http://肥猫.net/1.0.0.3",
         "decrypt": "0"
       }
     },
@@ -156,14 +157,14 @@
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
-        "appName": "http:///华谊",
-        "publicKey": "http:///MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
-        "dataKey": "http:///V04XQZNYRWN6T0JODZFIAG5CTZB3PT0=",
-        "dataIv": "http:///OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "http:///com.lxf.sncgtzxyx",
+        "appName": "http://肥猫.net/华谊",
+        "publicKey": "http://肥猫.net/MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
+        "dataKey": "http://肥猫.net/V04XQZNYRWN6T0JODZFIAG5CTZB3PT0=",
+        "dataIv": "http://肥猫.net/OC1A06E197EF10CF3F6058CA7A803B5E",
+        "pkg": "http://肥猫.net/com.lxf.sncgtzxyx",
         "host": "",
         "site": "https://1851089669.cdn.123clouddisk.com/1851089669/44107727",
-        "version": "http:///6.0.0.1",
+        "version": "http://肥猫.net/6.0.0.1",
         "decrypt": "1"
       }
     },
@@ -173,14 +174,14 @@
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
-        "appName": "http:///电影天堂",
-        "publicKey": "http:///MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
-        "dataKey": "http:///D2KREWRIBVNAUJJYEDL4VFHOY2Q0PQ==",
-        "dataIv": "http:///OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "http:///com.dytiantang.one",
+        "appName": "http://肥猫.net/电影天堂",
+        "publicKey": "http://肥猫.net/MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
+        "dataKey": "http://肥猫.net/D2KREWRIBVNAUJJYEDL4VFHOY2Q0PQ==",
+        "dataIv": "http://肥猫.net/OC1A06E197EF10CF3F6058CA7A803B5E",
+        "pkg": "http://肥猫.net/com.dytiantang.one",
         "host": "",
         "site": "https://dyttandroid04-1372779881.cos.ap-shanghai.myqcloud.com/app_dyttandroid.txt",
-        "version": "http:///3.0.0.7",
+        "version": "http://肥猫.net/3.0.0.7",
         "decrypt": "0"
       }
     },
@@ -190,14 +191,14 @@
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
-        "appName": "http:///橘汁",
-        "publicKey": "http:///MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
-        "dataKey": "http:///OW1WBLFZCLJ0WTNJQMRSZ2DYSGNBPT0=",
-        "dataIv": "http:///OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "http:///com.mxj.wylcjbxyx",
+        "appName": "http://肥猫.net/橘汁",
+        "publicKey": "http://肥猫.net/MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
+        "dataKey": "http://肥猫.net/OW1WBLFZCLJ0WTNJQMRSZ2DYSGNBPT0=",
+        "dataIv": "http://肥猫.net/OC1A06E197EF10CF3F6058CA7A803B5E",
+        "pkg": "http://肥猫.net/com.mxj.wylcjbxyx",
         "host": "",
         "site": "https://123-1349250429.cos.ap-shanghai.myqcloud.com/app.txt",
-        "version": "http:///3.0.2.4",
+        "version": "http://肥猫.net/3.0.2.4",
         "decrypt": "1"
       }
     },
@@ -261,6 +262,17 @@
       "type": 3,
       "api": "csp_Gz360",
       "playerType": 2
+    },
+    {
+      "key": "厂长",
+      "name": "🏭┃厂长┃影视",
+      "type": 3,
+      "playerType": "2",
+      "api": "csp_Czsapp",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "https://www.4kcz.com"
     },
     {
       "key": "csp_SP360",
@@ -395,7 +407,7 @@
       "key": "儿童",
       "name": "📚┃儿童┃启蒙",
       "type": 3,
-      "api": "http:///api/drpy2.min.js",
+      "api": "http://肥猫.net/api/drpy2.min.js",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
@@ -403,7 +415,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "ext": "http:///js/兔小贝.js"
+      "ext": "http://肥猫.net/js/兔小贝.js"
     },
     {
       "key": "csp_少儿",
@@ -472,19 +484,19 @@
       "api": "csp_Push",
       "playerType": "1",
       "searchable": 0,
-      "ext": "http:///.json/txt/ken.txt"
+      "ext": "http://肥猫.net/.json/txt/ken.txt"
     }
   ],
   "parses": [
     {
       "name": "Json聚合",
       "type": 3,
-      "url": "http:///Demo"
+      "url": "http://肥猫.net/Demo"
     },
     {
       "name": "Web聚合",
       "type": 3,
-      "url": "http:///Web"
+      "url": "http://肥猫.net/Web"
     },
     {
       "name": "qiyi[官源]",
@@ -540,7 +552,7 @@
   ],
   "rules": [
     {
-      "name": "??量非",
+      "name": "♻️量非",
       "hosts": [
         "lz",
         "vip.lz",
@@ -556,7 +568,7 @@
       ]
     },
     {
-      "name": "??索尼",
+      "name": "♻️索尼",
       "hosts": [
         "suonizy",
         "qrssv.com"
@@ -567,7 +579,7 @@
       ]
     },
     {
-      "name": "??乐视",
+      "name": "♻️乐视",
       "hosts": [
         "leshiyun"
       ],
@@ -576,7 +588,7 @@
       ]
     },
     {
-      "name": "??优质",
+      "name": "♻️优质",
       "hosts": [
         "yzzy",
         "playback"
@@ -589,7 +601,7 @@
       ]
     },
     {
-      "name": "??快看",
+      "name": "♻️快看",
       "hosts": [
         "kuaikan",
         "vip.kuaikan"
@@ -601,7 +613,7 @@
       ]
     },
     {
-      "name": "??360",
+      "name": "♻️360",
       "hosts": [
         "lyhuicheng"
       ],
@@ -611,7 +623,7 @@
       ]
     },
     {
-      "name": "??开源棋牌",
+      "name": "♻️开源棋牌",
       "hosts": [
         "askzycdn",
         "jkunbf",
@@ -624,7 +636,7 @@
       ]
     },
     {
-      "name": "??暴风",
+      "name": "♻️暴风",
       "hosts": [
         "bfengbf.com",
         "bfzy",
@@ -636,7 +648,7 @@
       ]
     },
     {
-      "name": "??农民",
+      "name": "♻️农民",
       "hosts": [
         "toutiaovod.com"
       ],
@@ -645,7 +657,7 @@
       ]
     },
     {
-      "name": "??火山",
+      "name": "♻️火山",
       "hosts": [
         "huoshan.com"
       ],
@@ -654,7 +666,7 @@
       ]
     },
     {
-      "name": "??抖音",
+      "name": "♻️抖音",
       "hosts": [
         "douyin.com"
       ],
@@ -663,7 +675,7 @@
       ]
     },
     {
-      "name": "??磁力",
+      "name": "♻️磁力",
       "hosts": [
         "magnet"
       ],
@@ -674,7 +686,7 @@
       ]
     },
     {
-      "name": "??饭团点击",
+      "name": "♻️饭团点击",
       "hosts": [
         "dadagui",
         "freeok",
@@ -685,7 +697,7 @@
       ]
     },
     {
-      "name": "??毛驴点击",
+      "name": "♻️毛驴点击",
       "hosts": [
         "www.maolvys.com"
       ],
