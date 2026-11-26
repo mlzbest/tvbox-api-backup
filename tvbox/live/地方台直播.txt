@@ -2013,14 +2013,15 @@ Simon Amstell：躺平哲学,https://live.ottiptv.cc/yy/1382749951
 咪视界4K,http://gslbserv.itv.cmvideo.cn/3000000010000005180/index.m3u8?channel-
 
 其他频道,#genre#
-CCTV1,http://69.30.245.50/live/cctv1.m3u8
 CCTV1,http://198.204.240.250:82/live/cctv1.m3u8
 CCTV1,http://74.91.26.218:82/live/cctv1hd.m3u8
+CCTV1,http://69.30.245.50/live/cctv1.m3u8
 CCTV1,https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
 CCTV2,http://74.91.26.218:82/live/cctv2hd.m3u8
 CCTV3,http://74.91.26.218:82/live/cctv3hd.m3u8
 CCTV4,http://74.91.26.218:82/live/cctv4hd.m3u8
 CCTV4,http://198.204.240.250:82/live/cctv4k.m3u8
+CCTV4,https://r.eu.cdn-redge.media/livehls/oeu/mt/live/cctv_4/live.livx/playlist.m3u8
 CCTV5,https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
 CCTV6,http://69.30.245.50/live/cctv6.m3u8
 CCTV6,http://198.204.240.250:82/live/cctv6.m3u8
@@ -2039,13 +2040,13 @@ CCTV16,http://74.91.26.218:82/live/cctv16hd.m3u8
 CCTV17,http://74.91.26.218:82/live/cctv17hd.m3u8
 CGTN,https://0472.org/hls/cgtn.m3u8
 CGTN,https://english-livebkali.cgtn.com/live/encgtn.m3u8
+CGTN,https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
 CGTN,https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
 CGTN,https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8
-CGTN,https://dai.google.com/linear/hls/event/r4sa-f6GSN2XIvzKv5jVng/master.m3u8
 CGTN,https://english-livebkali.cgtn.com/live/encgtn_0.m3u8
 CGTN Arabic,https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8
-CGTN Documentary,https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 CGTN Documentary,https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8
+CGTN Documentary,https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 CGTN Documentary,https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8
 CGTN French,https://francais-liveali.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8
 CGTN Global Biz,https://fastlive.cctvplus.com/out/v1/2b3d8a0c805d437f9dc85b764c2ac599/index.m3u8
@@ -2084,35 +2085,6 @@ Discovery Asia Taiwan,http://125.227.210.55:1004/VideoInput/play.ts
 Dongguan Comprehensive News Channel,http://stream.sun0769.com/dgrtv1/mp4tv1_1500.flv
 Dongguan Comprehensive News Channel,https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
 GB News,https://rakutenaa-lightning-gbnews-rakuten-ccoa9.amagi.tv/playlist/rakutenAA-lightning-gbnews-rakuten/playlist.m3u8
-GOOD TV CH1 綜合台  [Not 24/7],https://live.streamingfast.net/osmflivech1.m3u8
-GOOD TV CH12 維他命施,https://live.streamingfast.net/osmflivech12.m3u8
-GOOD TV CH14 真情部落格  [Not 24/7],https://live.streamingfast.net/osmflivech14.m3u8
-GOOD TV CH15 真情之夜,https://live.streamingfast.net/osmflivech15.m3u8
-GOOD TV CH16 葉光明  [Not 24/7],https://live.streamingfast.net/osmflivech16.m3u8
-GOOD TV CH17 大衛鮑森  [Not 24/7],https://live.streamingfast.net/osmflivech17.m3u8
-GOOD TV CH18 國際講員  [Not 24/7],https://live.streamingfast.net/osmflivech18.m3u8
-GOOD TV CH2 真理台,https://live.streamingfast.net/osmflivech2.m3u8
-GOOD TV CH20 恩典時分  [Not 24/7],https://live.streamingfast.net/osmflivech20.m3u8
-GOOD TV CH21 華語講員  [Not 24/7],https://live.streamingfast.net/osmflivech21.m3u8
-GOOD TV CH24 劉三講古  [Not 24/7],https://live.streamingfast.net/osmflivech24.m3u8
-GOOD TV CH27 空中聖經學院  [Not 24/7],https://live.streamingfast.net/osmflivech27.m3u8
-GOOD TV CH28 現代詩歌  [Not 24/7],https://live.streamingfast.net/osmflivech28.m3u8
-GOOD TV CH29 經典音樂河  [Not 24/7],https://live.streamingfast.net/osmflivech29.m3u8
-GOOD TV CH3 真情部落格 短版,https://live.streamingfast.net/osmflivech3.m3u8
-GOOD TV CH30 天堂敬拜  [Not 24/7],https://live.streamingfast.net/osmflivech30.m3u8
-GOOD TV CH31 福音佈道音樂會,https://live.streamingfast.net/osmflivech31.m3u8
-GOOD TV CH32 特會系列：禱告與轉化  [Not 24/7],https://live.streamingfast.net/osmflivech32.m3u8
-GOOD TV CH33 特會系列：研經培靈,https://live.streamingfast.net/osmflivech33.m3u8
-GOOD TV CH38 特會系列：青年特會  [Not 24/7],https://live.streamingfast.net/osmflivech38.m3u8
-GOOD TV CH40 家庭8點檔轉轉發現愛  [Not 24/7],https://live.streamingfast.net/osmflivech40.m3u8
-GOOD TV CH45 卡通  [Not 24/7],https://live.streamingfast.net/osmflivech45.m3u8
-GOOD TV CH47 牧者頻道  [Not 24/7],https://live.streamingfast.net/osmflivech47.m3u8
-GOOD TV CH49 禱告頻道  [Not 24/7],https://live.streamingfast.net/osmflivech49.m3u8
-GOOD TV CH5 共享觀點 短版  [Not 24/7],https://live.streamingfast.net/osmflivech5.m3u8
-GOOD TV CH50 國際講員 中文發音  [Not 24/7],https://live.streamingfast.net/osmflivech50.m3u8
-GOOD TV CH6 親近神 詩歌音樂  [Not 24/7],https://live.streamingfast.net/osmflivech6.m3u8
-GOOD TV CH7 禱告大軍 信息,https://live.streamingfast.net/osmflivech7.m3u8
-GOOD TV CH9 愛+好醫生 短版,https://live.streamingfast.net/osmflivech9.m3u8
 Global News,https://live.corusdigitaldev.com/groupb/live/3062d0e3-ed4c-4f47-8482-95648250f4b8/live.isml/.m3u8
 Guangxi Variety & Travel Channel,http://111.59.24.227:8181/tsfile/live/1001_1.m3u8?authid=0&key=txiptv&playlive=1
 Guangzhou TV,https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
@@ -2148,8 +2120,6 @@ Nei Monggol TV 2 Mongolian Culture Channel  [Not 24/7],http://play1-qk.nmtv.cn/l
 New Kmovies,https://ads.its-newid.net/api/manifest.m3u8?tp=lg_channels&channel_name=newkmovies&channel_id=newid_219&mpf=adfc204d-39af1962-13a2f01a&apikey=48230e6b-1cea0097-15975f93-39af1962&auth=b62c2c8b-8316a771-295eba28-f4663ddd&ads.live=[CONTENT_LIVE]&ads.deviceid=[DEVICE_ID]&ads.ifa=[IFA]&ads.ifatype=[IFA_TYPE]&ads.lat=[LMT]&ads.donotsell=[DNS]&ads.ua=[UA]&ads.ip=[IP]&ads.gdpr=[GDPR]&ads.gdpr_consent=[GDPR_CONSENT]&ads.country=[COUNTRY]&ads.us_privacy=[US_PRIVACY]&ads.appstoreurl=[APP_STOREURL]&ads.bundleid=[APP_BUNDLE]&ads.appname=[APP_NAME]&ads.appversion=[APP_VERSION]&ads.devicetype=[DEVICE_TYPE]&ads.devicemake=[DEVICE_MAKE]&ads.devicemodel=[DEVICE_MODEL]&ads.targetad=[TARGETAD_ALLOWED]&ads.fck=[FCK]&ads.viewsize=[VIEWSIZE]&ads.givn=[NONCE]
 Newsy,https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/e3e6e29095844c4ba7d887f01e44a5ef/index_8.m3u8
 One American News,https://oneamericanews-roku-us.amagi.tv/playlistR1080p.m3u8
-Outdoor Channel,https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
-QTV-1,http://video10.qtv.com.cn/drm/qtv1at/manifest.m3u8
 QTV-2,http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8
 QTV-3,http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8
 QTV-4,http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
@@ -2195,10 +2165,8 @@ VOA美国之音,https://voa-ingest.akamaized.net/hls/live/2033878/tvmc08/playlis
 ViuTV,http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 WION,https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8
 Wild Earth,https://wildearth-plex.amagi.tv/masterR1080p.m3u8
-Xinjiang TV 2,http://110.153.180.106:55555/out_3/index.m3u8
 Xinjiang TV 2,https://hls.quklive.com/live/play-sh-21.quklive.com/1777511615189085.m3u8?auth_key=2092871636-a39d8614688744d0b170b856b086ba80-0-33900446b83fa0b5befeb6bedbcd51a0
 Xinjiang TV 2,https://infolive.hongshannet.cn/RedHillEye/1781077833267957853648adb1cc9957853648adb1cc9.m3u8?auth_key=1812613833-0-0-4dabcc60fbe41e40712b37dbf24dc877
-Xinjiang TV 3,http://110.153.180.106:55555/out_2/index.m3u8
 Xinjiang TV 3,http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1
 Xinjiang TV 3,http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8
 Xinjiang TV 8,http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
@@ -2211,16 +2179,12 @@ Zhejiang TV International,https://ali-m-l.cztv.com/channels/lantian/channel10/10
 beIN SPORTS XTRA,https://d9ssxzmclhfo4.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t7en7ol3kq3sp/f881b29a-280a-4416-be20-40db0fcc0f07/3.m3u8
 三立新闻,https://d2jc41c1shgcol.cloudfront.net/live/iNEWS/playlist.m3u8
 上海教育,http://tencent-live.setv.sh.cn/live/programme_setvweb.m3u8?txSecret=fd19aacaed289e44e3f6d8baa5485a41&txTime=82DF98A7
-上虞1新闻综合  [Not 24/7],https://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8
-上虞3新商都  [Not 24/7],https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
-上虞經濟文化  [Not 24/7],https://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8
 上虞综合,http://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8
 东森新闻,https://d2jc41c1shgcol.cloudfront.net/live/EBCNews/playlist.m3u8
 中天新闻,https://d2jc41c1shgcol.cloudfront.net/live/CtiNEWS1/playlist.m3u8
 中视新闻,https://d2jc41c1shgcol.cloudfront.net/live/ctvnewsqt/playlist.m3u8
 之江纪录,https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
 之江纪录,http://ali-xwl.cztv.com/live/channel121080Pnew.m3u8
-余姚姚江文化,https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
 余姚新闻综合,https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 兴隆综合,https://jwcdnqx.hebyun.com.cn/live/xlzh/1500k/tzwj_video.m3u8
 农安新闻综合 [Geo-blocked],https://stream2.jlntv.cn/naxw/sd/live.m3u8
@@ -2240,6 +2204,7 @@ beIN SPORTS XTRA,https://d9ssxzmclhfo4.cloudfront.net/v1/manifest/3722c60a815c19
 教科影院,http://ali-xwl.cztv.com/live/channel041080Plxw.m3u8
 文化旅游,https://live.0593tv.cn/live/d1znvar7tabf.m3u8
 文成综合,http://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8
+新昌新聞綜合  [Not 24/7],https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8
 星影台,http://173.208.234.146/live/nowxy.m3u8
 松原新闻综合 [Geo-blocked],https://stream2.jlntv.cn/sytv/sd/live.m3u8
 武进新闻  [Not 24/7],https://live.wjyanghu.com/live/CH1.m3u8
@@ -2297,80 +2262,193 @@ OTV6,http://111.59.24.227:8181/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&aut
 SBN,http://111.59.24.227:8181/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 XZTV1,http://111.59.24.227:8181/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
 XZTV2,http://111.59.24.227:8181/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
-世界地理高清,http://49.234.31.101:7011/tsfile/live/1095_1.m3u8?key=txiptv&playlive=1&authid=0
+东方财经,http://111.8.242.124:9999/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
+东方财经,http://111.8.242.103:9999/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
+东方财经,http://111.8.242.102:9999/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
 东方财经,http://112.27.5.218:9901/tsfile/live/faacts/1044_1.m3u8?key=txiptv&playlive=1&authid=0
-五华,http://49.234.31.101:7011/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+书画频道,http://111.8.242.102:9999/tsfile/live/1044_1.m3u8?key=txiptv&playlive=1&authid=0
+书画频道,http://111.8.242.103:9999/tsfile/live/1044_1.m3u8?key=txiptv&playlive=1&authid=0
+书画频道,http://111.8.242.124:9999/tsfile/live/1044_1.m3u8?key=txiptv&playlive=1&authid=0
 五华台,http://49.234.31.101:7040/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+全纪实,http://111.8.242.124:9999/tsfile/live/1048_1.m3u8?key=txiptv&playlive=1&authid=0
+全纪实,http://111.8.242.103:9999/tsfile/live/1048_1.m3u8?key=txiptv&playlive=1&authid=0
+全纪实,http://111.8.242.102:9999/tsfile/live/1048_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰台,http://183.234.143.5:9902/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+动漫剧场,http://111.8.242.124:9999/tsfile/live/1051_1.m3u8?key=txiptv&playlive=1&authid=0
+动漫剧场,http://111.8.242.102:9999/tsfile/live/1051_1.m3u8?key=txiptv&playlive=1&authid=0
+动漫剧场,http://111.8.242.103:9999/tsfile/live/1051_1.m3u8?key=txiptv&playlive=1&authid=0
+劲爆体育,http://111.8.242.103:9999/tsfile/live/1035_1.m3u8?key=txiptv&playlive=1&authid=0
+劲爆体育,http://111.8.242.124:9999/tsfile/live/1035_1.m3u8?key=txiptv&playlive=1&authid=0
+劲爆体育,http://111.8.242.102:9999/tsfile/live/1035_1.m3u8?key=txiptv&playlive=1&authid=0
 南宁影视,http://111.59.24.227:8181/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
-南方一高清,http://49.234.31.101:7011/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
-南方二,http://49.234.31.101:7011/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
-南方五,http://49.234.31.101:7011/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
-南方四,http://49.234.31.101:7011/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
+卡酷动画,http://111.8.242.102:9999/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
+卡酷动画,http://111.8.242.103:9999/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷动画,http://183.234.143.5:9902/tsfile/live/1119_1.m3u8?key=txiptv&playlive=0&authid=0
+卡酷动画,http://111.8.242.124:9999/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷少儿,http://112.27.5.218:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷少儿HD,http://112.27.5.218:9901/tsfile/live/faacts/1035_1.m3u8?key=txiptv&playlive=1&authid=0
 嘉佳卡通,http://111.59.24.227:8181/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
 嘉佳卡通,http://183.234.143.5:9902/tsfile/live/1069_1.m3u8?key=txiptv&playlive=0&authid=0
-嘉佳卡通,http://49.234.31.101:7011/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
-央视文化高清,http://49.234.31.101:7011/tsfile/live/1099_1.m3u8?key=txiptv&playlive=1&authid=0
+天元围棋,http://111.8.242.103:9999/tsfile/live/1082_1.m3u8?key=txiptv&playlive=1&authid=0
+天元围棋,http://111.8.242.124:9999/tsfile/live/1082_1.m3u8?key=txiptv&playlive=1&authid=0
+天元围棋,http://111.8.242.102:9999/tsfile/live/1082_1.m3u8?key=txiptv&playlive=1&authid=0
+娄底台,http://111.8.242.124:9999/tsfile/live/1124_1.m3u8?key=txiptv&playlive=1&authid=0
+娄底台,http://111.8.242.103:9999/tsfile/live/1124_1.m3u8?key=txiptv&playlive=1&authid=0
+娄底台,http://111.8.242.102:9999/tsfile/live/1124_1.m3u8?key=txiptv&playlive=1&authid=0
 宣城公共,http://112.27.5.218:9901/tsfile/live/faacts/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 宣城综合,http://112.27.5.218:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-少儿动画,http://49.234.31.101:7011/tsfile/live/1042_1.m3u8?key=txiptv&playlive=1&authid=0
-山歌台,http://49.234.31.101:7011/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
 岭南戏曲,http://183.234.143.5:9902/tsfile/live/1071_1.m3u8?key=txiptv&playlive=0&authid=0
+岳阳公共,http://111.8.242.124:9999/tsfile/live/1135_1.m3u8?key=txiptv&playlive=1&authid=0
+岳阳公共,http://111.8.242.102:9999/tsfile/live/1135_1.m3u8?key=txiptv&playlive=1&authid=0
+岳阳公共,http://111.8.242.103:9999/tsfile/live/1135_1.m3u8?key=txiptv&playlive=1&authid=0
+岳阳台,http://111.8.242.102:9999/tsfile/live/1129_1.m3u8?key=txiptv&playlive=1&authid=0
+岳阳台,http://111.8.242.124:9999/tsfile/live/1129_1.m3u8?key=txiptv&playlive=1&authid=0
+岳阳台,http://111.8.242.103:9999/tsfile/live/1129_1.m3u8?key=txiptv&playlive=1&authid=0
+常德台,http://111.8.242.103:9999/tsfile/live/1126_1.m3u8?key=txiptv&playlive=1&authid=0
+常德台,http://111.8.242.102:9999/tsfile/live/1126_1.m3u8?key=txiptv&playlive=1&authid=0
+常德台,http://111.8.242.124:9999/tsfile/live/1126_1.m3u8?key=txiptv&playlive=1&authid=0
 平南台,http://111.59.24.227:8181/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0
-广州综合HD,http://49.234.31.101:7011/tsfile/live/1043_1.m3u8?key=txiptv&playlive=1&authid=0
 广德一套,http://112.27.5.218:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 广德一套HD,http://112.27.5.218:9901/tsfile/live/faacts/1019_1.m3u8?key=txiptv&playlive=1&authid=0
 广德二套,http://112.27.5.218:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
+张家界,http://111.8.242.103:9999/tsfile/live/1127_1.m3u8?key=txiptv&playlive=1&authid=0
+张家界,http://111.8.242.124:9999/tsfile/live/1127_1.m3u8?key=txiptv&playlive=1&authid=0
+张家界,http://111.8.242.102:9999/tsfile/live/1127_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐垂钓,http://111.8.242.124:9999/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐垂钓,http://111.8.242.103:9999/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐垂钓,http://111.8.242.102:9999/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
 快乐垂钓,http://112.27.5.218:9901/tsfile/live/faacts/1048_1.m3u8?key=txiptv&playlive=1&authid=0
 快乐购,http://112.27.5.218:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-怀旧剧场高清,http://49.234.31.101:7011/tsfile/live/1098_1.m3u8?key=txiptv&playlive=1&authid=0
-惠州1,http://49.234.31.101:7011/tsfile/live/1103_1.m3u8?key=txiptv&playlive=1&authid=0
-房产,http://49.234.31.101:7011/tsfile/live/1107_1.m3u8?key=txiptv&playlive=1&authid=0
-收视指南,http://49.234.31.101:7011/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐购高清,http://111.8.242.124:9999/tsfile/live/1075_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐购高清,http://111.8.242.103:9999/tsfile/live/1075_1.m3u8?key=txiptv&playlive=1&authid=0
+快乐购高清,http://111.8.242.102:9999/tsfile/live/1075_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化公共,http://111.8.242.124:9999/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化公共,http://111.8.242.103:9999/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化公共,http://111.8.242.102:9999/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化综合,http://111.8.242.102:9999/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化综合,http://111.8.242.103:9999/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+怀化综合,http://111.8.242.124:9999/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 新视觉,http://112.27.5.218:9901/tsfile/live/faacts/1043_1.m3u8?key=txiptv&playlive=1&authid=0
-梅县1,http://49.234.31.101:7011/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
+株洲台,http://111.8.242.124:9999/tsfile/live/1122_1.m3u8?key=txiptv&playlive=1&authid=0
+株洲台,http://111.8.242.103:9999/tsfile/live/1122_1.m3u8?key=txiptv&playlive=1&authid=0
+株洲台,http://111.8.242.102:9999/tsfile/live/1122_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州1,http://49.234.31.101:7040/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
-梅州1,http://49.234.31.101:7011/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-梅州2,http://49.234.31.101:7011/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州2,http://49.234.31.101:7040/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
-河源综合,http://49.234.31.101:7011/tsfile/live/1100_1.m3u8?key=txiptv&playlive=1&authid=0
-法治,http://49.234.31.101:7011/tsfile/live/1111_1.m3u8?key=txiptv&playlive=1&authid=0
+欢笑剧场,http://111.8.242.102:9999/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
+欢笑剧场,http://111.8.242.124:9999/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
+欢笑剧场,http://111.8.242.103:9999/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
+永州公共,http://111.8.242.124:9999/tsfile/live/1081_1.m3u8?key=txiptv&playlive=1&authid=0
+永州公共,http://111.8.242.103:9999/tsfile/live/1081_1.m3u8?key=txiptv&playlive=1&authid=0
+永州公共,http://111.8.242.102:9999/tsfile/live/1081_1.m3u8?key=txiptv&playlive=1&authid=0
+永州台,http://111.8.242.103:9999/tsfile/live/1123_1.m3u8?key=txiptv&playlive=1&authid=0
+永州台,http://111.8.242.102:9999/tsfile/live/1123_1.m3u8?key=txiptv&playlive=1&authid=0
+永州台,http://111.8.242.124:9999/tsfile/live/1123_1.m3u8?key=txiptv&playlive=1&authid=0
+法制天地,http://111.8.242.124:9999/tsfile/live/1050_1.m3u8?key=txiptv&playlive=1&authid=0
+法制天地,http://111.8.242.102:9999/tsfile/live/1050_1.m3u8?key=txiptv&playlive=1&authid=0
+法制天地,http://111.8.242.103:9999/tsfile/live/1050_1.m3u8?key=txiptv&playlive=1&authid=0
 深圳,http://111.59.24.227:8181/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
-炫动卡通,http://49.234.31.101:7011/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
-热播剧场,http://49.234.31.101:7011/tsfile/live/1089_1.m3u8?key=txiptv&playlive=1&authid=0
-珠江台,http://183.234.143.5:9902/tsfile/live/1074_1.m3u8?key=txiptv&playlive=1&authid=0
+游戏风云,http://111.8.242.124:9999/tsfile/live/1053_1.m3u8?key=txiptv&playlive=1&authid=0
+游戏风云,http://111.8.242.102:9999/tsfile/live/1053_1.m3u8?key=txiptv&playlive=1&authid=0
+游戏风云,http://111.8.242.103:9999/tsfile/live/1053_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南娱乐,http://111.8.242.102:9999/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南娱乐,http://111.8.242.103:9999/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南娱乐,http://111.8.242.124:9999/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南导视,http://111.8.242.124:9999/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南导视,http://111.8.242.102:9999/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南导视,http://111.8.242.103:9999/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南教育,http://111.8.242.102:9999/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南教育,http://111.8.242.103:9999/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南教育,http://111.8.242.124:9999/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南爱晚,http://111.8.242.124:9999/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南爱晚,http://111.8.242.103:9999/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南爱晚,http://111.8.242.102:9999/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南电视剧,http://111.8.242.102:9999/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南电视剧,http://111.8.242.124:9999/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南电视剧,http://111.8.242.103:9999/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南经视,http://111.8.242.124:9999/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南经视,http://111.8.242.102:9999/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南经视,http://111.8.242.103:9999/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南都市,http://111.8.242.124:9999/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南都市,http://111.8.242.103:9999/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
+湖南都市,http://111.8.242.102:9999/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
+湘潭台,http://111.8.242.103:9999/tsfile/live/1131_1.m3u8?key=txiptv&playlive=1&authid=0
+湘潭台,http://111.8.242.102:9999/tsfile/live/1131_1.m3u8?key=txiptv&playlive=1&authid=0
+湘潭台,http://111.8.242.124:9999/tsfile/live/1131_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西公共,http://111.8.242.103:9999/tsfile/live/1084_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西公共,http://111.8.242.102:9999/tsfile/live/1084_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西公共,http://111.8.242.124:9999/tsfile/live/1084_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西台,http://111.8.242.124:9999/tsfile/live/1128_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西台,http://111.8.242.102:9999/tsfile/live/1128_1.m3u8?key=txiptv&playlive=1&authid=0
+湘西台,http://111.8.242.103:9999/tsfile/live/1128_1.m3u8?key=txiptv&playlive=1&authid=0
+溆浦时政,http://111.8.242.124:9999/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+溆浦时政,http://111.8.242.103:9999/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+溆浦时政,http://111.8.242.102:9999/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+潇湘电影,http://111.8.242.103:9999/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
+潇湘电影,http://111.8.242.102:9999/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
+潇湘电影,http://111.8.242.124:9999/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
 珠江台,http://183.234.143.5:9902/tsfile/live/1077_1.m3u8?key=txiptv&playlive=0&authid=0
+珠江台,http://183.234.143.5:9902/tsfile/live/1074_1.m3u8?key=txiptv&playlive=1&authid=0
 珠江台BM,http://111.59.24.227:8181/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
-相声小品,http://49.234.31.101:7011/tsfile/live/1088_1.m3u8?key=txiptv&playlive=1&authid=0
-第一剧场高清,http://49.234.31.101:7011/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
-粤荟萃,http://49.234.31.101:7011/tsfile/live/1108_1.m3u8?key=txiptv&playlive=1&authid=0
-精彩影视,http://112.27.5.218:9901/tsfile/live/faacts/1040_1.m3u8?key=txiptv&playlive=1&authid=0
-纪实科教,http://112.27.5.218:9901/tsfile/live/faacts/1049_1.m3u8?key=txiptv&playlive=1&authid=0
+生活时尚高清,http://111.8.242.124:9999/tsfile/live/1092_1.m3u8?key=txiptv&playlive=1&authid=0
+生活时尚高清,http://111.8.242.102:9999/tsfile/live/1092_1.m3u8?key=txiptv&playlive=1&authid=0
+生活时尚高清,http://111.8.242.103:9999/tsfile/live/1092_1.m3u8?key=txiptv&playlive=1&authid=0
+益阳台,http://111.8.242.124:9999/tsfile/live/1130_1.m3u8?key=txiptv&playlive=1&authid=0
+益阳台,http://111.8.242.102:9999/tsfile/live/1130_1.m3u8?key=txiptv&playlive=1&authid=0
+益阳台,http://111.8.242.103:9999/tsfile/live/1130_1.m3u8?key=txiptv&playlive=1&authid=0
 纪实科教,http://112.27.5.218:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
-经典电影,http://49.234.31.101:7011/tsfile/live/1045_1.m3u8?key=txiptv&playlive=1&authid=0
+纪实科教,http://112.27.5.218:9901/tsfile/live/faacts/1049_1.m3u8?key=txiptv&playlive=1&authid=0
 经济科教高清,http://49.234.31.101:7040/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://49.234.31.101:7011/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://183.234.143.5:9902/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
+芷江综合,http://111.8.242.102:9999/tsfile/live/1073_1.m3u8?key=txiptv&playlive=1&authid=0
+芷江综合,http://111.8.242.103:9999/tsfile/live/1073_1.m3u8?key=txiptv&playlive=1&authid=0
+芷江综合,http://111.8.242.124:9999/tsfile/live/1073_1.m3u8?key=txiptv&playlive=1&authid=0
 茶频道,http://112.27.5.218:9901/tsfile/live/faacts/1042_1.m3u8?key=txiptv&playlive=1&authid=0
-谍战剧场,http://49.234.31.101:7011/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
-足球,http://49.234.31.101:7011/tsfile/live/1109_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳公共,http://111.8.242.102:9999/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳公共,http://111.8.242.103:9999/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳公共,http://111.8.242.124:9999/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳台,http://111.8.242.124:9999/tsfile/live/1120_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳台,http://111.8.242.103:9999/tsfile/live/1120_1.m3u8?key=txiptv&playlive=1&authid=0
+衡阳台,http://111.8.242.102:9999/tsfile/live/1120_1.m3u8?key=txiptv&playlive=1&authid=0
+辰溪综合,http://111.8.242.102:9999/tsfile/live/1110_1.m3u8?key=txiptv&playlive=1&authid=0
+辰溪综合,http://111.8.242.103:9999/tsfile/live/1110_1.m3u8?key=txiptv&playlive=1&authid=0
+辰溪综合,http://111.8.242.124:9999/tsfile/live/1110_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳公共,http://111.8.242.124:9999/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳公共,http://111.8.242.102:9999/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳公共,http://111.8.242.103:9999/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳台,http://111.8.242.103:9999/tsfile/live/1125_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳台,http://111.8.242.124:9999/tsfile/live/1125_1.m3u8?key=txiptv&playlive=1&authid=0
+邵阳台,http://111.8.242.102:9999/tsfile/live/1125_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州公共,http://111.8.242.102:9999/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州公共,http://111.8.242.103:9999/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州公共,http://111.8.242.124:9999/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州台,http://111.8.242.103:9999/tsfile/live/1121_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州台,http://111.8.242.102:9999/tsfile/live/1121_1.m3u8?key=txiptv&playlive=1&authid=0
+郴州台,http://111.8.242.124:9999/tsfile/live/1121_1.m3u8?key=txiptv&playlive=1&authid=0
+都市剧场,http://111.8.242.103:9999/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
+都市剧场,http://111.8.242.102:9999/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
+都市剧场,http://111.8.242.124:9999/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
+重温经典,http://111.8.242.124:9999/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
+重温经典,http://111.8.242.103:9999/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
+重温经典,http://111.8.242.102:9999/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
 重温经典,http://112.27.5.218:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-野外,http://49.234.31.101:7011/tsfile/live/1110_1.m3u8?key=txiptv&playlive=1&authid=0
 金色学堂,http://112.27.5.218:9901/tsfile/live/faacts/1051_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://111.8.242.124:9999/tsfile/live/1031_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://111.8.242.103:9999/tsfile/live/1031_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://111.8.242.102:9999/tsfile/live/1031_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通,http://183.234.143.5:9902/tsfile/live/1120_1.m3u8?key=txiptv&playlive=0&authid=0
 金鹰卡通,http://112.27.5.218:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://49.234.31.101:7011/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通HD,http://112.27.5.218:9901/tsfile/live/faacts/1011_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰纪实高清,http://49.234.31.101:7011/tsfile/live/1064_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰纪实高清,http://111.8.242.102:9999/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰纪实高清,http://111.8.242.124:9999/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰纪实高清,http://111.8.242.103:9999/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
+长沙综合,http://111.8.242.124:9999/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
+长沙综合,http://111.8.242.102:9999/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
+长沙综合,http://111.8.242.103:9999/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
+靖州综合,http://111.8.242.103:9999/tsfile/live/1108_1.m3u8?key=txiptv&playlive=1&authid=0
+靖州综合,http://111.8.242.102:9999/tsfile/live/1108_1.m3u8?key=txiptv&playlive=1&authid=0
+靖州综合,http://111.8.242.124:9999/tsfile/live/1108_1.m3u8?key=txiptv&playlive=1&authid=0
 预留节目1,http://112.27.5.218:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
 预留节目2,http://112.27.5.218:9901/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
-风云剧场高清,http://49.234.31.101:7011/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
-风云足球高清,http://49.234.31.101:7011/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
-风云音乐高清,http://49.234.31.101:7011/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
-魅力时尚,http://49.234.31.101:7011/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
 
 河北频道,#genre#
 河北农民,http://101.23.150.94:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2395,19 +2473,14 @@ BTV卡酷,http://113.25.252.226:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive
 吉林市1,http://61.138.128.226:29901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 吉林市2,http://61.138.128.226:29901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
 吉林市3,http://61.138.128.226:29901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
-吉林教育,http://61.138.128.226:29901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
-中国教育电视台,http://61.138.128.226:29901/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
-卡酷动画,http://61.138.128.226:29901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
-吉视乡村,http://61.138.128.226:29901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+吉林教育,http://222.169.85.8:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 吉视影视,http://61.138.128.226:29901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 吉视生活,http://61.138.128.226:29901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
 吉视综艺文化,http://61.138.128.226:29901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 吉视都市,http://61.138.128.226:29901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 嘉佳卡通,http://61.138.128.226:29901/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
-家庭影院,http://61.138.128.226:29901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通,http://61.138.128.226:29901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰纪实,http://61.138.128.226:29901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-长影频道,http://61.138.128.226:29901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
 
 黑龙江频道,#genre#
 黑龙江公共,http://112.99.195.122:65000/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2418,18 +2491,17 @@ BTV卡酷,http://113.25.252.226:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive
 黑龙江影视,http://shuangyashan.coccc.online:65000/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江文体,http://112.99.195.122:65000/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江文体,http://shuangyashan.coccc.online:65000/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
-黑龙江新闻法治,http://shuangyashan.coccc.online:65000/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江新闻法治,http://112.99.195.122:65000/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
+黑龙江新闻法治,http://shuangyashan.coccc.online:65000/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江都市,http://112.99.195.122:65000/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
 黑龙江都市,http://shuangyashan.coccc.online:65000/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
-卡酷少儿,http://shuangyashan.coccc.online:65000/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷少儿,http://112.99.195.122:65000/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://shuangyashan.coccc.online:65000/tsfile/live/1034_1.m3u8?key=txiptv&playlive=1&authid=0
+卡酷少儿,http://shuangyashan.coccc.online:65000/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通,http://112.99.195.122:65000/tsfile/live/1034_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://shuangyashan.coccc.online:65000/tsfile/live/1034_1.m3u8?key=txiptv&playlive=1&authid=0
 
 江苏频道,#genre#
 江苏城市,http://218.94.91.114:9901/tsfile/live/0120_3.m3u8?key=txiptv&playlive=1&authid=0
-江苏综艺,http://218.94.91.114:9901/tsfile/live/0120_4.m3u8?key=txiptv&playlive=1&authid=0
 空中课堂,http://218.94.91.114:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 
 安徽频道,#genre#
@@ -2472,13 +2544,16 @@ JXTV-5,http://115.150.63.77:9902/tsfile/live/1034_1.m3u8?key=txiptv&playlive=1&a
 魅力足球HD,http://115.150.63.77:9902/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
 
 山东频道,#genre#
-山东体育,http://222.134.245.16:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 山东体育,http://144.123.165.186:9901/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
+山东体育,http://222.134.245.16:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+山东体育,http://223.78.65.165:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 山东少儿高清,http://144.123.165.186:9901/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
+山东教育,http://223.78.65.165:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 山东文旅,http://144.123.165.186:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
 山东综艺高清,http://144.123.165.186:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
 山东齐鲁,http://222.134.245.16:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 CGTN,http://120.27.63.14:30006/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
+QTV-3,http://223.78.65.165:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
 书画频道,http://120.27.63.14:30006/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
 快乐垂钓,http://120.27.63.14:30006/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
 石家庄娱乐,http://120.27.63.14:30006/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2511,31 +2586,31 @@ CGTN,http://221.232.196.76:7777/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&au
 广东频道,#genre#
 广东体育,http://120.198.86.251:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 广东体育,http://183.239.248.218:8181/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
-广东体育,http://125.93.74.27:9002/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0
 广东体育,http://218.13.138.139:59901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
-广东体育,http://61.143.43.2:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+广东体育,http://183.239.226.235:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+广东体育,http://218.13.170.98:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
 广东体育高清,http://120.198.86.186:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
-广东体育高清,http://120.196.235.42:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
 广东体育高清,http://120.238.84.45:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-广东公共,http://120.196.235.42:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+广东体育高清,http://120.196.235.42:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共,http://120.198.86.251:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+广东公共,http://120.196.235.42:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共,http://183.239.226.235:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共高清,http://120.198.86.186:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 广东公共高清,http://120.238.84.45:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
-广东嘉佳卡通,http://183.239.226.235:9901/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
 广东嘉佳卡通,http://120.198.86.251:9901/tsfile/live/1036_1.m3u8?key=txiptv&playlive=1&authid=0
+广东嘉佳卡通,http://183.239.226.235:9901/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
 广东嘉佳卡通高清,http://120.198.86.186:9901/tsfile/live/1053_1.m3u8?key=txiptv&playlive=1&authid=0
 广东少儿,http://120.198.86.251:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
 广东少儿高清,http://183.239.226.235:9901/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0
 广东少儿高清,http://120.198.86.186:9901/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
 广东影视,http://120.198.86.251:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
+广东影视,http://125.93.74.27:9002/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 广东影视,http://183.239.226.235:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
 广东影视,http://218.13.138.139:59901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
-广东影视,http://125.93.74.27:9002/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 广东影视高清,http://120.198.86.186:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
+广东新闻,http://120.198.86.251:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 广东新闻,http://183.239.248.218:8181/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
 广东新闻,http://120.196.235.42:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-广东新闻,http://120.198.86.251:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 广东新闻,http://183.239.226.235:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
 广东新闻,http://218.13.138.139:59901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 广东新闻高清,http://120.198.86.186:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2544,12 +2619,12 @@ CGTN,http://221.232.196.76:7777/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&au
 广东珠江,http://183.239.248.218:8181/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 广东珠江,http://218.13.138.139:59901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 广东珠江,http://218.13.170.98:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-广东珠江高清,http://120.196.235.42:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 广东珠江高清,http://120.238.84.45:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
+广东珠江高清,http://120.196.235.42:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 广东移动,http://120.196.235.42:9901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=1&authid=0
 广东经济科教,http://183.239.226.235:9901/tsfile/live/1042_1.m3u8?key=txiptv&playlive=1&authid=0
-广东经济科教高清,http://120.198.86.251:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 广东经济科教高清,http://120.198.86.186:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
+广东经济科教高清,http://120.198.86.251:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 CHC动作电影高清,http://120.198.86.186:9901/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
 CHC动作电影高清,http://120.238.84.45:9901/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
 CHC家庭电影高清,http://120.198.86.186:9901/tsfile/live/1046_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2577,9 +2652,9 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 党建新闻,http://flv4mp4.people.com.cn/videofile7/pvmsvideo/2021/3/10/ShiXinPei_71ec1680d031363446f16a2366abccb9_android_c.mp4
 兴宁台,http://120.238.84.45:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 冬奧纪实高清,http://120.198.86.186:9901/tsfile/live/1103_1.m3u8?key=txiptv&playlive=1&authid=0
+凤凰中文,http://120.198.86.186:9901/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰中文,http://120.198.86.251:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰中文,http://183.239.248.218:8181/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
-凤凰中文,http://120.198.86.186:9901/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰中文 高清,http://183.239.248.218:8181/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰中文台,http://120.238.84.45:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
 凤凰资讯,http://183.239.248.218:8181/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2602,11 +2677,11 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 南方四高清,http://120.238.84.45:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷动画,http://125.93.74.27:9002/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷动画,http://218.13.170.98:9901/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
-卡酷少儿,http://120.198.86.186:9901/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
 卡酷少儿,http://120.198.86.251:9901/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0
-嘉佳卡通,http://120.196.235.42:9901/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
-嘉佳卡通,http://183.239.248.218:8181/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+卡酷少儿,http://120.198.86.186:9901/tsfile/live/1054_1.m3u8?key=txiptv&playlive=1&authid=0
 嘉佳卡通,http://120.238.84.45:9901/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
+嘉佳卡通,http://183.239.248.218:8181/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+嘉佳卡通,http://120.196.235.42:9901/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
 大埔1,http://183.239.226.235:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
 天映频道,http://120.198.86.186:9901/tsfile/live/1043_1.m3u8?key=txiptv&playlive=1&authid=0
 央视文化,http://120.238.84.45:9901/tsfile/live/1092_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2617,8 +2692,8 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 山歌1,http://120.196.235.42:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
 山歌2,http://120.196.235.42:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 山歌台高清,http://120.198.86.186:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
-岭南戏曲,http://120.198.86.251:9901/tsfile/live/1078_1.m3u8?key=txiptv&playlive=1&authid=0
 岭南戏曲,http://183.239.226.235:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
+岭南戏曲,http://120.198.86.251:9901/tsfile/live/1078_1.m3u8?key=txiptv&playlive=1&authid=0
 岭南戏曲,http://120.238.84.45:9901/tsfile/live/1095_1.m3u8?key=txiptv&playlive=1&authid=0
 平远综合,http://120.198.86.186:9901/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
 广场舞,http://120.198.86.186:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2651,11 +2726,10 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 梅州,http://120.198.86.251:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州-1,http://120.238.84.45:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州-2,http://120.238.84.45:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-梅州1,http://120.198.86.186:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
-梅州1,http://183.239.226.235:9901/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州1,http://120.196.235.42:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-梅州2,http://120.196.235.42:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+梅州1,http://120.198.86.186:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州2,http://120.198.86.186:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
+梅州2,http://120.196.235.42:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州客家生活,http://183.239.226.235:9901/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州导视,http://120.198.86.186:9901/tsfile/live/1102_1.m3u8?key=txiptv&playlive=1&authid=0
 梅州山歌文艺,http://120.238.84.45:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2682,15 +2756,14 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 热播剧场,http://120.196.235.42:9901/tsfile/live/1089_1.m3u8?key=txiptv&playlive=1&authid=0
 爱体育,http://183.239.226.235:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
 爱电影,http://59.39.89.130:60901/tsfile/live/0125_29.m3u8?key=txiptv&playlive=1&authid=0
+现代教育,http://120.198.86.251:9901/tsfile/live/1080_1.m3u8?key=txiptv&playlive=1&authid=0
 现代教育,http://120.198.86.186:9901/tsfile/live/1112_1.m3u8?key=txiptv&playlive=1&authid=0
 现代教育,http://183.239.226.235:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
-现代教育,http://120.198.86.251:9901/tsfile/live/1080_1.m3u8?key=txiptv&playlive=1&authid=0
 珠江电影,http://183.239.248.218:8181/tsfile/live/1046_1.m3u8?key=txiptv&playlive=1&authid=0
-珠江高清,http://120.198.86.186:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 珠江高清,http://120.198.86.251:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+珠江高清,http://120.198.86.186:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
 珠海-1,http://120.196.235.42:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
 相声小品,http://120.196.235.42:9901/tsfile/live/1088_1.m3u8?key=txiptv&playlive=1&authid=0
-相声小品,http://120.238.84.45:9901/tsfile/live/1081_1.m3u8?key=txiptv&playlive=1&authid=0
 移动频道,http://120.198.86.251:9901/tsfile/live/1082_1.m3u8?key=txiptv&playlive=1&authid=0
 第一剧场,http://120.238.84.45:9901/tsfile/live/1086_1.m3u8?key=txiptv&playlive=1&authid=0
 第一剧场高清,http://120.196.235.42:9901/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2699,11 +2772,11 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 经典电影,http://120.238.84.45:9901/tsfile/live/1040_1.m3u8?key=txiptv&playlive=1&authid=0
 经济科教,http://218.13.138.139:59901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
 经济科教,http://218.13.170.98:9901/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://183.239.248.218:8181/tsfile/live/1049_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://183.239.226.235:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://120.196.235.42:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://120.198.86.186:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://120.238.84.45:9901/tsfile/live/1103_1.m3u8?key=txiptv&playlive=1&authid=0
+翡翠台,http://183.239.248.218:8181/tsfile/live/1049_1.m3u8?key=txiptv&playlive=1&authid=0
+翡翠台,http://183.239.226.235:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
+翡翠台,http://120.198.86.251:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
 茶频道高清,http://183.239.226.235:9901/tsfile/live/1046_1.m3u8?key=txiptv&playlive=1&authid=0
 谍战剧场,http://120.196.235.42:9901/tsfile/live/1047_1.m3u8?key=txiptv&playlive=1&authid=0
 谍战剧场,http://120.238.84.45:9901/tsfile/live/1042_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -2711,25 +2784,23 @@ G 导视HD,http://120.198.86.186:9901/tsfile/live/1048_1.m3u8?key=txiptv&playliv
 足球,http://120.196.235.42:9901/tsfile/live/1109_1.m3u8?key=txiptv&playlive=1&authid=0
 都市剧场高清,http://120.198.86.186:9901/tsfile/live/1107_1.m3u8?key=txiptv&playlive=1&authid=0
 野外,http://120.196.235.42:9901/tsfile/live/1110_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://120.196.235.42:9901/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://183.239.248.218:8181/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通,http://120.198.86.251:9901/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://120.198.86.186:9901/tsfile/live/1055_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://120.238.84.45:9901/tsfile/live/1036_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://183.239.248.218:8181/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://120.196.235.42:9901/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰卡通,http://125.93.74.27:9002/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰纪实高清,http://120.196.235.42:9901/tsfile/live/1064_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰纪实高清,http://120.198.86.186:9901/tsfile/live/1078_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰纪实高清,http://120.196.235.42:9901/tsfile/live/1064_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰纪实高清,http://120.198.86.251:9901/tsfile/live/1060_1.m3u8?key=txiptv&playlive=1&authid=0
 金鹰纪实高清,http://120.238.84.45:9901/tsfile/live/1059_1.m3u8?key=txiptv&playlive=1&authid=0
 预留2,http://183.239.248.218:8181/tsfile/live/1069_1.m3u8?key=txiptv&playlive=1&authid=0
 频道,http://120.198.86.186:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
-风云剧场,http://120.238.84.45:9901/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
 风云剧场,http://120.198.86.251:9901/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
+风云剧场,http://120.238.84.45:9901/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
 风云剧场高清,http://120.196.235.42:9901/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
 风云足球,http://120.198.86.251:9901/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
-风云足球,http://120.238.84.45:9901/tsfile/live/1087_1.m3u8?key=txiptv&playlive=1&authid=0
 风云足球高清,http://120.196.235.42:9901/tsfile/live/1094_1.m3u8?key=txiptv&playlive=1&authid=0
 风云音乐,http://120.198.86.251:9901/tsfile/live/1089_1.m3u8?key=txiptv&playlive=1&authid=0
-风云音乐,http://120.238.84.45:9901/tsfile/live/1089_1.m3u8?key=txiptv&playlive=1&authid=0
 风云音乐高清,http://120.196.235.42:9901/tsfile/live/1096_1.m3u8?key=txiptv&playlive=1&authid=0
 魅力时尚,http://120.196.235.42:9901/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
 
@@ -2742,12 +2813,12 @@ CGTN,http://183.223.157.33:9901/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&au
 峨眉电影,http://183.223.157.33:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 
 广西频道,#genre#
-广西影视,http://221.7.175.154:8445/tsfile/live/1024_1.m3u8?key=txiptv&playlive=1&authid=0
 广西影视,http://36.136.38.87:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
+广西影视,http://221.7.175.154:8445/tsfile/live/1024_1.m3u8?key=txiptv&playlive=1&authid=0
 广西影视,http://219.159.91.10:8801/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-广西新闻,http://36.136.38.87:9901/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
 广西新闻,http://221.7.175.127:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
 广西新闻,http://221.7.175.154:8445/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
+广西新闻,http://36.136.38.87:9901/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
 广西综艺,http://36.136.38.87:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 广西综艺,http://221.7.175.127:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
 广西综艺,http://221.7.175.154:8445/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
